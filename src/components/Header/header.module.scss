@@ -1,0 +1,119 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+.header__container {
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px white solid;
+  width: calc(100% - 1160px / 4 + 10px);
+  height: 74px;
+  border-radius: 50px;
+  gap: 25px;
+  background-color: #003263;
+  color: white;
+  box-sizing: border-box;
+}
+
+.header__navitem {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.header__logo {
+  margin-left: 60px;
+  background-image: url('../../../public/logo.png');
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  color: black;
+  background-position: center;
+}
+
+.header__navigate {
+  display: flex;
+  align-items: center;
+  gap: 31px;
+  margin-right: 74px;
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  position: relative;
+  height: 26px;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 25;
+  cursor: pointer;
+  margin: 0;
+}
+
+.burger:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s 20ms ease-in-out;
+}
+
+.burger__icon {
+  height: 3px;
+  width: 36px;
+  background-color: white;
+}
+
+.burger::after,
+.burger::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: white;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+@include desktop {
+  .header__container {
+    width: calc(100% - 400px / 4 + 16px);
+  }
+}
+
+@include laptop {
+  .header__navigate {
+    gap: 25px;
+  }
+}
+
+@include netbook {
+  .header__navigate {
+    gap: 20px;
+  }
+
+  .header__navitem {
+    font-size: 18px;
+  }
+}
+
+@include tablet {
+  .header__navhidden {
+    display: none;
+  }
+
+  .header__navigate {
+    margin-right: 30px;
+  }
+
+  .header__logo {
+    margin-left: 30px;
+  }
+
+}
