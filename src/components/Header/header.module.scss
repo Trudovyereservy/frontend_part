@@ -3,32 +3,30 @@
 
 .header__container {
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px white solid;
+  border: 2px $bg-color-white solid;
   width: calc(100% - 1160px / 4 + 10px);
   height: 74px;
   border-radius: 50px;
   gap: 25px;
-  background-color: #003263;
-  color: white;
+  background-color: $bg-color-blue;
+  color: $bg-color-white;
   box-sizing: border-box;
 }
 
 .header__navitem {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
 .header__logo {
   margin-left: 60px;
   background-image: url('../../../public/logo.png');
-  width: 50px;
-  height: 50px;
-  background-size: 50px 50px;
-  color: black;
+  width: 52px;
+  height: 52px;
+  background-size: 53px 53px;
   background-position: center;
 }
 
@@ -36,7 +34,7 @@
   display: flex;
   align-items: center;
   gap: 31px;
-  margin-right: 74px;
+  margin-right: 72px;
 }
 
 .burger {
@@ -70,7 +68,7 @@
   content: '';
   height: 4px;
   width: 100%;
-  background-color: white;
+  background-color: $bg-color-white;
 }
 
 .burger::before {
@@ -90,6 +88,14 @@
 @include laptop {
   .header__navigate {
     gap: 25px;
+  }
+
+  .header__container {
+    height: 74px;
+  }
+
+  .header__navigate {
+    margin-right: 60px;
   }
 }
 

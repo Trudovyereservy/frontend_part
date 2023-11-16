@@ -7,8 +7,7 @@
   margin: 0 auto;
   max-width: 100%;
   position: relative;
-  // position: absolute;
-  top: 0;
+  // top: 0;
 }
 
 .mainbanner__button {
@@ -26,8 +25,8 @@
   background-position: center;
   width: 100%;
   background-repeat: no-repeat;
-  height: 741px;
-  margin-top: -100px;
+  height: 747px;
+  margin-top: -103px;
   z-index: -1;
 }
 
@@ -37,23 +36,22 @@
   line-height: 28.58px;
   max-width: 500px;
   min-height: 93px;
-  color: white;
+  color: $bg-color-white;
 }
 
 .mainbanner__title {
   font-size: 64px;
-  font-family: 'Roboto', sans-serif;
   font-stretch: 140%;
   max-width: 860px;
   line-height: 64.44px;
-  color: white;
-  letter-spacing: -2.7px;
+  color: $bg-color-white;
+  // letter-spacing: -2.7px;
 }
 
 .mainbanner__logo {
   position: absolute;
   right: 140px;
-  top: 32px;
+  top: 30px;
   object-fit: cover;
 }
 
@@ -99,16 +97,34 @@
   .mainbanner__title {
     font-size: 55px;
     max-width: 631px;
+    line-height: 55px;
+  }
+
+  .mainbanner__subtitle {
+    line-height: 34px;
+    max-width: 480px;
   }
 
   .mainbanner__container {
     left: 43px;
-    top: 83px;
+    top: 89px;
+    gap: 20px;
   }
+
   .mainbanner__background {
     background-image: url(../../../public/banner_1024px.svg);
     background-position: center;
     height: 741px;
+  }
+
+  .mainbanner__logo {
+    width: 510px;
+    height: 510px;
+    top: 118px;
+  }
+
+  .mainbanner__button {
+    margin-top: 15px;
   }
 }
 
