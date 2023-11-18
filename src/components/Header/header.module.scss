@@ -59,7 +59,7 @@
 .burger__icon {
   height: 3px;
   width: 36px;
-  background-color: white;
+  background-color: $bg-color-white;
 }
 
 .burger::after,
@@ -121,5 +121,38 @@
   .header__logo {
     margin-left: 30px;
   }
+}
 
+@include mobile {
+  .header__container {
+    margin-top: 35px;
+    height: 50px;
+    max-width: 300px;
+  }
+
+  .header__navigate {
+    margin-right: 28px;
+  }
+
+  .header__logo {
+    margin-left: 24px;
+    width: 36px;
+    height: 36px;
+    background-size: 36px 36px;
+    background-position: center;
+  }
+
+  .burger {
+    height: 20px;
+  }
+
+  .burger__icon {
+    height: 3px;
+    width: 30px;
+  }
+
+  .burger::after,
+  .burger::before {
+    height: 3px;
+  }
 }

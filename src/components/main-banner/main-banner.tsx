@@ -1,5 +1,6 @@
 import styles from '../main-banner/main-banner.module.scss';
 import picturelogo from '../../../public/Mask group.png';
+import picturelogo_mobile from '../../../public/Mask group_394px.png';
 // import picturebackground from '../../../public/main_banner_picture.svg';
 import Image from 'next/image';
 
@@ -7,6 +8,7 @@ const MainBanner = () => {
   return (
     <div className={styles.mainbanner__wrapper}>
       <Image src={picturelogo} alt="background_main_banner" className={styles.mainbanner__logo} />
+      <Image src={picturelogo_mobile} alt="background_main_banner" className={styles.mainbanner__logo_mobile} />
 
       <div className={styles.mainbanner__background}></div>
       <div className={styles.mainbanner__container}>
