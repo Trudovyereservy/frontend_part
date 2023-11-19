@@ -2,8 +2,8 @@
 @import '../../styles/_mixins.scss';
 
 .card {
-  width: 360px;
-  height: 498px;
+  // width: 360px;
+  // height: 498px;
 }
 
 .card__image {
@@ -61,15 +61,15 @@
   transition: 0.3s ease-in-out;
 }
 
-@include tablet {
+@include laptop {
   .card__link {
     width: 176.3px;
   }
 }
 
-@include mobile {
+@include tablet {
   .card {
-    width: 300px;
+    // width: 300px;
   }
   .card__title {
     font-size: 14px;

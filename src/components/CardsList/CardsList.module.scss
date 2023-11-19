@@ -9,7 +9,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .cardslist__title {
@@ -29,7 +29,7 @@
   list-style-type: none;
 }
 
-@include tablet {
+@include laptop {
   .cardslist {
     max-width: 1024px;
     padding: 40px 42px 100px 42px;
@@ -42,10 +42,19 @@
   }
 }
 
+@include tablet{
+  .cardslist {
+    padding: 20px 2% 69px 2%;
+  }
+  .cardslist__container {
+    gap: 2vw;
+  }
+}
+
 @include mobile {
   .cardslist {
     max-width: 394px;
-    padding: 20px 47px 69px 46px;
+    padding: 20px 47px 69px 47px;
   }
   .cardslist__title {
     font-size: 34px;
