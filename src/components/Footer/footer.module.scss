@@ -1,11 +1,148 @@
-.footer__container {
-    background-color: antiquewhite;
-    height: 150px;
-    // flex: 0 0 auto;
-    // text-align: center;
-    display: flex;
+@import '../../styles/variables';
 
-    justify-content: center;
+.footer__container {
+  background-color: $bg-color-blue;
+  height: 324px;
+  // max-width: 1440px;
+  // max-width: 1440px;
+  display: flex;
+  border: red 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__wrapper {
+  width: calc(100% - 1160px / 4 + 10px);
+
+  // width: 100%;
+  // height: 100%;
+  border: green 2px solid;
+  // padding: 62px 45px 32px;
+  // margin: 62px 45px 32px;
+  margin: 62px 45px 32px;
+
+}
+
+.footer__logo {
+  background-image: url('../../../public/logo.svg');
+  width: 53px;
+  height: 53px;
+}
+
+.footer__social {
+  display: flex;
+  width: 125px;
+  height: 25px;
+  gap: 18px;
+}
+
+.footer__social_twitter {
+  background-image: url('../../../public/twitter-brands.svg');
+  width: 22px;
+  height: 21px;
+}
+
+.footer__social_facebook {
+  background-image: url('../../../public/facebook-square-brands.svg');
+  width: 18px;
+  height: 21px;
+  color: aquamarine;
+}
+
+.footer__social_icon {
+}
+
+.footer__contacts {
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
     align-items: center;
-    
+}
+
+
+.footer__adress {
+    display: flex;
+    gap: 15px;
+}
+
+
+.footer__input_phone {
+    width: 249px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px $bg-color-white solid;
+    border-radius: 30px;
+    padding-left: 25px;
+}
+
+.footer__input_phone::placeholder {
+    color: $bg-color-white;
+}
+
+.footer__phone_number {
+    display: flex;
+    gap: 13px;
+    color: $bg-color-white;
+    font-size: 14px;
+}
+
+.footer__button {
+    width: 176px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: $bg-color-red;
+    color: $bg-color-white;
+    font-size: 15px;
+}
+
+.footer__contacts_item {
+    color: $bg-color-white;
+    font-size: 14px;
+}
+
+
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__container {
+  color: $bg-color-white;
+}
+
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__about_title {
+  max-width: 286px;
+  font-size: 20px;
+}
+
+.footer__about_subtitle {
+  max-width: 286px;
+  font-size: 15px;
+  line-height: 25.53px;
+}
+
+.footer__menu {
+  display: flex;
+  gap: 27px;
+}
+
+.footer__list {
+  width: 133px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__list_title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
 }
