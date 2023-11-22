@@ -1,17 +1,16 @@
 @import '../../styles/variables';
+@import '../../styles/_mixins.scss';
 
 .footer__container {
   background-color: $bg-color-blue;
   height: 327px;
   display: flex;
-  // border: red 2px solid;
   justify-content: center;
   align-items: center;
 }
 
 .footer__wrapper {
   width: calc(100% - 1160px / 4 + 10px);
-  // border: green 2px solid;
   margin: 40px 45px 32px;
 }
 
@@ -46,65 +45,59 @@
 }
 
 .footer__contacts {
-    display: flex;
-    // padding-top: 10px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .footer__adress {
   margin-top: 20px;
-    display: flex;
-    gap: 36px;
-    margin-left: 100px;
-    max-width: 30px;
+  display: flex;
+  gap: 36px;
+  margin-left: 100px;
+  max-width: 30px;
 }
 
-
 .footer__input_phone {
-    width: 249px;
-    height: 50px;
-    background-color: transparent;
-    border: 1px $bg-color-white solid;
-    border-radius: 30px;
-    padding-left: 25px;
+  width: 249px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px $bg-color-white solid;
+  border-radius: 30px;
+  padding-left: 25px;
 }
 
 .footer__input_phone::placeholder {
-    color: $bg-color-white;
+  color: $bg-color-white;
 }
 
 .footer__phone_number {
   margin-right: 2px;
-    display: flex;
-    gap: 13px;
-    color: $bg-color-white;
-    font-size: 14px;
+  display: flex;
+  gap: 13px;
+  color: $bg-color-white;
+  font-size: 14px;
 }
 
 .footer__button {
-    width: 176px;
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    background-color: $bg-color-red;
-    color: $bg-color-white;
-    font-size: 15px;
+  width: 176px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background-color: $bg-color-red;
+  color: $bg-color-white;
+  font-size: 15px;
 }
 
 .footer__contacts_item {
-    color: $bg-color-white;
-    font-size: 14px;
+  color: $bg-color-white;
+  font-size: 14px;
 }
-
-
 
 .footer__links {
   display: flex;
   justify-content: space-between;
   min-height: 178px;
-
 }
 
 .footer__container {
@@ -138,7 +131,8 @@
   width: 113px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  list-style: none;
 }
 
 .footer__list_title {
@@ -149,5 +143,19 @@
 
 .footer__list_item {
   font-size: 15px;
-  line-height: 25,53;
+  line-height: 25, 53;
+}
+
+@include desktop {
+  .footer__wrapper {
+    // width: calc(100% - 1160px / 4 + 10px);
+    width: calc(100% - 400px / 4 + 16px);
+    margin: 40px 15px 32px;
+  }
+
+  .footer__adress {
+    // gap: 36px;
+    margin-left: 0px;
+    // max-width: 30px;
+  }
 }

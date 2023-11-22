@@ -1,4 +1,5 @@
 import styles from './footer.module.scss';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -12,32 +13,83 @@ const Footer = () => {
               Пример текста пример текста пример текста пример текста пример текста пример текста{' '}
             </p>
           </div>
-
-          <div className={styles.footer__menu}>
-            <div className={styles.footer__list}>
-              <h3 className={styles.footer__list_title}>Пример</h3>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-            </div>
-            <div className={styles.footer__list}>
-              <h3 className={styles.footer__list_title}>Пример</h3>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-            </div>
-            <div className={styles.footer__list}>
-              <h3 className={styles.footer__list_title}>Пример</h3>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-              <p className={styles.footer__list_item}>Пример</p>
-            </div>
-          </div> 
-{/* } */}
-
+          <nav className={styles.footer__menu}>
+            <ul className={styles.footer__list}>
+              <li>
+                <h3 className={styles.footer__list_title}>Пример</h3>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+            </ul>
+            <ul className={styles.footer__list}>
+              <li>
+                <h3 className={styles.footer__list_title}>Пример</h3>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+            </ul>
+            <ul className={styles.footer__list}>
+              <li>
+                <h3 className={styles.footer__list_title}>Пример</h3>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.footer__list_item}>
+                  Пример
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <div className={styles.footer__contacts}>
