@@ -56,6 +56,20 @@
   display: block;
 }
 
+@include laptop {
+  .faqitem__wrapper {
+    padding: 26px 60px 26px 58px;
+  }
+
+  .faqitem__wrapper_open {
+    padding: 30px 60px 10px 58px;
+  }
+
+  .faqitem__paragraph {
+    padding: 0 60px 20px 58px;
+  }
+}
+
 @include mobile {
   .faqitem__title {
     font-size: 14px;
