@@ -41,9 +41,6 @@
   color: aquamarine;
 }
 
-.footer__social_icon {
-}
-
 .footer__contacts {
   display: flex;
   justify-content: space-between;
@@ -148,14 +145,46 @@
 
 @include desktop {
   .footer__wrapper {
-    // width: calc(100% - 1160px / 4 + 10px);
     width: calc(100% - 400px / 4 + 16px);
     margin: 40px 15px 32px;
   }
 
   .footer__adress {
-    // gap: 36px;
-    margin-left: 0px;
-    // max-width: 30px;
+    margin-left: 0;
   }
 }
+
+@include laptop {
+  .footer__wrapper {
+    // width: calc(100% - 1160px / 4 + 10px);
+    margin: 62px 42px 33px;
+  }
+
+  .footer__adress {
+    margin-top: 12px;
+    margin-left: 45px;
+  }
+
+  .footer__menu {
+    display: flex;
+    gap: 47px;
+    margin-top: 7px;
+    margin-right: 27px;
+  }
+
+  .footer__list {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 950px) {
+  .footer__phone_number {
+    // align-self: flex-end;
+  }
+
+  .footer__adress {
+    margin-right: 200px;
+    // order: 0;
+  }
+}
+
