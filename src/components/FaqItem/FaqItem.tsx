@@ -1,8 +1,9 @@
 'use client';
+import { FaqItemProps } from './FaqItem.props';
 import styles from './FaqItem.module.scss';
 import { useState } from 'react';
 
-const FaqItem = () => {
+const FaqItem = (faqItems: FaqItemProps) => {
   const [isItemOpened, setIsItemOpened] = useState(false);
   const handleOpenItem = () => {
     setIsItemOpened(!isItemOpened);
@@ -13,7 +14,7 @@ const FaqItem = () => {
       <div
         className={`${styles.faqitem__wrapper} ${isItemOpened ? styles.faqitem__wrapper_open : ''}`}
       >
-        <h3 className={styles.faqitem__title}>Пример текста</h3>
+        <h3 className={styles.faqitem__title}>{faqItems.title}</h3>
         <button
           className={`${styles.faqitem__button} ${
             isItemOpened ? styles.faqitem__button_active : ''
@@ -26,11 +27,7 @@ const FaqItem = () => {
           isItemOpened ? styles.faqitem__paragraph_open : ''
         } `}
       >
-        Пример текста пример текста пример текста пример текста пример текста пример текста пример
-        текста пример текста пример текста пример текста пример текста пример текста пример текста
-        пример текста пример текста пример текста пример текста пример текста пример текста пример
-        текста пример текста пример текста пример текста пример текста пример текста пример текста
-        пример текста пример текста пример текста пример текста пример текста
+        {faqItems.text}
       </p>
     </li>
   );

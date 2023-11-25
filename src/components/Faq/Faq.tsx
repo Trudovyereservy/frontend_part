@@ -1,17 +1,17 @@
-import styles from "./Faq.module.scss"
-import { FaqItem } from "../FaqItem/FaqItem"
-
+import styles from './Faq.module.scss';
+import { FaqItem } from '../FaqItem/FaqItem';
+import { testFaqItems } from '../../utils/constants';
 const Faq = () => {
-    return(
-        <section className={styles.faq}>
-            <h2 className={styles.faq__title}>Пример текста</h2>
-            <ul className={styles.faq__container}>
-                <FaqItem />
-                <FaqItem />
-                <FaqItem />
-            </ul>
-        </section>
-    )
-}
+  return (
+    <section className={styles.faq}>
+      <h2 className={styles.faq__title}>Пример текста</h2>
+      <ul className={styles.faq__container}>
+        {testFaqItems.map( (elem) => (
+          <FaqItem title={elem.title} text={elem.text} key={elem.id}/>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
-export { Faq }
+export { Faq };
