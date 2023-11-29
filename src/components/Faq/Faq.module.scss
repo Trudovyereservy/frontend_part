@@ -36,10 +36,10 @@
 }
 @include mobile {
   .faq {
-    padding: 20px 46px 100px 48px;
+    padding: 15px 46px 100px 48px
   }
   .faq__title {
     display: block;
-
+    margin: 0 auto 35px;
   }
 }
