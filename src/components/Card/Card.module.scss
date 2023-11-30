@@ -2,8 +2,7 @@
 @import '../../styles/_mixins.scss';
 
 .card {
-  // width: 360px;
-  // height: 498px;
+
 }
 
 .card__image {
@@ -40,7 +39,7 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .card__link {
@@ -52,7 +51,7 @@
   color: #fff;
   text-align: center;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -65,19 +64,29 @@
   .card__link {
     width: 176.3px;
   }
+  .card__title {
+    letter-spacing: -0.3px;
+  }
+  .card__subtitle {
+    letter-spacing: -0.3px;
+  }
 }
 
 @include tablet {
-  .card {
-    // width: 300px;
-  }
   .card__title {
     font-size: 14px;
+    letter-spacing: -0.2px;
+    margin-bottom: 8px;
   }
   .card__subtitle {
-    font-size: 14px;
+    /*font-size: 14px;*/
+    display: none;
   }
   .card__text {
     font-size: 14px;
+    margin-bottom: 9px;
+  }
+  .card__link {
+    width: 220px;
   }
 }
