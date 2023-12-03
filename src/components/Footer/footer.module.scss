@@ -62,6 +62,13 @@
   border: 1px $bg-color-white solid;
   border-radius: 30px;
   padding-left: 25px;
+  background: none;
+  // border: none;
+  color: $bg-color-white;
+}
+
+.footer__input_phone:focus {
+
 }
 
 .footer__input_phone::placeholder {

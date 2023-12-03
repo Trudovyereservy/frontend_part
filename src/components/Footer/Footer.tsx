@@ -1,5 +1,6 @@
 import styles from './footer.module.scss';
 import Link from 'next/link';
+import { Button } from '../Button/Button';
 
 const Footer = () => {
   return (
@@ -118,6 +119,8 @@ const Footer = () => {
             <button type="submit" className={styles.footer__button}>
               Пример текста
             </button>
+            <Button className={styles.footer__button} disabled={false} active={true} onClick={() => console.log(123)}>Кнопкааа</Button> 
+
           </form>
         </div>
       </div>
