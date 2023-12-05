@@ -1,6 +1,9 @@
+'use client';
 import styles from './footer.module.scss';
 import Link from 'next/link';
 import { Button } from '../Button/Button';
+import { ButtonProps } from '../Button/Button.props';
+import { buttons } from '../../utils/constans';
 
 const Footer = () => {
   return (
@@ -9,9 +12,11 @@ const Footer = () => {
         <div className={styles.footer__links}>
           <div className={styles.footer__about}>
             <Link href="#">
-            <div className={styles.footer__logo}></div>
+              <div className={styles.footer__logo}></div>
             </Link>
-            <h3 className={`${styles.footer__about_title} ${styles.footer__hidden}`}>Пример текста</h3>
+            <h3 className={`${styles.footer__about_title} ${styles.footer__hidden}`}>
+              Пример текста
+            </h3>
             <p className={`${styles.footer__about_subtitle} ${styles.footer__hidden}`}>
               Пример текста пример текста пример текста пример текста пример текста пример текста{' '}
             </p>
@@ -98,29 +103,40 @@ const Footer = () => {
         <div className={styles.footer__contacts}>
           <div className={styles.footer__social}>
             <Link href="#">
-            <div
-              className={`${styles.footer__social_icon} ${styles.footer__social_facebook}`}
-            ></div>
+              <div
+                className={`${styles.footer__social_icon} ${styles.footer__social_facebook}`}
+              ></div>
             </Link>
             <Link href="#">
-            <div className={`${styles.footer__social_icon} ${styles.footer__social_twitter}`}></div>
+              <div
+                className={`${styles.footer__social_icon} ${styles.footer__social_twitter}`}
+              ></div>
             </Link>
           </div>
           <div className={styles.footer__adress}>
             <Link href="#">
-            <p className={styles.footer__contacts_item}>Пример</p>
+              <p className={styles.footer__contacts_item}>Пример</p>
             </Link>
             <Link href="#">
-            <p className={styles.footer__contacts_item}>Пример</p>
+              <p className={styles.footer__contacts_item}>Пример</p>
             </Link>
           </div>
           <form className={`${styles.footer__phone_number} ${styles.footer__hidden}`}>
             <input type="text" placeholder="Phone" className={styles.footer__input_phone} />
-            <button type="submit" className={styles.footer__button}>
+            {/* <button type="submit" className={styles.footer__button}>
               Пример текста
-            </button>
-            <Button className={styles.footer__button} disabled={false} active={true} onClick={() => console.log(123)}>Кнопкааа</Button> 
-
+            </button> */}
+            <Button
+              className={styles.footer__button}
+              disabled={false}
+              active={true}
+              // onClick={() => {console.log("!!!!");}}
+              onClick={() => {
+                console.log('Кнопка нажата!');
+              }}
+            >
+              {buttons[1].text}
+            </Button>
           </form>
         </div>
       </div>
