@@ -1,8 +1,11 @@
+'use client'
 import styles from '../main-banner/main-banner.module.scss';
 import picturelogo from '../../../public/Mask group.png';
 import picturelogo_mobile from '../../../public/Mask group_394px.png';
 // import picturebackground from '../../../public/main_banner_picture.svg';
 import Image from 'next/image';
+import { Button } from '../Button/Button';
+import { buttons } from '@/utils/constans';
 
 const MainBanner = () => {
   return (
@@ -20,7 +23,18 @@ const MainBanner = () => {
           Пример текста пример текста пример текста пример текста пример текста пример текста пример
           текста пример текста пример текста
         </p>
-        <button className={styles.mainbanner__button}>Пример текста</button>
+        {/* <button className={styles.mainbanner__button}>Пример текста</button> */}
+        <Button
+          className={styles.mainbanner__button}
+          disabled={false}
+          active={true}
+          // onClick={() => {console.log("!!!!");}}
+          onClick={() => {
+            console.log('Кнопка нажата!');
+          }}
+        >
+          {buttons[0].text}
+        </Button>
       </div>
     </div>
   );

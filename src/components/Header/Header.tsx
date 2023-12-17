@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 import styles from './header.module.scss';
+
 
 const Header = () => {
   return (
