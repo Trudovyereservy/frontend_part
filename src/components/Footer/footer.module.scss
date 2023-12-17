@@ -63,11 +63,8 @@
   border-radius: 30px;
   padding-left: 25px;
   background: none;
-  // border: none;
   color: $bg-color-white;
-}
-
-.footer__input_phone:focus {
+  outline: none;
 
 }
 
@@ -76,6 +73,7 @@
 }
 
 .footer__phone_number {
+  position: relative;
   margin-right: 2px;
   display: flex;
   gap: 13px;
@@ -91,6 +89,12 @@
   background-color: $bg-color-red;
   color: $bg-color-white;
   font-size: 15px;
+}
+
+.footer__button:disabled {
+  // background-color: aqua;
+  background-color: $bg-color-dark_red;
+  
 }
 
 .footer__contacts_item {
@@ -139,6 +143,10 @@
   list-style: none;
 }
 
+.footer__list_row {
+  display: flex;
+}
+
 .footer__list_title {
   font-size: 15px;
   font-weight: 600;
@@ -148,6 +156,16 @@
 .footer__list_item {
   font-size: 15px;
   line-height: 25, 53;
+}
+
+.footer__form_error {
+  position: absolute;
+  color: $bg-color-red;
+  font-size: 14px;
+  top: 55px;
+  left: 25px;
+  
+
 }
 
 @include desktop {
@@ -285,5 +303,5 @@
 
   .footer__about {
     margin-left: 5px;
-  }
+  } 
 }

@@ -2,10 +2,20 @@
 import styles from './footer.module.scss';
 import Link from 'next/link';
 import { Button } from '../Button/Button';
-import { ButtonProps } from '../Button/Button.props';
 import { buttons } from '../../utils/constans';
+import { useState } from 'react';
+import { Input } from '../Input/Input';
+import { useForm } from 'react-hook-form';
+import { Links } from '../Links/Links';
 
 const Footer = () => {
+  // const [errors, setErrors] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({ mode: 'onChange' });
+
   return (
     <footer className={styles.footer__container}>
       <div className={styles.footer__wrapper}>
@@ -22,7 +32,7 @@ const Footer = () => {
             </p>
           </div>
           <nav className={styles.footer__menu}>
-            <ul className={styles.footer__list}>
+            {/* <ul className={styles.footer__list}>
               <li>
                 <h3 className={styles.footer__list_title}>Пример</h3>
               </li>
@@ -46,8 +56,45 @@ const Footer = () => {
                   Пример
                 </Link>
               </li>
+            </ul> */}
+
+            <ul className={styles.footer__list_row}>
+              {buttons[0].map((link) => (
+                <Links
+                  key={link.id}
+                  title={link.title}
+                  text={link.text}
+                  linkUrl={link.linkUrl}
+                  linkText={link.linkText}
+                />
+              ))}
             </ul>
+
+            {/* <ul className={styles.footer__list}>
+              {buttons[1].map((link) => (
+                <Links
+                  key={link.id}
+                  title={link.text}
+                  text={link.text}
+                  linkUrl={link.linkUrl}
+                  linkText={link.linkText}
+                />
+              ))}
+            </ul>
+
             <ul className={styles.footer__list}>
+              {buttons[2].map((link) => (
+                <Links
+                  key={link.id}
+                  title={link.text}
+                  text={link.text}
+                  linkUrl={link.linkUrl}
+                  linkText={link.linkText}
+                />
+              ))}
+            </ul> */}
+
+            {/* <ul className={styles.footer__list}>
               <li>
                 <h3 className={styles.footer__list_title}>Пример</h3>
               </li>
@@ -96,7 +143,7 @@ const Footer = () => {
                   Пример
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </nav>
         </div>
 
@@ -121,22 +168,27 @@ const Footer = () => {
               <p className={styles.footer__contacts_item}>Пример</p>
             </Link>
           </div>
-          <form className={`${styles.footer__phone_number} ${styles.footer__hidden}`}>
-            <input type="text" placeholder="Phone" className={styles.footer__input_phone} />
-            {/* <button type="submit" className={styles.footer__button}>
-              Пример текста
-            </button> */}
+          <form
+            className={`${styles.footer__phone_number} ${styles.footer__hidden}`}
+            onSubmit={handleSubmit((data) => {
+              console.log(data);
+            })}
+          >
+            <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
             <Button
               className={styles.footer__button}
-              disabled={false}
+              disabled={!isValid}
               active={true}
-              // onClick={() => {console.log("!!!!");}}
               onClick={() => {
                 console.log('Кнопка нажата!');
               }}
             >
-              {buttons[1].text}
+              {buttons[0][1].text}
             </Button>
+            {/* {!isValid ? <div className={styles.footer__form_error}>Введите номер телефона</div> : ''} */}
+            <div className={styles.footer__form_error}>
+              {errors?.Phone && <p>{errors?.Phone?.message || 'Введите номер телефона'}</p>}
+            </div>
           </form>
         </div>
       </div>

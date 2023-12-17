@@ -1,31 +1,76 @@
 const buttons = [
-  {
-    //   title: 'Пример текста пример текста пример текста пример текста',
-    //   subtitle: 'Пример текста',
-    text: 'Пример текста 1',
-    //   linkUrl: '#',
-    //   linkText: 'Пример текста',
-    //   imgUrl: '/sports-teacher-in-gym-class 1.jpg',
-    id: 0,
-  },
-  {
-    //   title: 'Пример текста пример текста пример текста пример текста',
-    //   subtitle: 'Пример текста',
-    text: 'Пример текста 2',
-    //   linkUrl: '#',
-    //   linkText: 'Пример текста',
-    //   imgUrl: '/sports-teacher-in-gym-class 1.jpg',
-    id: 1,
-  },
-  {
-    //   title: 'Пример текста пример текста пример текста пример текста',
-    //   subtitle: 'Пример текста',
-    text: 'Пример текста 3',
-    //   linkUrl: '#',
-    //   linkText: 'Пример текста',
-    //   imgUrl: '/sports-teacher-in-gym-class 1.jpg',
-    id: 2,
-  },
+  [
+    {
+      title: 'Пример',
+      text: 'Пример1',
+      id: 0,
+      linkText: 'Ссылка1',
+      linkUrl: '#',
+    },
+    {
+      title: 'Пример',
+      text: 'Пример2',
+      id: 1,
+      linkText: 'Ссылка2',
+      linkUrl: '#',
+    },
+    {
+      title: 'Пример',
+      text: 'Пример3',
+      id: 2,
+      linkText: 'Ссылка3',
+      linkUrl: '#',
+    },
+    
+  ],
+
+  [
+    {
+      text: 'Пример4',
+      title: 'Пример',
+      id: 0,
+      linkText: '',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример5',
+      title: 'Пример',
+      id: 1,
+      linkText: '',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример6',
+      title: 'Пример',
+      id: 2,
+      linkText: '',
+      linkUrl: '#',
+    },
+  ],
+
+  [
+    {
+      text: 'Пример7',
+      title: 'Пример',
+      id: 0,
+      linkText: '',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример8',
+      title: 'Пример',
+      id: 1,
+      linkText: '',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример9',
+      title: 'Пример',
+      id: 2,
+      linkText: '',
+      linkUrl: '#',
+    },
+  ],
 ];
 
 export { buttons };
