@@ -37,6 +37,13 @@
   margin-right: 72px;
 }
 
+.header__navigate_links {
+  list-style: none;
+  display: flex;
+  gap: 31px;
+
+}
+
 .burger {
   background-color: transparent;
   border: none;
@@ -102,6 +109,10 @@
 @include netbook {
   .header__navigate {
     gap: 20px;
+  }
+
+  .header__navigate_links {
+    gap: 15px;
   }
 
   .header__navitem {

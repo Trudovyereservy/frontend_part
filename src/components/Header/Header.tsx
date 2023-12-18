@@ -1,32 +1,39 @@
 'use client';
 import Link from 'next/link';
 import styles from './header.module.scss';
-
+import { headerLinks } from '@/utils/constans';
+import { LinksHeader } from './LinksHeader/LinksHeader';
+import  Menu  from '@/components/Menu/Menu';
+import { useState } from 'react';
 
 const Header = () => {
+  const [closeMenu, setCloseMenu] = useState(false);
+  
+  const handleToggleMenu = () => {
+    setCloseMenu(!closeMenu);
+  }
+
   return (
     <header className={styles.header__container}>
-      {/* <div className={styles.header__wrapper}></div> */}
       <Link className={styles.header__navitem} href="/">
         <div className={styles.header__logo}></div>
       </Link>
       <nav className={styles.header__navigate}>
-        <Link className={`${styles.header__navitem} ${styles.header__navhidden}`} href="/blog">
-          Блог
-        </Link>
-        <Link className={`${styles.header__navitem} ${styles.header__navhidden}`} href="/coachs">
-          Тренерский состав
-        </Link>
-        <Link className={`${styles.header__navitem} ${styles.header__navhidden}`} href="/news">
-          Новости
-        </Link>
-        <Link className={`${styles.header__navitem} ${styles.header__navhidden}`} href="/contacts">
-          Контакты
-        </Link>
+      <ul className={styles.header__navigate_links}>
+        {headerLinks.map((link) => (
+          <LinksHeader key={link.id} title={link.title} href={link.href} />
+        ))}
+
         <button className={styles.burger} type="button">
           <span className={styles.burger__icon}></span>
         </button>
+        </ul>
       </nav>
+
+
+      {/* В какой компонент встатвить бургер меню?! */}
+
+      {/* <Menu handler={closeMenu} handleToggleMenu={handleToggleMenu} /> */}
     </header>
   );
 };

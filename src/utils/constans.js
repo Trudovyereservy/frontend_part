@@ -1,76 +1,91 @@
 const buttons = [
   [
     {
-      title: 'Пример',
       text: 'Пример1',
       id: 0,
-      linkText: 'Ссылка1',
+      linkText: 'Пример1',
       linkUrl: '#',
     },
     {
-      title: 'Пример',
       text: 'Пример2',
       id: 1,
-      linkText: 'Ссылка2',
+      linkText: 'Пример2',
       linkUrl: '#',
     },
     {
-      title: 'Пример',
       text: 'Пример3',
       id: 2,
-      linkText: 'Ссылка3',
-      linkUrl: '#',
-    },
-    
-  ],
-
-  [
-    {
-      text: 'Пример4',
-      title: 'Пример',
-      id: 0,
-      linkText: '',
+      linkText: 'Пример3',
       linkUrl: '#',
     },
     {
-      text: 'Пример5',
-      title: 'Пример',
-      id: 1,
-      linkText: '',
-      linkUrl: '#',
-    },
-    {
-      text: 'Пример6',
-      title: 'Пример',
+      text: 'Пример3',
       id: 2,
-      linkText: '',
+      linkText: 'Пример4',
       linkUrl: '#',
     },
   ],
 
   [
     {
-      text: 'Пример7',
-      title: 'Пример',
+      text: 'Пример1',
       id: 0,
-      linkText: '',
+      linkText: 'Пример5',
       linkUrl: '#',
     },
     {
-      text: 'Пример8',
-      title: 'Пример',
+      text: 'Пример2',
       id: 1,
-      linkText: '',
+      linkText: 'Пример6',
       linkUrl: '#',
     },
     {
-      text: 'Пример9',
-      title: 'Пример',
+      text: 'Пример3',
       id: 2,
-      linkText: '',
+      linkText: 'Пример7',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример3',
+      id: 2,
+      linkText: 'Пример8',
+      linkUrl: '#',
+    },
+  ],
+
+  [
+    {
+      text: 'Пример1',
+      id: 0,
+      linkText: 'Пример9',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример2',
+      id: 1,
+      linkText: 'Пример10',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример3',
+      id: 2,
+      linkText: 'Пример11',
+      linkUrl: '#',
+    },
+    {
+      text: 'Пример3',
+      id: 2,
+      linkText: 'Пример12',
       linkUrl: '#',
     },
   ],
 ];
 
-export { buttons };
+const headerLinks = [
+  { id: 0, title: 'Блог', href: '/blog' },
+  { id: 1, title: 'Тренерский состав', href: '/coachs' },
+  { id: 2, title: 'Новости', href: '/news' },
+  { id: 3, title: 'Контакты', href: '/contacts' },
+];
+
+export { buttons, headerLinks };

@@ -3,13 +3,11 @@ import styles from './footer.module.scss';
 import Link from 'next/link';
 import { Button } from '../Button/Button';
 import { buttons } from '../../utils/constans';
-import { useState } from 'react';
 import { Input } from '../Input/Input';
 import { useForm } from 'react-hook-form';
-import { Links } from '../Links/Links';
+import {LinksBlock} from '../Links/LinksBlock'
 
 const Footer = () => {
-  // const [errors, setErrors] = useState(false);
   const {
     register,
     handleSubmit,
@@ -32,118 +30,26 @@ const Footer = () => {
             </p>
           </div>
           <nav className={styles.footer__menu}>
-            {/* <ul className={styles.footer__list}>
-              <li>
-                <h3 className={styles.footer__list_title}>Пример</h3>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-            </ul> */}
-
-            <ul className={styles.footer__list_row}>
+           
+            <ul className={styles.footer__list}>
+            <h3 className={styles.footer__list_title}>Пример</h3>
               {buttons[0].map((link) => (
-                <Links
-                  key={link.id}
-                  title={link.title}
-                  text={link.text}
-                  linkUrl={link.linkUrl}
-                  linkText={link.linkText}
-                />
-              ))}
-            </ul>
-
-            {/* <ul className={styles.footer__list}>
-              {buttons[1].map((link) => (
-                <Links
-                  key={link.id}
-                  title={link.text}
-                  text={link.text}
-                  linkUrl={link.linkUrl}
-                  linkText={link.linkText}
-                />
+                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
               ))}
             </ul>
 
             <ul className={styles.footer__list}>
-              {buttons[2].map((link) => (
-                <Links
-                  key={link.id}
-                  title={link.text}
-                  text={link.text}
-                  linkUrl={link.linkUrl}
-                  linkText={link.linkText}
-                />
+            <h3 className={styles.footer__list_title}>Пример</h3>
+              {buttons[1].map((link) => (
+                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
               ))}
-            </ul> */}
-
-            {/* <ul className={styles.footer__list}>
-              <li>
-                <h3 className={styles.footer__list_title}>Пример</h3>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
             </ul>
-            <ul className={`${styles.footer__list} ${styles.footer__hidden}`}>
-              <li>
-                <h3 className={styles.footer__list_title}>Пример</h3>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.footer__list_item}>
-                  Пример
-                </Link>
-              </li>
-            </ul> */}
+            <ul className={styles.footer__list}>
+            <h3 className={styles.footer__list_title}>Пример</h3>
+              {buttons[2].map((link) => (
+                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
+              ))}
+            </ul>
           </nav>
         </div>
 
