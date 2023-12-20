@@ -2,8 +2,9 @@
 import { FaqItemProps } from './FaqItem.props';
 import styles from './FaqItem.module.scss';
 import { useState } from 'react';
+import classNames from 'classnames';
 
-const FaqItem = (faqItems: FaqItemProps) => {
+const FaqItem = ({ title, text }: FaqItemProps) => {
   const [isItemOpened, setIsItemOpened] = useState(false);
   const handleOpenItem = () => {
     setIsItemOpened(!isItemOpened);
@@ -12,9 +13,11 @@ const FaqItem = (faqItems: FaqItemProps) => {
   return (
     <li className={styles.faqitem}>
       <div
-        className={`${styles.faqitem__wrapper} ${isItemOpened ? styles.faqitem__wrapper_open : ''}`}
+        className={classNames(styles.faqitem__wrapper, {
+          [styles.faqitem__wrapper_open]: isItemOpened,
+        })}
       >
-        <h3 className={styles.faqitem__title}>{faqItems.title}</h3>
+        <h3 className={styles.faqitem__title}>{title}</h3>
         <button
           className={`${styles.faqitem__button} ${
             isItemOpened ? styles.faqitem__button_active : ''
@@ -23,11 +26,11 @@ const FaqItem = (faqItems: FaqItemProps) => {
         />
       </div>
       <p
-        className={`${styles.faqitem__paragraph} ${
-          isItemOpened ? styles.faqitem__paragraph_open : ''
-        } `}
+        className={classNames(styles.faqitem__paragraph, {
+          [styles.faqitem__paragraph_open]: isItemOpened,
+        })}
       >
-        {faqItems.text}
+        {text}
       </p>
     </li>
   );
