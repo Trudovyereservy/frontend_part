@@ -8,7 +8,9 @@ const Input = (props: InputProps) => {
       type="text"
       placeholder="Phone"
       className={className}
-      {...register(nameInput, { required: 'Введите телефон в формате +7-***-**-**' })}
+      {...register(nameInput, { required: 'Введите телефон в формате +7-***-**-**',  pattern: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/i })}
+      // {...register(nameInput, { required: 'Введите телефон в формате +7-***-**-**',  pattern: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/i })}
+      // {...register(nameInput, { required: 'Введите телефон в формате +7-***-**-**',  pattern: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/i })}
     />
   );
 };
