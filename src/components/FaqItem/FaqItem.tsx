@@ -19,9 +19,9 @@ const FaqItem = ({ title, text }: FaqItemProps) => {
       >
         <h3 className={styles.faqitem__title}>{title}</h3>
         <button
-          className={`${styles.faqitem__button} ${
-            isItemOpened ? styles.faqitem__button_active : ''
-          }`}
+          className={classNames(styles.faqitem__button, {
+            [styles.faqitem__button_active]: isItemOpened,
+          })}
           onClick={handleOpenItem}
         />
       </div>
