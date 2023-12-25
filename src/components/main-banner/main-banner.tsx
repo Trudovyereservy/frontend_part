@@ -5,7 +5,7 @@ import picturelogo_mobile from '../../../public/Mask group_394px.png';
 // import picturebackground from '../../../public/main_banner_picture.svg';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
-import { buttons } from '@/utils/constans';
+import { buttonsNames } from '@/utils/constans';
 
 const MainBanner = () => {
   return (
@@ -36,7 +36,7 @@ const MainBanner = () => {
             console.log('Кнопка нажата!');
           }}
         >
-          {buttons[0][0].text}
+          {buttonsNames.mainButtonFooter}
         </Button>
       </div>
     </div>

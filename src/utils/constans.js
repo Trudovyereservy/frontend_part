@@ -1,5 +1,5 @@
-const buttons = [
-  [
+const linksItems = {
+  exampleOne: [
     {
       text: 'Пример1',
       id: 0,
@@ -25,8 +25,7 @@ const buttons = [
       linkUrl: '#',
     },
   ],
-
-  [
+  exampleTwo: [
     {
       text: 'Пример1',
       id: 0,
@@ -53,7 +52,7 @@ const buttons = [
     },
   ],
 
-  [
+  exampleThree: [
     {
       text: 'Пример1',
       id: 0,
@@ -79,7 +78,12 @@ const buttons = [
       linkUrl: '#',
     },
   ],
-];
+};
+
+const buttonsNames = {
+  mainButtonHeader: 'Пример',
+  mainButtonFooter: 'Пример',
+};
 
 const headerLinks = [
   { id: 0, title: 'Блог', href: '/blog' },
@@ -88,4 +92,4 @@ const headerLinks = [
   { id: 3, title: 'Контакты', href: '/contacts' },
 ];
 
-export { buttons, headerLinks };
+export { linksItems, buttonsNames, headerLinks };

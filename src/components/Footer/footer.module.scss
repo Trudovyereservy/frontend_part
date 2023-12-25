@@ -65,7 +65,6 @@
   background: none;
   color: $bg-color-white;
   outline: none;
-
 }
 
 .footer__input_phone::placeholder {
@@ -94,7 +93,6 @@
 .footer__button:disabled {
   // background-color: aqua;
   background-color: $bg-color-dark_red;
-  
 }
 
 .footer__contacts_item {
@@ -166,8 +164,6 @@
   font-size: 14px;
   top: 55px;
   left: 25px;
-  
-
 }
 
 @include desktop {
@@ -247,14 +243,14 @@
   .footer__container {
     height: 294px;
     justify-content: flex-start;
-    align-items: initial; 
+    align-items: initial;
   }
 
   .footer__wrapper {
     margin: 45px 43px 53px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start
+    justify-content: flex-start;
   }
 
   .footer__social {
@@ -291,7 +287,6 @@
   .footer__list {
     gap: 0px;
     max-width: 80px;
-    
   }
 
   .footer__list_item {
@@ -305,5 +300,5 @@
 
   .footer__about {
     margin-left: 5px;
-  } 
+  }
 }

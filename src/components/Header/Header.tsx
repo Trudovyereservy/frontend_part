@@ -7,10 +7,10 @@ import  Menu  from '@/components/Menu/Menu';
 import { useState } from 'react';
 
 const Header = () => {
-  const [closeMenu, setCloseMenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const handleToggleMenu = () => {
-    setCloseMenu(!closeMenu);
+    setIsMenuOpen(isMenuOpen => !isMenuOpen);
   }
 
   return (
@@ -24,7 +24,7 @@ const Header = () => {
           <LinksHeader key={link.id} title={link.title} href={link.href} />
         ))}
 
-        <button className={styles.burger} type="button">
+        <button className={styles.burger} type="button" onClick={handleToggleMenu}>
           <span className={styles.burger__icon}></span>
         </button>
         </ul>
@@ -33,7 +33,7 @@ const Header = () => {
 
       {/* В какой компонент встатвить бургер меню?! */}
 
-      {/* <Menu handler={closeMenu} handleToggleMenu={handleToggleMenu} /> */}
+      <Menu handler={isMenuOpen} handleToggleMenu={handleToggleMenu} />
     </header>
   );
 };
