@@ -1,0 +1,180 @@
+$primary: #003263;
+$subtitle: #545454;
+$button: #d1172c;
+$button_text: #fff;
+
+.form {
+  margin: 4px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  height: 527px;
+  @media screen and (max-width: 1135px) {
+    height: 550px;
+    margin: 8px auto 0 auto;
+  }
+  @media screen and (max-width: 625px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 702px;
+    margin: 0 auto;
+  }
+
+  .form__header {
+    color: $primary;
+    font-family: var(--font-roboto);
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38.5px;
+    margin: 0;
+    display: none;
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    @media screen and (max-width: 625px) {
+        display: block;
+    }
+  }
+
+  .form__lines {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    max-width: 1440px;
+    z-index: -1;
+    @media screen and (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+  .form__photoContainer {
+    background-image: url('../../images/Children-1440.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    width: 457.15px;
+    height: 100%;
+    @media screen and (max-width: 1439px) {
+      background-image: url('../../images/Children-1024.svg');
+      width: 405.1px;
+      background-position: 0 79px;
+    }
+    @media screen and (max-width: 850px) {
+        background-image: url('../../images/Children-393.svg');
+        width: 294.3px;
+        height: 312.3px;
+        background-position: center;
+      }
+  }
+
+  .form__formContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+    margin-left: 96px;
+    @media screen and (max-width: 1135px) {
+        margin-left: 58px;
+        margin-top: 29px;
+    }
+    @media screen and (max-width: 850px) {
+        margin-left: 15px;
+    }
+    @media screen and (max-width: 625px) {
+        margin: 0;
+    }
+
+    p {
+      color: $subtitle;
+      font-family: var(--font-roboto);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      width: 400px;
+      height: 55px;
+      margin: 0;
+      @media screen and (max-width: 625px) {
+        display: none;
+      }
+    }
+    h2 {
+      color: $primary;
+      font-family: var(--font-roboto);
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 98px;
+      margin: 0;
+      @media screen and (max-width: 1135px) {
+        font-size: 55px;
+        line-height: 71px;
+        margin-bottom: 7px;
+      }
+      @media screen and (max-width: 850px) {
+        font-size: 34px;
+        line-height: 38.5px;
+        margin-bottom: 7px;
+      }
+      @media screen and (max-width: 625px) {
+        display: none;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 22px;
+      @media screen and (max-width: 625px) {
+        margin-top: 13px;
+      }
+
+      input {
+        border-radius: 30px;
+        border: 1px solid $primary;
+        width: 525px;
+        height: 46px;
+        padding-left: 31px;
+        margin-bottom: 15px;
+        @media screen and (max-width: 1135px) {
+            padding-left: 25px;
+            width: 431px;
+        }
+        @media screen and (max-width: 850px) {
+            padding-left: 16px;
+            width: 280px;
+        }
+      }
+      input::placeholder {
+        color: $primary;
+        font-family: var(--font-inter);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 1;
+      }
+      button {
+        background-color: $button;
+        color: $button_text;
+        border-radius: 30px;
+        width: 211.2px;
+        font-family: var(--font-roboto);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: normal;
+        padding: 16px 35px;
+        border: none;
+        margin-top: 5px;
+        @media screen and (max-width: 1135px){ 
+            font-weight: 500;
+            padding: 16px 0;
+            width: 173.5px;
+        }
+        @media screen and (max-width: 850px) {
+            width: 220px;
+        }
+      }
+    }
+  }
+}
