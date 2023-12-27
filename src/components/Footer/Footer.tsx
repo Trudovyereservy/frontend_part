@@ -5,7 +5,7 @@ import { Button } from '../Button/Button';
 import { linksItems, buttonsNames } from '../../utils/constans';
 import { Input } from '../Input/Input';
 import { useForm } from 'react-hook-form';
-import {LinksBlock} from '../Links/LinksBlock';
+import { LinksBlock } from '../Links/LinksBlock';
 
 const Footer = () => {
   const {
@@ -14,17 +14,16 @@ const Footer = () => {
     formState: { errors, isValid },
   } = useForm({ mode: 'onChange' });
 
-
   const createLinks = (index: number, sectionName: string, linksItems: object) => {
     return (
       <ul key={index} className={styles.footer__list}>
-  <h3 className={styles.footer__list_title}>{sectionName}</h3>
-  {linksItems.map((link) => (
-    <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
-  ))}
-</ul>
-    )
-  }
+        <h3 className={styles.footer__list_title}>{sectionName}</h3>
+        {linksItems.map((link) => (
+          <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
+        ))}
+      </ul>
+    );
+  };
 
   return (
     <footer className={styles.footer__container}>
@@ -42,28 +41,9 @@ const Footer = () => {
             </p>
           </div>
           <nav className={styles.footer__menu}>
-           
-            {/* <ul className={styles.footer__list}>
-            <h3 className={styles.footer__list_title}>Пример</h3>
-              {linksItems.exampleOne.map((link) => (
-                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
-              ))}
-            </ul> */}
             {createLinks(1, 'Список1', linksItems.exampleOne)}
             {createLinks(2, 'Список2', linksItems.exampleTwo)}
             {createLinks(3, 'Список3', linksItems.exampleThree)}
-            {/* <ul className={styles.footer__list}>
-            <h3 className={styles.footer__list_title}>Пример</h3>
-              {linksItems.exampleTwo.map((link) => (
-                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
-              ))}
-            </ul>
-            <ul className={styles.footer__list}>
-            <h3 className={styles.footer__list_title}>Пример</h3>
-              {linksItems.exampleThree.map((link) => (
-                <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
-              ))}
-            </ul> */}
           </nav>
         </div>
 
@@ -105,7 +85,6 @@ const Footer = () => {
             >
               {buttonsNames.mainButtonFooter}
             </Button>
-            {/* {!isValid ? <div className={styles.footer__form_error}>Введите номер телефона</div> : ''} */}
             <div className={styles.footer__form_error}>
               {errors?.Phone && <p>{errors?.Phone?.message || 'введите номер телефона'}</p>}
             </div>

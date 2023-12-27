@@ -92,4 +92,12 @@ const headerLinks = [
   { id: 3, title: 'Контакты', href: '/contacts' },
 ];
 
-export { linksItems, buttonsNames, headerLinks };
+const navLinksMenu = [
+  { id: 5, name: 'Главная', href: '/' },
+  { id: 1, name: 'Блог', href: '/blog' },
+  { id: 2, name: 'Тренерский состав', href: '/coachs' },
+  { id: 3, name: 'Новости', href: '/news' },
+  { id: 4, name: 'Контакты', href: '/contacts' },
+];
+
+export { linksItems, navLinksMenu, buttonsNames, headerLinks };
