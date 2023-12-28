@@ -1,8 +1,21 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Roboto, Inter } from 'next/font/google';
 import '../styles/globals.scss';
 
-const roboto = Roboto({ subsets: ['latin'], display: 'swap', variable: '--font-roboto', weight: ['400', '500', '700'] });
+const roboto = Roboto({
+  subsets: ['latin'],
+  style: 'normal',
+  display: 'swap',
+  variable: '--font-roboto',
+  weight: ['400', '500', '700'],
+});
+const inter = Inter({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'Трудовые резервы',
@@ -12,11 +25,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" className={roboto.variable}>
+    <html lang="ru" className={`${inter.variable} ${roboto.variable}`}>
       <body>
-        <div className='page__wrapper'>
-          {children}
-        </div>
+        <div className="page__wrapper">{children}</div>
       </body>
     </html>
   );
