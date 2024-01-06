@@ -1,3 +1,6 @@
+@import './variables';
+@import './mixins';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +18,7 @@ body {
   justify-content: center;
   max-width: 1440px;
   margin: 0 auto;
-
+  font-family: var(--font-roboto), sans-serif;
 }
 
 a {
@@ -23,7 +26,14 @@ a {
   text-decoration: none;
 }
 
+.page__wrapper {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
 .page {
   max-width: 1440px;
 }
-

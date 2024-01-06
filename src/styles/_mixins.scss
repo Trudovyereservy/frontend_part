@@ -10,6 +10,12 @@
     }
 }
 
+@mixin netbook() {
+    @media (max-width: $breakpoint_netbook) {
+        @content;
+    }
+}
+
 @mixin tablet() {
     @media (max-width: $breakpoint_tablet) {
         @content;
