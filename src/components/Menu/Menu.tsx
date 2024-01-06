@@ -3,6 +3,7 @@ import styles from './menu.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navLinksMenu } from '@/utils/constans';
+import classNames from 'classnames';
 
 const Menu = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
@@ -10,12 +11,11 @@ const Menu = ({ handler, handleToggleMenu }) => {
   };
 
   const pathName = usePathname();
-  
 
   return (
     <section className={`${styles.menu} ${handler ? `${styles.menu_active}` : ''}`}>
       <div
-        className={`${styles.menu__overlay} ${handler ? `${styles.menu__overlay_active}` : ''}`}
+        className={classNames(styles.menu__overlay, {[styles.menu__overlay_active]: handler})}
       ></div>
       <section className={styles.menu__container}>
         <button className={styles.menu__button_close} type="button" onClick={closeMenu}></button>
@@ -25,7 +25,7 @@ const Menu = ({ handler, handleToggleMenu }) => {
               const isActive = pathName === link.href;
               return (
                 <Link
-                  className={isActive ? `${styles.menu__link_active} ${styles.menu__link}` : `${styles.menu__link}`}
+                  className={classNames(styles.menu__link, {[styles.menu__link_active]: isActive})}
                   onClick={closeMenu}
                   href={link.href}
                   key={link.id}

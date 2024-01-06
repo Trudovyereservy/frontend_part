@@ -16,10 +16,6 @@ export default function Home() {
   return (
     <div className={styles.mainbanner__wrapper}>
       <MainBanner />
-
-       {/* В какой компонент встатвить бургер меню?! */}
-
-      {/* <Menu handler={closeMenu} handleToggleMenu={handleToggleMenu} /> */}
     </div>
   );
 }

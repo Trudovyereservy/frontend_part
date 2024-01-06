@@ -6,6 +6,7 @@ import { linksItems, buttonsNames } from '../../utils/constans';
 import { Input } from '../Input/Input';
 import { useForm } from 'react-hook-form';
 import { LinksBlock } from '../Links/LinksBlock';
+import classNames from 'classnames';
 
 const Footer = () => {
   const {
@@ -33,10 +34,10 @@ const Footer = () => {
             <Link href="#">
               <div className={styles.footer__logo}></div>
             </Link>
-            <h3 className={`${styles.footer__about_title} ${styles.footer__hidden}`}>
+            <h3 className={classNames(styles.footer__about_title, styles.footer__hidden)}>
               Пример текста
             </h3>
-            <p className={`${styles.footer__about_subtitle} ${styles.footer__hidden}`}>
+            <p className={classNames(styles.footer__about_subtitle, styles.footer__hidden)}>
               Пример текста пример текста пример текста пример текста пример текста пример текста{' '}
             </p>
           </div>
@@ -51,12 +52,12 @@ const Footer = () => {
           <div className={styles.footer__social}>
             <Link href="#">
               <div
-                className={`${styles.footer__social_icon} ${styles.footer__social_facebook}`}
+                className={classNames(styles.footer__social_icon, styles.footer__social_facebook)}
               ></div>
             </Link>
             <Link href="#">
               <div
-                className={`${styles.footer__social_icon} ${styles.footer__social_twitter}`}
+                className={classNames(styles.footer__social_icon, styles.footer__social_twitter)}
               ></div>
             </Link>
           </div>
@@ -69,7 +70,7 @@ const Footer = () => {
             </Link>
           </div>
           <form
-            className={`${styles.footer__phone_number} ${styles.footer__hidden}`}
+            className={classNames(styles.footer__phone_number, styles.footer__hidden)}
             onSubmit={handleSubmit((data) => {
               console.log(data);
             })}
