@@ -1,10 +1,8 @@
 'use client';
 import styles from './page.module.scss';
-// import '../components/main-banner/'
 import { useState } from 'react';
-
 import { MainBanner } from '@/components/main-banner/main-banner';
-import Menu from '@/components/Menu/Menu';
+import { Faq } from "@/components/Faq/Faq";
 
 export default function Home() {
   const [closeMenu, setCloseMenu] = useState(false);
@@ -14,8 +12,9 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.mainbanner__wrapper}>
+    <main className={styles.mainbanner__wrapper}>
       <MainBanner />
-    </div>
+      <Faq />
+    </main>
   );
 }
