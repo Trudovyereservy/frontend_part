@@ -17,7 +17,7 @@ const Footer = () => {
 
   const createLinks = (index: number, sectionName: string, linksItems: object) => {
     return (
-      <ul key={index} className={styles.footer__list}>
+      <ul key={index} className={styles.footer__list} >
         <h3 className={styles.footer__list_title}>{sectionName}</h3>
         {linksItems.map((link) => (
           <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />

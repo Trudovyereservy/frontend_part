@@ -73,7 +73,7 @@
 
 .footer__phone_number {
   position: relative;
-  margin-right: 2px;
+  // margin-right: 2px;
   display: flex;
   gap: 13px;
   color: $bg-color-white;
@@ -91,7 +91,6 @@
 }
 
 .footer__button:disabled {
-  // background-color: aqua;
   background-color: $bg-color-dark_red;
 }
 
@@ -236,6 +235,10 @@
 
   .footer__list {
     max-width: 79px;
+  }
+
+  .footer__list:last-child {
+    display: none;
   }
 }
 
