@@ -1,24 +1,29 @@
 @mixin desktop() {
-    @media (max-width: $breakpoint_desktop) {
-        @content;
-    }
+  @media (max-width: $breakpoint_desktop) {
+    @content;
+  }
 }
 
 @mixin laptop() {
-    @media (max-width: $breakpoint_laptop) {
-        @content;
-    }
+  @media (max-width: $breakpoint_laptop) {
+    @content;
+  }
+}
+
+@mixin netbook() {
+  @media (max-width: $breakpoint_netbook) {
+    @content;
+  }
 }
 
 @mixin tablet() {
-    @media (max-width: $breakpoint_tablet) {
-        @content;
-    }
+  @media (max-width: $breakpoint_tablet) {
+    @content;
+  }
 }
 
 @mixin mobile() {
-    @media (max-width: $breakpoint_mobile) {
-        @content;
-    }
+  @media (max-width: $breakpoint_mobile) {
+    @content;
+  }
 }
-

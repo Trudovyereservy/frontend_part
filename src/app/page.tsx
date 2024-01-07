@@ -1,10 +1,10 @@
-import { Faq } from "@/components/Faq/Faq";
+import  Form  from "@/components/Form/Form";
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Faq />
+      <Form />
     </main>
   );
 }
