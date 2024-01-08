@@ -79,10 +79,10 @@
 .form__input {
   border-radius: 30px;
   border: 1px solid $bg-color-blue;
-  width: 525px;
-  height: 46px;
+  width: 560px;
+  height: 50px;
   padding-left: 31px;
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 .form__input::placeholder {
   color: $bg-color-blue;
@@ -104,6 +104,23 @@
   padding: 16px 35px;
   border: none;
   margin-top: 5px;
+  cursor: pointer;
+}
+.form__inputError {
+  font-family: var(--font-roboto);
+  display: block;
+  color: $bg-color-red;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  min-height: 12px;
+  margin-bottom: 2px;
+}
+
+.form__submitButton:disabled {
+  color: #C2C2C2;
+  background-color: #F8F8F8;
 }
 
 @include desktop {
@@ -135,7 +152,7 @@
 
   .form__input {
     padding-left: 25px;
-    width: 431px;
+    width: 460px;
   }
 
   .form__submitButton {
@@ -165,7 +182,7 @@
 
   .form__input {
     padding-left: 16px;
-    width: 280px;
+    width: 300px;
   }
 
   .form__submitButton {
