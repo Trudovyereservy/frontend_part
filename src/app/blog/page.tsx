@@ -1,4 +1,5 @@
 // import Head from 'next/head';
+import {CardsList} from '../../components/BlockCards/CardsList/CardList'
 
 export default function BlogPage() {
   const style = {
@@ -15,6 +16,7 @@ export default function BlogPage() {
       <a href="blog/profile" style={style}>
         ссылка на профиль
       </a>
+    <CardsList />
     </>
   );
 }
