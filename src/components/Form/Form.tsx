@@ -1,9 +1,9 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import styles from './Form.module.scss';
 import Image from 'next/image';
-import lines from '../../../public/Lines.svg';
-import { regularExpressions } from '../../utils/regularExpressions';
+import styles from './Form.module.scss';
+import lines from '@/../public/Lines.svg';
+import { regularExpressions } from '@/utils/regularExpressions';
 
 interface FormData {
   name: string;
@@ -15,10 +15,15 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isValid }
-  } = useForm<FormData>({mode: "all"});
-  const onSubmit: SubmitHandler<FormData> = (data) => console.log(data);
+    reset,
+    formState: { errors, isSubmitting, isValid },
+  } = useForm<FormData>({ mode: 'all' });
 
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log(data);
+    reset();
+  };
+  
   return (
     <div className={styles.form}>
       <h2 className={styles.form__headerMobile}>Пример текста</h2>
@@ -33,6 +38,7 @@ export default function Form() {
           <input
             className={styles.form__input}
             placeholder="Ваше имя"
+            aria-invalid={errors.name ? true : false}
             {...register('name', {
               required: 'Поле обязательно для заполнения',
               minLength: {
@@ -54,6 +60,7 @@ export default function Form() {
             className={styles.form__input}
             placeholder="Телефон"
             type="text"
+            aria-invalid={errors.phoneNumber ? true : false}
             {...register('phoneNumber', {
               required: 'Поле обязательно для заполнения',
               maxLength: {
@@ -71,6 +78,7 @@ export default function Form() {
             className={styles.form__input}
             placeholder="E-mail"
             type="email"
+            aria-invalid={errors.eMail ? true : false}
             {...register('eMail', {
               required: 'Поле обязательно для заполнения',
               maxLength: {

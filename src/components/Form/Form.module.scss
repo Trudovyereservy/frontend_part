@@ -16,11 +16,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: 38.5px;
-  margin: 0;
   display: none;
   width: 300px;
-  margin-top: 15px;
-  margin-bottom: 8px;
+  margin: 15px 0 8px 0;
 }
 
 .form__lines {
@@ -44,8 +42,7 @@
 .form__formContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 44px;
-  margin-left: 96px;
+  margin: 44px 0 0 96px;
 }
 
 .form__subtitle {
@@ -126,7 +123,7 @@
 @include desktop {
   .form {
     height: 550px;
-    margin: 8px auto 0 auto;
+    margin: 8px auto 0;
   }
 
   .form__lines {
@@ -140,8 +137,7 @@
   }
 
   .form__formContainer {
-    margin-left: 58px;
-    margin-top: 29px;
+    margin: 29px 0 0 58px;
   }
 
   .form__header {
@@ -159,6 +155,12 @@
     font-weight: 500;
     padding: 16px 0;
     width: 173.5px;
+  }
+}
+
+@include laptop {
+  .form {
+    margin: 8px 20px 0;
   }
 }
 
