@@ -1,12 +1,13 @@
 import styles from './CardsList.module.scss';
 import { Card } from '../Card/Card';
-import { testCards } from '@/utils/constatns';
+import { blogCards } from '@/utils/constans';
+
 const CardsList = () => {
   return (
     <section className={styles.cardslist}>
-      <h2 className={styles.cardslist__title}>Пример текста</h2>
+      {/* <h2 className={styles.cardslist__title}>Блог</h2> */}
       <ul className={styles.cardslist__container}>
-        {testCards.map((card) => (
+        {blogCards.map((card) => (
           <Card
             key={card.id}
             title={card.title}

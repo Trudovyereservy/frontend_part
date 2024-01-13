@@ -1,14 +1,18 @@
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_mixins.scss';
 
+.card {
+  max-width: 360px;
+}
+
 .card__image {
-  width: 100%;
+  // width: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;
+  object-position: right;
   border-radius: 5px;
-  background: $bg-color-ligth-grey;
-  margin-bottom: 25px;
+  // background: $bg-color-ligth-grey;
+  margin-bottom: 10px;
 }
 
 .card__title {
@@ -17,7 +21,8 @@
   font-style: normal;
   font-weight: 600;
   line-height: 1.65;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  letter-spacing: -0.35px;
 }
 
 .card__subtitle {
@@ -35,31 +40,51 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
-  margin-bottom: 28px;
+  letter-spacing: 0.1px;
 }
 
-.card__link {
-  border-radius: 30px;
-  background: $bg-color-red;
-  display: block;
-  width: 211.2px;
-  padding: 16px 35px;
-  color: #fff;
+
+.card__image_wrapper {
+  position: relative;
+}
+
+.card__image_title {
+  position: absolute;
+  background-color: $bg-color-red;
+  top: -10px;
+  left: 20px;
+  width: 77px;
+  height: 21px;
+  font-size: 10px;
+  font-weight: 700;
+  color: $text-color-white;
+  padding: 5px 10px;
   text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
+  border-radius: 5px;
 }
 
-.card__link:hover {
-  background-color: rgba(209, 23, 44, 0.9);
-  transition: 0.3s ease-in-out;
-}
+// .card__link {
+//   border-radius: 30px;
+//   background: $bg-color-red;
+//   display: block;
+//   width: 211.2px;
+//   padding: 16px 35px;
+//   color: #fff;
+//   text-align: center;
+//   font-size: 15px;
+//   font-weight: 500;
+//   line-height: 1;
+// }
+
+// .card__link:hover {
+//   background-color: rgba(209, 23, 44, 0.9);
+//   transition: 0.3s ease-in-out;
+// }
 
 @include laptop {
-  .card__link {
-    width: 176.3px;
-  }
+  // .card__link {
+  //   width: 176.3px;
+  // }
   .card__title {
     letter-spacing: -0.3px;
   }
@@ -82,7 +107,7 @@
     font-size: 14px;
     margin-bottom: 9px;
   }
-  .card__link {
-    width: 220px;
-  }
+  // .card__link {
+  //   width: 220px;
+  // }
 }

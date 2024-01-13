@@ -13,9 +13,6 @@ export default function BlogPage() {
         <meta name="title" content="Блог" />
       </head>
       <div>Блог</div>
-      <a href="blog/profile" style={style}>
-        ссылка на профиль
-      </a>
     <CardsList />
     </>
   );
