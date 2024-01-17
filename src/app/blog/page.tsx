@@ -12,7 +12,6 @@ export default function BlogPage() {
         <title>Трудовые резервы | Блог</title>
         <meta name="title" content="Блог" />
       </head>
-      <div>Блог</div>
     <CardsList />
     </>
   );
