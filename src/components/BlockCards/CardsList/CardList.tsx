@@ -1,14 +1,27 @@
 import styles from './CardsList.module.scss';
 import { Card } from '../Card/Card';
-// import { blogCards } from '@/utils/constans';
+import useWindowSize from '../../../hooks/useWindowSize';
+import { useState, useEffect } from 'react';
 
-const CardsList = ({blogCards, count}) => {
-
-  // console.log(window.innerWidth);
+// const CardsList = ({blogCards, count}) => {
+const CardsList = ({ blogCards }) => {
+  const [count, setCount] = useState(0);
+  const width = useWindowSize();
+  const getLimit = () => {
+    if (width < 1024) {
+      setCount(8);
+    } else if (width < 1440) {
+      setCount(8);
+    } else {
+      setCount(9);
+    }
+  };
+  useEffect(() => {
+    getLimit();
+  }, [width]);
 
   return (
     <section className={styles.cardslist}>
-      {/* <h2 className={styles.cardslist__title}>Блог</h2> */}
       <ul className={styles.cardslist__container}>
         {blogCards.slice(0, count).map((card) => (
           <Card
