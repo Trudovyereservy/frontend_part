@@ -24,16 +24,6 @@
   letter-spacing: -0.35px;
 }
 
-.card__subtitle {
-  flex-shrink: 0;
-  color: $text-color-grey;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.70227;
-  margin-bottom: 10px;
-}
-
 .card__text {
   color: $text-color-grey;
   font-size: 15px;
@@ -61,23 +51,14 @@
   border-radius: 5px;
 }
 
-// .card__link {
-//   border-radius: 30px;
-//   background: $bg-color-red;
-//   display: block;
-//   width: 211.2px;
-//   padding: 16px 35px;
-//   color: #fff;
-//   text-align: center;
-//   font-size: 15px;
-//   font-weight: 500;
-//   line-height: 1;
-// }
+.card__link {
+  opacity: 1;
+}
 
-// .card__link:hover {
-//   background-color: rgba(209, 23, 44, 0.9);
-//   transition: 0.3s ease-in-out;
-// }
+.card__link:hover {
+  opacity: .75;
+  transition: opacity 0.1s ease-in-out;
+}
 
 @include laptop {
   .card {

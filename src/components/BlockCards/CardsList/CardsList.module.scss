@@ -33,7 +33,7 @@
   flex-wrap: wrap;
 }
 
-@include laptop {
+@include desktop {
   .cardslist {
     max-width: 1024px;
     padding: 40px 42px 100px 42px;

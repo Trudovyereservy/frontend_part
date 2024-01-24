@@ -1,15 +1,15 @@
 import styles from './CardsList.module.scss';
 import { Card } from '../Card/Card';
+import {ICardBlogProps} from '../Card/Card.props'
 import useWindowSize from '../../../hooks/useWindowSize';
 import { useState, useEffect } from 'react';
 
-// const CardsList = ({blogCards, count}) => {
-const CardsList = ({ blogCards }) => {
-  const [count, setCount] = useState(0);
-  const width = useWindowSize();
+const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
+  const [count, setCount] = useState<number>(0);
+  const width: number = useWindowSize();
   const getLimit = () => {
-    if (width < 1024) {
-      setCount(8);
+    if (width === 1024) {
+      setCount(9);
     } else if (width < 1440) {
       setCount(8);
     } else {
@@ -27,11 +27,9 @@ const CardsList = ({ blogCards }) => {
           <Card
             key={card.id}
             title={card.title}
-            subtitle={card.subtitle}
             text={card.text}
             imgUrl={card.imgUrl}
             linkUrl={card.linkUrl}
-            linkText={card.linkText}
           />
         ))}
       </ul>

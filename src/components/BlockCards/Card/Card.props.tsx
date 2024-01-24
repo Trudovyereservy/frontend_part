@@ -1,8 +1,8 @@
-export interface ICardProps {
-    title: string;
-    subtitle: string;
-    text: string;
-    imgUrl: string;
-    linkUrl: string;
-    linkText: string;
-  }
+export interface ICardBlogProps {
+  id: string;
+  key: string;
+  title: string;
+  text: string;
+  imgUrl: string;
+  linkUrl: string;
+}

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ICardProps } from './Card.props';
+import { ICardBlogProps } from './Card.props';
 import styles from './Card.module.scss';
 
-const Card = ({ title, text, imgUrl }: ICardProps) => {
+const Card = ({ title, text, imgUrl, linkUrl }: ICardBlogProps) => {
   return (
     <li className={styles.card}>
       <div className={styles.card__image_wrapper}>
@@ -16,8 +16,10 @@ const Card = ({ title, text, imgUrl }: ICardProps) => {
         />
         <span className={styles.card__image_title}>Пример</span>
       </div>
-      <h2 className={styles.card__title}>{title}</h2>
-      <p className={styles.card__text}>{text}</p>
+      <Link href={linkUrl} className={styles.card__link}>
+        <h2 className={styles.card__title}>{title}</h2>
+        <p className={styles.card__text}>{text}</p>
+      </Link>
     </li>
   );
 };
