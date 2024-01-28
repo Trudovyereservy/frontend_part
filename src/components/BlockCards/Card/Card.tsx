@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ICardBlogProps } from './Card.props';
 import styles from './Card.module.scss';
 
-const Card = ({ title, text, imgUrl, linkUrl }: ICardBlogProps) => {
+const Card = ({ title, shortDescription, imgUrl, linkUrl }: ICardBlogProps) => {
   return (
     <li className={styles.card}>
       <div className={styles.card__image_wrapper}>
@@ -18,7 +18,7 @@ const Card = ({ title, text, imgUrl, linkUrl }: ICardBlogProps) => {
       </div>
       <Link href={linkUrl} className={styles.card__link}>
         <h2 className={styles.card__title}>{title}</h2>
-        <p className={styles.card__text}>{text}</p>
+        <p className={styles.card__text}>{shortDescription}</p>
       </Link>
     </li>
   );

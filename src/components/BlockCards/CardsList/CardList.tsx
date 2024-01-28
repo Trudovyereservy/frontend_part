@@ -27,7 +27,7 @@ const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
           <Card
             key={card.id}
             title={card.title}
-            text={card.text}
+            shortDescription={card.shortDescription}
             imgUrl={card.imgUrl}
             linkUrl={card.linkUrl}
           />

@@ -2,7 +2,7 @@ export interface ICardBlogProps {
   id: string;
   key: string;
   title: string;
-  text: string;
+  shortDescription: string;
   imgUrl: string;
   linkUrl: string;
 }
