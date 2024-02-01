@@ -35,12 +35,6 @@
   }
 }
 
-@include laptop {
-}
-
-@include netbook {
-}
-
 @include tablet {
   .description__title {
     font-size: 45px;
