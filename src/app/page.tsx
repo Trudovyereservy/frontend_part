@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { MainBanner } from '@/components/main-banner/main-banner';
 import { Faq } from "@/components/Faq/Faq";
 import  Form  from "@/components/Form/Form";
+import { CardsList } from '../components/CardsList/CardsList';
 
 export default function Home() {
   const [closeMenu, setCloseMenu] = useState(false);
@@ -15,8 +16,9 @@ export default function Home() {
   return (
     <main className={styles.mainbanner__wrapper}>
       <MainBanner />
-      <Faq />
+      <CardsList/>
       <Form/>
+      <Faq />
     </main>
   );
 }

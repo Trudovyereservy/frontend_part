@@ -40,15 +40,20 @@
   }
   .cardslist__container {
     gap: 20px;
+  flex-wrap: wrap;
   }
 }
 
 @include tablet{
   .cardslist {
     padding: 20px 2% 69px 2%;
+  // flex-wrap: wrap;
+
   }
   .cardslist__container {
     gap: 2vw;
+  // flex-wrap: wrap;
+
   }
 }
 
@@ -68,4 +73,6 @@
     gap:34px;
   }
 }
+
+
 
