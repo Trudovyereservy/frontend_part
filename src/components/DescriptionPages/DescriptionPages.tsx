@@ -10,16 +10,12 @@ const DescriptionPages = () => {
   if (!blockData) {
     return null; 
   }
-  
-  console.log(pathName);
-  console.log(typeof pathName);
-  console.log(descriptionPages[0].route);
 
   return (
-    <>
+    <article className={styles.description__container}>
       <h2 className={styles.description__title}>{blockData.page}</h2>
       <p className={styles.description__text}>{blockData.content}</p>
-    </>
+    </article>
   );
 };
 export { DescriptionPages };

@@ -40,27 +40,13 @@
   }
   .cardslist__container {
     gap: 20px;
-  flex-wrap: wrap;
   }
 }
 
 @include tablet{
   .cardslist {
-    padding: 20px 2% 69px 2%;
-  // flex-wrap: wrap;
-
-  }
-  .cardslist__container {
-    gap: 2vw;
-  // flex-wrap: wrap;
-
-  }
-}
-
-@include mobile {
-  .cardslist {
-    max-width: 394px;
-    padding: 20px 47px 69px 47px;
+    max-width: 494px;
+    padding: 20px 47px 69px;
   }
   .cardslist__title {
     font-size: 34px;
@@ -71,6 +57,12 @@
   .cardslist__container {
     flex-direction: column;
     gap:34px;
+  }
+}
+
+@include mobile {
+  .cardslist {
+    max-width: 394px;
   }
 }
 
