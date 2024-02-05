@@ -184,7 +184,14 @@ const blogCards = [
   },
 ];
 
+const coach = {
+  name: 'Иванов Иван Иванович',
+  directions: ['Лыжи', 'Бег', 'Плавание', 'Триатлон', 'Футбол'],
+  achievements: 'glksdhsddgjldfjg dfg dfjgd dfjg dgj dlkgj djgljdfg',
+  imgUrl: '/coach.jpg',
+}
 
 
 
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards };
+
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coach };
