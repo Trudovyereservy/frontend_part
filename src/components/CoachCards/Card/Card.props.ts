@@ -1,8 +1,8 @@
 export interface ICardCoachProps {
-    title: string;
-    subtitle: string;
-    text: string;
-    imgUrl: string;
-    linkUrl: string;
-    linkText: string;
-  }
+  name: string;
+  surname: string;
+  directions: string;
+  achievements: string;
+  patronymic: string;
+  photo: string;
+}

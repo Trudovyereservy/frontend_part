@@ -1,6 +1,6 @@
 'use client';
-import {Card as  CoachCards } from '../../components/CoachCards/Card/Card';
-// import { blogCards } from '@/utils/constans';
+import { CoachList } from '../../components/CoachCards/CoachList/CoachList';
+import { coachCards } from '@/utils/constans';
 
 export default function CoachsPage() {
   return (
@@ -9,8 +9,7 @@ export default function CoachsPage() {
         <title>Трудовые резервы | Тренерский состав</title>
         <meta name="title" content="Блог" />
       </head>
-      <div>Тренерский состав</div>
-      <CoachCards />
+      <CoachList coachCards={coachCards}/>
       </>
   );
 }
