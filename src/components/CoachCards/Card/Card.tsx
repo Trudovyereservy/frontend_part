@@ -31,8 +31,8 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
       {openInfo ? (
         <div className={styles.card__info}>
           <h3 className={styles.card__name}>{surname}</h3>
-          <h3 className={styles.card__title}>{name}</h3>
-          <h3 className={styles.card__title}>{patronymic}</h3>
+          <h3 className={styles.card__name}>{name}</h3>
+          <h3 className={styles.card__name}>{patronymic}</h3>
           <p className={styles.card__directions}>{directions}</p>
         </div>
       ) : (
