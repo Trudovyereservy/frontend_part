@@ -1,4 +1,53 @@
-const linksItems = {
+interface LinkItem {
+  text: string;
+  id: number;
+  linkText: string;
+  linkUrl: string;
+}
+
+interface LinksItems {
+  exampleOne: LinkItem[];
+  exampleTwo: LinkItem[];
+  exampleThree: LinkItem[];
+}
+
+interface ButtonNames {
+  mainButtonHeader: string;
+  mainButtonFooter: string;
+}
+
+interface HeaderLink {
+  id: number;
+  title: string;
+  href: string;
+}
+
+interface NavLink {
+  id: number;
+  name: string;
+  href: string;
+}
+
+interface BlogCard {
+  title: string;
+  subtitle: string;
+  shortDescription: string;
+  linkUrl: string;
+  linkText: string;
+  imgUrl: string;
+  id: number;
+}
+
+interface CoachCard {
+  surname: string;
+  name: string;
+  patronymic: string;
+  directions: string[];
+  achievements: string;
+  photo: string;
+}
+
+const linksItems: LinksItems = {
   exampleOne: [
     {
       text: 'Пример1',
@@ -51,7 +100,6 @@ const linksItems = {
       linkUrl: '#',
     },
   ],
-
   exampleThree: [
     {
       text: 'Пример1',
@@ -80,19 +128,19 @@ const linksItems = {
   ],
 };
 
-const buttonsNames = {
+const buttonsNames: ButtonNames = {
   mainButtonHeader: 'Пример',
   mainButtonFooter: 'Пример',
 };
 
-const headerLinks = [
+const headerLinks: HeaderLink[] = [
   { id: 0, title: 'Блог', href: '/blog' },
   { id: 1, title: 'Тренерский состав', href: '/coachs' },
   { id: 2, title: 'Новости', href: '/news' },
   { id: 3, title: 'Контакты', href: '/contacts' },
 ];
 
-const navLinksMenu = [
+const navLinksMenu: NavLink[] = [
   { id: 5, name: 'Главная', href: '/' },
   { id: 1, name: 'Блог', href: '/blog' },
   { id: 2, name: 'Тренерский состав', href: '/coachs' },
@@ -100,7 +148,7 @@ const navLinksMenu = [
   { id: 4, name: 'Контакты', href: '/contacts' },
 ];
 
-const blogCards = [
+const blogCards: BlogCard[] = [
   {
     title: 'Пример текста пример текста пример текста пример текста',
     subtitle: 'Пример текста',
@@ -193,7 +241,7 @@ const blogCards = [
   },
 ];
 
-const coachCards = [
+const coachCards: CoachCard[] = [
   {
     surname: 'Иванов',
     name: 'Иван',

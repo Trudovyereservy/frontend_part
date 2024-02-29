@@ -8,7 +8,7 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
   const [openInfo, setOpenInfo] = useState(true);
 
   function openCard() {
-    setOpenInfo(!openInfo);
+    setOpenInfo((prevState) => !prevState);
   }
 
   return (

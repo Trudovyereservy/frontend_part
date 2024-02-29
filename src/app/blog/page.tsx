@@ -1,4 +1,3 @@
-// import Head from 'next/head';
 'use client';
 import {CardsList} from '../../components/BlockCards/CardsList/CardList';
 import { blogCards } from '@/utils/constans';

@@ -14,7 +14,7 @@
   background-image: url('../../../../public/Coach_plus.png');
   background-position: center;
   background-repeat: no-repeat;
-  border: #839ead 1px solid;
+  border: $border-color-ligth-blue 1px solid;
   border-radius: 8px;
   bottom: -20px;
   left: calc(50% - 54px / 2);
@@ -44,7 +44,7 @@
   margin-bottom: 10px;
 }
 
-.card__directions {
+.card__directions, .card__achievements {
   font-size: 15px;
   font-weight: 500;
   line-height: 170%;
@@ -53,10 +53,6 @@
 
 .card__achievements {
   margin-top: 47px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 170%;
 }
 
 @include laptop {
