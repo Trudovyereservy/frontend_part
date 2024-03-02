@@ -1,3 +1,6 @@
+'use client';
+import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+
 export default function ContactsPage() {
   return (
     <>
@@ -5,7 +8,7 @@ export default function ContactsPage() {
         <title>Трудовые резервы | Контакты</title>
         <meta name="title" content="Блог" />
       </head>
-      <div>Контакты</div>
+      <DescriptionPages />
     </>
   );
 }
