@@ -1,23 +1,19 @@
 'use client';
 import styles from './page.module.scss';
-import { useState } from 'react';
 import { MainBanner } from '@/components/main-banner/main-banner';
-import { Faq } from "@/components/Faq/Faq";
-import  Form  from "@/components/Form/Form";
+import { Faq } from '@/components/Faq/Faq';
+import Form from '@/components/Form/Form';
 import { CardsList } from '../components/CardsList/CardsList';
+import FeedbacksSlider from '../components/FeedbacksSlider/FeedbacksSlider';
+import { sliderPosts } from '@/utils/constans';
 
 export default function Home() {
-  const [closeMenu, setCloseMenu] = useState(false);
-  
-  const handleToggleMenu = () => {
-    setCloseMenu(!closeMenu);
-  }
-
   return (
     <main className={styles.mainbanner__wrapper}>
       <MainBanner />
-      <CardsList/>
-      <Form/>
+      <CardsList />
+      <FeedbacksSlider posts={sliderPosts} />
+      <Form />
       <Faq />
     </main>
   );
