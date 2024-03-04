@@ -9,7 +9,7 @@ const Carousel = ({ posts }: ICarouselProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % posts.length);
-    }, 2000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, [posts.length]);
@@ -23,10 +23,13 @@ const Carousel = ({ posts }: ICarouselProps) => {
       <h2 className={styles.feedbacks__title}>Пример текста</h2>
       <div className={styles.feedbacks__carousel}>
         <div
-          className={styles.feedbackCard__container}
+          className={classNames(styles.feedbackCard__container, styles.feedbackCard__content_hidden)}
           onClick={() => goToPost((currentIndex - 1 + posts.length) % posts.length)}
         >
-          {posts[(currentIndex - 1 + posts.length) % posts.length].post}
+          <div className={classNames(styles.feedbackCard__content, styles.feedbackCard__content_onside)}>
+          <p className={styles.feedbackCard__textPost}>
+            {posts[(currentIndex - 1 + posts.length) % posts.length].post}
+          </p>
 
           <div className={styles.feedbackCard__about}>
             <p className={styles.feedbackCard__textName}>
@@ -35,6 +38,7 @@ const Carousel = ({ posts }: ICarouselProps) => {
             <p className={styles.feedbackCard__textDescription}>
               {posts[(currentIndex - 1 + posts.length) % posts.length].description}
             </p>
+          </div>
           </div>
         </div>
 
@@ -55,8 +59,10 @@ const Carousel = ({ posts }: ICarouselProps) => {
           className={styles.feedbackCard__container}
           onClick={() => goToPost((currentIndex + 1) % posts.length)}
         >
-          {posts[(currentIndex + 1) % posts.length].post}
-
+          <div className={classNames(styles.feedbackCard__content, styles.feedbackCard__content_onside)}>
+          <p className={styles.feedbackCard__textPost}>
+            {posts[(currentIndex + 1) % posts.length].post}
+          </p>
           <div className={styles.feedbackCard__about}>
             <p className={styles.feedbackCard__textName}>
               {posts[(currentIndex + 1) % posts.length].name}
@@ -65,10 +71,11 @@ const Carousel = ({ posts }: ICarouselProps) => {
               {posts[(currentIndex + 1) % posts.length].description}
             </p>
           </div>
+          </div>
         </div>
       </div>
 
-      <div className={styles.feedbacks__indicators}>
+      <div className={classNames(styles.feedbacks__indicators, styles.feedbackCard__content_hidden)}>
         {posts.map((_, index) => (
           <span
             key={index}

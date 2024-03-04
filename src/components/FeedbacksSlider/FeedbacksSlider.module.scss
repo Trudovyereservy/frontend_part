@@ -1,14 +1,15 @@
 @import '@/styles/_variables.scss';
-
+@import '@/styles/_mixins.scss';
 
 .feedbacks__container {
   display: block;
   padding: 40px 0 70px;
-  width: 100%;
+  max-width: 100%;
   min-height: 594px;
 
   .feedbacks__title {
     padding: 0 140px;
+    padding-bottom: 20px;
     color: $bg-color-blue;
     font-size: 64px;
     font-weight: 700;
@@ -22,32 +23,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 327px;
+  height: 327px;
   box-sizing: border-box;
-  overflow-x: auto;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  overflow: hidden;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-}
-
-.feedbacks__carouselContent {
-  position: absolute;
-  height: 100%;
-  display: flex;
-  gap: 36px;
-  box-sizing: border-box;
-  transition: all .6s;
-
-  &.feedbacks__carouselContent_firstCard {
-    transform: translateX(340px);
-  }
-
-  &.feedbacks__carouselContent_lastCard {
-    transform: translateX(-340px);
   }
 }
 
@@ -56,7 +37,7 @@
   height: 16px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 11px;
 }
 
 .feedbacks__indicator {
@@ -80,34 +61,27 @@
   }
 }
 
-
-
 .feedbackCard__container {
   display: inline-block;
   min-width: 615px;
-  height: min-content;
-  padding: 48px 41px;
+  height: 278px;
+  padding: 45px 40px 80px;
   margin: 14px 0 35px;
   border-radius: 30px;
   border: 2px solid $bg-color-blue;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   opacity: 0.3;
-  transition: opacity 0.4s ease-out;
 
-   &.feedbackCard__active {
-     margin: 0 20px;
-     padding: 65px 74px 50px;
-     min-width: 680px;
-     height: 100%;
-     border: 2px solid $bg-color-blue;
-     opacity: 1;
-     transition: opacity 0.4s ease-out;
+  &.feedbackCard__active {
+    margin: 0 35px;
+    padding: 62px 74px 56px;
+    min-width: 680px;
+    height: 100%;
+    border: 2px solid $bg-color-blue;
+    opacity: 1;
 
-     .feedbackCard__content {
-       gap: 50px;
-       transition: gap 0.4s ease-out;
-     }
+    .feedbackCard__content {
+      gap: 50px;
+    }
   }
 }
 
@@ -117,24 +91,27 @@
   justify-content: space-between;
   align-items: center;
   gap: 27px;
-  transition: gap 0.4s ease-out;
+}
 
-  .feedbackCard__textPost {
-    text-align: justify;
-    text-align-last: center;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25.5px;
-  }
+.feedbackCard__content_onside {
+  gap: 22px;
+}
+
+.feedbackCard__textPost {
+  text-align: justify;
+  text-align-last: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25.5px;
 }
 
 .feedbackCard__about {
-text-align: center;
+  text-align: center;
 
   .feedbackCard__textName {
     font-size: 20px;
     font-weight: 700;
-    line-height: 33px;
+    line-height: 28px;
     color: $bg-color-blue;
   }
 
@@ -142,5 +119,120 @@ text-align: center;
     font-size: 16px;
     font-weight: 400;
     line-height: 26.15px;
+  }
+}
+
+@include laptop {
+  .feedbackCard__container {
+    display: inline-block;
+    min-width: 615px;
+    height: 278px;
+    padding: 45px 40px 80px;
+    margin: 20px 0 35px;
+    border: 2px solid $bg-color-blue;
+    opacity: 0.3;
+
+    &.feedbackCard__active {
+      margin: 0 20px;
+      padding: 62px 43px 56px;
+      min-width: 620px;
+    }
+  }
+  .feedbacks__container {
+    padding: 40px 0 70px;
+
+    .feedbacks__title {
+      padding: 0 40px;
+      padding-bottom: 20px;
+      font-size: 55px;
+    }
+  }
+}
+
+@include tablet {
+  .feedbackCard__container {
+    min-width: 615px;
+    height: 240px;
+    border-radius: 25px;
+
+    &.feedbackCard__active {
+      padding: 20px 24px 56px;
+      min-width: 320px;
+      height: 280px;
+
+      .feedbackCard__content {
+        gap: 20px;
+      }
+    }
+  }
+
+  .feedbackCard__textPost {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .feedbacks__container {
+    .feedbacks__title {
+      font-size: 34px;
+    }
+  }
+}
+
+@include mobile {
+  .feedbacks__carousel {
+    height: 360px;
+  }
+
+  .feedbackCard__content_hidden {
+    visibility: hidden;
+  }
+
+  .feedbackCard__container {
+    min-width: 615px;
+    height: 360px;
+    border-radius: 30px;
+    margin: 0;
+    margin-left: 10px;
+
+    &.feedbackCard__active {
+      padding: 44px 33px 56px;
+      min-width: 269px;
+      height: 360px;
+      margin-left: 5px;
+
+      .feedbackCard__content {
+        gap: 20px;
+      }
+    }
+  }
+
+  .feedbackCard__textPost {
+    text-align: justify;
+    text-align-last: center;
+    line-height: 23.1px;
+  }
+
+  .feedbacks__container {
+    .feedbacks__title {
+      font-size: 34px;
+      padding: 0 47px 27px;
+    }
+  }
+
+  .feedbackCard__about {
+    .feedbackCard__textName {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 23.1px;
+    }
+
+    .feedbackCard__textDescription {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 23.1px;
+    }
   }
 }
