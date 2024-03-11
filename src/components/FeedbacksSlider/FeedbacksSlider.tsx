@@ -2,6 +2,7 @@ import styles from './FeedbacksSlider.module.scss';
 import React, { useState, useEffect } from 'react';
 import { ICarouselProps } from './FeedbacksSlider.props';
 import classNames from 'classnames';
+import  Swiper  from './SwiperTest/SwiperTest';
 
 const Carousel = ({ posts }: ICarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,7 +10,7 @@ const Carousel = ({ posts }: ICarouselProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % posts.length);
-    }, 20000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [posts.length]);
@@ -19,6 +20,7 @@ const Carousel = ({ posts }: ICarouselProps) => {
   };
 
   return (
+    <>
     <section className={styles.feedbacks__container}>
       <h2 className={styles.feedbacks__title}>Пример текста</h2>
       <div className={styles.feedbacks__carousel}>
@@ -87,6 +89,8 @@ const Carousel = ({ posts }: ICarouselProps) => {
         ))}
       </div>
     </section>
+    <Swiper />
+    </>
   );
 };
 

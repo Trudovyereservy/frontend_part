@@ -1,0 +1,72 @@
+@import '../../../styles/_variables';
+@import '../../../styles/_mixins';
+
+.myslider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.myslide {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-width: 615px;
+  height: 278px;
+  padding: 45px 40px 80px;
+  margin-top: 14px;
+  border-radius: 30px;
+  border: 2px solid $bg-color-blue;
+  opacity: 0.3;
+}
+
+.swiper-slide-active {
+  font-size: 22px;
+  padding: 62px 74px 56px;
+  opacity: 1;
+  margin: 0;
+  height: 327px; 
+}
+
+.swiper-slide-prev {
+  padding-top: 30px;
+}
+
+.swiper-slide-next {
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 7.5px;
+  border: 1px solid $bg-color-blue;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background-color: $border-color-red;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+

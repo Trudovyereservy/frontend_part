@@ -1,5 +1,7 @@
 @import './variables';
 @import './mixins';
+@import '../components/FeedbacksSlider/SwiperTest/myswiper.scss';
+@import '../../node_modules/swiper/swiper-bundle.css';
 
 * {
   box-sizing: border-box;

@@ -1,0 +1,129 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+// @import 'swiper/scss/bundle';
+// @import 'swiper/scss'; // импорт стилей Swiper
+// @import 'swiper/scss/autoplay'; // импорт стилей для autoplay
+// @import 'swiper/scss/pagination'; // импорт стилей для pagination
+
+// @import 'node_modules/swiper/package/scss/swiper';
+// @import 'node_modules/swiper/package/scss/autoplay';
+// @import 'node_modules/swiper/package/scss/pagination';
+
+.feedbacks__title {
+  padding: 0 140px;
+  padding-bottom: 20px;
+  color: $bg-color-blue;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 163.418%;
+}
+
+.feedbackCard__textPost {
+  text-align: justify;
+  text-align-last: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25.5px;
+}
+
+.feedbackCard__container {
+  display: inline-block;
+  min-width: 615px;
+  height: 278px;
+  padding: 45px 40px 80px;
+  margin: 14px 0 35px;
+  border-radius: 30px;
+  border: 2px solid $bg-color-blue;
+  opacity: 0.3;
+}
+
+
+.feedbackCard__about {
+  text-align: center;
+
+  .feedbackCard__textName {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: $bg-color-blue;
+  }
+
+  .feedbackCard__textDescription {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.15px;
+  }
+}
+
+
+// ____________________________________
+
+.myslider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.myslide {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-width: 615px;
+  height: 278px;
+  padding: 45px 40px 80px;
+  margin-top: 14px;
+  border-radius: 30px;
+  border: 2px solid #003263;
+  opacity: 0.3;
+}
+
+.swiper-slide-active {
+  font-size: 22px;
+  padding: 62px 74px 56px;
+  opacity: 1;
+  margin: 0;
+  height: 327px; 
+}
+
+.swiper-slide-prev {
+  padding-top: 30px;
+}
+
+.swiper-slide-next {
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 7.5px;
+  border: 1px solid #003263;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background-color: #d1172c;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+
