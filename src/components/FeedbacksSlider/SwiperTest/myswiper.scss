@@ -1,5 +1,6 @@
-@import '../../../styles/_variables';
-@import '../../../styles/_mixins';
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
 
 .myslider {
   display: flex;
@@ -13,7 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  min-width: 615px;
+  // min-width: 615px;
   height: 278px;
   padding: 45px 40px 80px;
   margin-top: 14px;
@@ -28,6 +29,7 @@
   opacity: 1;
   margin: 0;
   height: 327px; 
+  
 }
 
 .swiper-slide-prev {
@@ -66,6 +68,40 @@
   border-radius: 10px;
   border: none;
 }
+
+
+
+
+
+@include laptop {
+  .myslide {
+    width: 220px;
+  }
+}
+
+@include mobile {
+  .myslide {
+    width: 280px;
+  }
+
+  .swiper-slide {
+    width: 300px;
+  }
+
+  .swiper-slide-active {
+    width: 250px;
+    font-size: 22px;
+    // padding: 62px 74px 56px;
+    padding: 10px;
+    opacity: 1;
+    margin: 0;
+    height: 327px; 
+  }
+}
+
+
+
+
 
 
 
