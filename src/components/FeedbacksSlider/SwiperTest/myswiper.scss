@@ -1,7 +1,6 @@
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_mixins.scss';
 
-
 .myslider {
   display: flex;
   flex-direction: column;
@@ -14,7 +13,6 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  // min-width: 615px;
   height: 278px;
   padding: 45px 40px 80px;
   margin-top: 14px;
@@ -29,36 +27,54 @@
   opacity: 1;
   margin: 0;
   height: 327px; 
-  
 }
 
 .swiper-slide-prev {
-  padding-top: 30px;
+  padding-top: 44px;
+}
+
+.myslide.swiper-slide-prev {
+  gap: 25px;
 }
 
 .swiper-slide-next {
-  padding-top: 30px;
+  padding-top: 44px;
   overflow: hidden;
+}
+
+.myslide.swiper-slide-next {
+  gap: 25px;
 }
 
 .swiper-pagination {
   position: relative;
-  margin-top: 30px;
+  margin-top: 38px;
 }
 
 .swiper-pagination-bullets {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  margin-right: 5px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0;
 }
 
 .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-  background-color: white;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  background-color: $bg-color-white;
   border-radius: 7.5px;
   border: 1px solid $bg-color-blue;
   opacity: 1;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 3px;
 }
 
 .swiper-pagination-bullet-active {
@@ -69,15 +85,58 @@
   border: none;
 }
 
+@include tablet {
+  .myslide {
+    width: 320px;
+    height: 240px; 
+    // margin-top: 17px;
+  }
 
+  .swiper-slide-active {
+    width: 400px;
+    font-size: 22px;
+    padding: 10px;
+    opacity: 1;
+    margin: 0;
+    height: 280px; 
+  }
+}
 
+@include netbook {
+  .myslide {
+    width: 400px;
+    // margin-top: 17px;
+  }
 
+  .swiper-slide-active {
+    width: 400px;
+    font-size: 22px;
+    padding: 10px;
+    opacity: 1;
+    margin: 0;
+    height: 327px; 
+  }
+}
 
 @include laptop {
   .myslide {
-    width: 220px;
+    width: 620px;
+    margin-top: 17px;
+  }
+
+  .swiper-slide-active {
+    margin: 0;
+  }
+
+  .swiper-slide-active {
+    padding: 62px 43px 56px;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 0px;
   }
 }
+
 
 @include mobile {
   .myslide {
@@ -90,12 +149,11 @@
 
   .swiper-slide-active {
     width: 250px;
-    font-size: 22px;
-    // padding: 62px 74px 56px;
-    padding: 10px;
-    opacity: 1;
-    margin: 0;
-    height: 327px; 
+    // font-size: 22px;
+    // padding: 10px;
+    // opacity: 1;
+    // margin: 0;
+    // height: 327px; 
   }
 }
 

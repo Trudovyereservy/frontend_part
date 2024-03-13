@@ -67,3 +67,10 @@
     }
   }
 }
+
+@include laptop {
+  .feedbacks__title {
+    padding: 0 42px 20px;
+    font-size: 55px;
+  }
+}

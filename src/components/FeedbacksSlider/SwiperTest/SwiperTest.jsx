@@ -58,34 +58,39 @@ export default () => {
           // // when window width is >= 394px
           // [BREAKPOINT_MOBILE]: {
           395: {
-            // slidesPerView: 'auto',
+            slidesPerView: 'auto',
             slidesPerView: 2,
             spaceBetween: 31,
             loop:false,
           },
           // // when window width is >= 768px
           // [BREAKPOINT_TABLET]: {
-          758: {
-            slidesPerView: 2,
-            spaceBetween: 5
+          768: {
+            // slidesPerView: 2,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: true
           },
           // // // when window width is >= 1024px
           // [BREAKPOINT_NETBOOK]: {
           880: {
-            // slidesPerView: 4,
-            spaceBetween: 40
+            slidesPerView: 'auto',
+            slidesPerView: 2,
+            spaceBetween: 15,
+            // loop: true,
           },
           // // when window width is >= 1280px
           // [BREAKPOINT_LAPTOP]: {
           1024: {
             // slidesPerView: 4,
-            spaceBetween: 35
+            spaceBetween: 20
           },
            // // when window width is >= 1440px
           // [BREAKPOINT_DESKTOP]: {
           1280: {
             // slidesPerView: 4,
-            // spaceBetween: 35
+            spaceBetween: 34,
+            slidesPerView: 'auto',
           }
         }}
       
