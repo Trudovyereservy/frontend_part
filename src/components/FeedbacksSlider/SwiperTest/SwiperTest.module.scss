@@ -29,7 +29,6 @@
   opacity: 0.3;
 }
 
-
 .feedbackCard__about {
   text-align: center;
 
@@ -70,7 +69,27 @@
 
 @include laptop {
   .feedbacks__title {
-    padding: 0 42px 20px;
+    padding: 0 42px 22px;
     font-size: 55px;
+  }
+}
+
+@include tablet {
+  .feedbackCard__textPost {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+@include mobile {
+  .feedbacks__title {
+    padding: 0 47px 27px;
+    font-size: 34px;
+  }
+
+  .feedbackCard__textPost {
+    font-size: 14px;
+    line-height: 23.1px;
   }
 }

@@ -26,7 +26,7 @@
   padding: 62px 74px 56px;
   opacity: 1;
   margin: 0;
-  height: 327px; 
+  height: 327px;
 }
 
 .swiper-slide-prev {
@@ -59,7 +59,7 @@
   margin-right: 5px;
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -85,37 +85,8 @@
   border: none;
 }
 
-@include tablet {
-  .myslide {
-    width: 320px;
-    height: 240px; 
-    // margin-top: 17px;
-  }
+@include desktop {
 
-  .swiper-slide-active {
-    width: 400px;
-    font-size: 22px;
-    padding: 10px;
-    opacity: 1;
-    margin: 0;
-    height: 280px; 
-  }
-}
-
-@include netbook {
-  .myslide {
-    width: 400px;
-    // margin-top: 17px;
-  }
-
-  .swiper-slide-active {
-    width: 400px;
-    font-size: 22px;
-    padding: 10px;
-    opacity: 1;
-    margin: 0;
-    height: 327px; 
-  }
 }
 
 @include laptop {
@@ -137,30 +108,56 @@
   }
 }
 
-
-@include mobile {
+@include netbook {
   .myslide {
-    width: 280px;
-  }
-
-  .swiper-slide {
-    width: 300px;
+    width: 400px;
   }
 
   .swiper-slide-active {
-    width: 250px;
-    // font-size: 22px;
-    // padding: 10px;
-    // opacity: 1;
-    // margin: 0;
-    // height: 327px; 
+    width: 620px;
+    font-size: 22px;
+    opacity: 1;
+    margin: 0;
+    height: 327px;
   }
 }
 
+@include tablet {
+  .myslide {
+    // width: 320px;
+    height: 240px;
+    gap: 30px;
+  }
 
+  .swiper-slide-active {
+    width: 320px;
+    font-size: 22px;
+    padding: 20px 24px 56px;
+    opacity: 1;
+    margin: 0;
+    height: 280px;
+  }
+}
 
+@include mobile {
+  .swiper-slide-active {
+    width: 269px;
+    height: 360px;
+    justify-content: center;
+    // padding: 20px 24px 56px;
+  }
 
+  .swiper-slide-next {
+    width: 269px;
+    height: 360px;
+    margin: 0;
+    // padding: 20px 24px 56px;
+  }
 
-
-
-
+  .swiper-slide-prev {
+    width: 269px;
+    height: 360px;
+    margin: 0;
+  }
+  
+}

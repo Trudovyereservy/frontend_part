@@ -60,16 +60,23 @@ export default () => {
           395: {
             slidesPerView: 'auto',
             slidesPerView: 2,
+            initialSlide: 1,
             spaceBetween: 31,
             loop:false,
           },
           // // when window width is >= 768px
           // [BREAKPOINT_TABLET]: {
+            460: {
+              // slidesPerView: 2,
+              slidesPerView: 'auto',
+              spaceBetween: 20,
+              loop: true
+            },
           768: {
             // slidesPerView: 2,
             slidesPerView: 'auto',
             spaceBetween: 20,
-            loop: true
+            // loop: true
           },
           // // // when window width is >= 1024px
           // [BREAKPOINT_NETBOOK]: {
@@ -83,6 +90,7 @@ export default () => {
           // [BREAKPOINT_LAPTOP]: {
           1024: {
             // slidesPerView: 4,
+            slidesPerView: 'auto',
             spaceBetween: 20
           },
            // // when window width is >= 1440px
