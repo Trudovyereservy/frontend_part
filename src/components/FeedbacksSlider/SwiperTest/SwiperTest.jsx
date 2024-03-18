@@ -59,14 +59,14 @@ export default () => {
           // [BREAKPOINT_MOBILE]: {
           395: {
             slidesPerView: 'auto',
-            slidesPerView: 2,
-            initialSlide: 1,
-            spaceBetween: 31,
+            // slidesPerView: 2,
+            initialSlide: 0,
+            spaceBetween: 20,
             loop:false,
           },
           // // when window width is >= 768px
           // [BREAKPOINT_TABLET]: {
-            460: {
+            480: {
               // slidesPerView: 2,
               slidesPerView: 'auto',
               spaceBetween: 20,
