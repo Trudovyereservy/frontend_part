@@ -85,9 +85,6 @@
   border: none;
 }
 
-@include desktop {
-}
-
 @include laptop {
   .myslide {
     width: 620px;
@@ -96,9 +93,7 @@
 
   .swiper-slide-active {
     margin: 0;
-  }
-
-  .swiper-slide-active {
+    width: 520px;
     padding: 62px 43px 56px;
   }
 
@@ -123,14 +118,15 @@
 
 @include tablet {
   .myslide {
+    width: 380px;
     height: 240px;
     gap: 30px;
+    padding: 20px 24px 56px;
   }
 
   .swiper-slide-active {
     width: 320px;
     font-size: 22px;
-    padding: 20px 24px 56px;
     opacity: 1;
     margin: 0;
     height: 280px;
@@ -139,14 +135,12 @@
 
 @include pocketpc {
   .swiper-slide {
-    // width: 280px;
     height: 310px;
   }
 
   .myslide {
     width: 280px;
     gap: 30px;
-    // margin: 0;
   }
 
   .swiper-slide-active {
@@ -160,7 +154,6 @@
     width: 269px;
     height: 360px;
     justify-content: center;
-    // padding: 20px 24px 56px;
   }
 
   .swiper-slide-next {

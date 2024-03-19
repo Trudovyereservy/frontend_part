@@ -80,18 +80,17 @@
     font-weight: 400;
     line-height: 18px;
   }
+
+  .feedbacks__title {
+    padding: 0 40px 20px;
+    font-size: 34px;
+  }
 }
 
 @include pocketpc {
   .feedbacks__title {
     padding: 0 47px 27px;
-    font-size: 34px;
   }
-
-  // .feedbackCard__textPost {
-  //   font-size: 14px;
-  //   line-height: 23.1px;
-  // }
 }
 
 @include mobile {
