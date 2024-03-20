@@ -1,9 +1,9 @@
 import {useMemo} from 'react';
 
-import { useCardCount } from '../../../hooks/useCardCount';
-import useWindowSize from '../../../hooks/useWindowSize';
-import { Card } from '../Card/Card';
-import { ICardCoachProps } from '../Card/Card.props';
+import { Card } from '@/components/CoachCards/Card/Card';
+import { ICardCoachProps } from '@/components/CoachCards/Card/Card.props';
+import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
 
 import styles from './CoachList.module.scss';
 

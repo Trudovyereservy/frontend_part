@@ -1,12 +1,13 @@
 'use client';
+
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 
-import { linksItems, buttonsNames } from '../../utils/constans';
-import { Button } from '../Button/Button';
-import { Input } from '../Input/Input';
-import { LinksBlock } from '../Links/LinksBlock';
+import { Button } from '@/components/Button/Button';
+import { Input } from '@/components/Input/Input';
+import { LinksBlock } from '@/components/Links/LinksBlock';
+import { linksItems, buttonsNames } from '@/utils/constans';
 
 import styles from './footer.module.scss';
 

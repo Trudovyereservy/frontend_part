@@ -1,14 +1,15 @@
 'use client';
 import Image from 'next/image';
 
+import { Button } from '@/components/Button/Button';
 import { buttonsNames } from '@/utils/constans';
 
-import picturelogo from '../../../public/Mask group.png';
-import picturelogo_mobile from '../../../public/Mask group_394px.png';
-import { Button } from '../Button/Button';
-
-
 import styles from '../main-banner/main-banner.module.scss';
+
+import picturelogo from '@/public/Mask group.png';
+import picturelogo_mobile from '@/public/Mask group_394px.png';
+
+
 
 const MainBanner = () => {
   return (

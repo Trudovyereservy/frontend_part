@@ -1,11 +1,11 @@
 'use client';
 import { useState } from 'react';
 
+import { CardsList } from '@/components/CardsList/CardsList';
 import { Faq } from "@/components/Faq/Faq";
 import  Form  from "@/components/Form/Form";
 import { MainBanner } from '@/components/main-banner/main-banner';
 
-import { CardsList } from '../components/CardsList/CardsList';
 
 import styles from './page.module.scss';
 

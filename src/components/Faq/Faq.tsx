@@ -1,5 +1,5 @@
-import { testFaqItems } from '../../utils/constants';
-import { FaqItem } from '../FaqItem/FaqItem';
+import { FaqItem } from '@/components/FaqItem/FaqItem';
+import { testFaqItems } from '@/utils/constants';
 
 import styles from './Faq.module.scss';
 
