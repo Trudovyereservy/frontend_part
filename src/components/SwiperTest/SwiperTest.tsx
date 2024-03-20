@@ -2,24 +2,18 @@
 'use сlient';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { sliderPosts } from '../../../utils/constans';
 
-// import { ISwiperTestProps } from './SwiperTest.props';
+import { ISwiperTestProps } from './SwiperTest.props';
 
 import styles from './SwiperTest.module.scss';
-import '../../../styles/globals.scss';
+import '../../styles/globals.scss';
 import './myswiper.scss';
 
-export default () => {
-// const SwiperTest () => {
-// const SwiperTest = ({ sliderPosts }: ISwiperTestProps) => {
-// const SwiperTest = ({sliderPosts}) => {
+const SwiperTest = ({ sliderPosts }: ISwiperTestProps) => {
   return (
     <>
       <h2 className={styles.feedbacks__title}>Пример текста</h2>
       <Swiper
-        install
-        Swiper
         className={styles.myslider}
         modules={[Pagination, Autoplay]}
         loop={true}
@@ -94,4 +88,4 @@ export default () => {
   );
 };
 
-// export default SwiperTest;
+export default SwiperTest;

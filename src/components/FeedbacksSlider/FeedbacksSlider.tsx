@@ -3,7 +3,6 @@ import styles from './FeedbacksSlider.module.scss';
 import React, { useState, useEffect } from 'react';
 import { ICarouselProps } from './FeedbacksSlider.props';
 import classNames from 'classnames';
-import  Swiper  from './SwiperTest/SwiperTest';
 
 const Carousel = ({ posts }: ICarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,8 +89,6 @@ const Carousel = ({ posts }: ICarouselProps) => {
         ))}
       </div>
     </section>
-    <Swiper />
-    {/* <Swiper /> */}
     </>
   );
 };

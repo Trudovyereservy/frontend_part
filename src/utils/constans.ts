@@ -69,7 +69,7 @@ const linksItems: LinksItems = {
     },
     {
       text: 'Пример3',
-      id: 2,
+      id: 3,
       linkText: 'Пример4',
       linkUrl: '#',
     },
@@ -95,7 +95,7 @@ const linksItems: LinksItems = {
     },
     {
       text: 'Пример3',
-      id: 2,
+      id: 3,
       linkText: 'Пример8',
       linkUrl: '#',
     },
@@ -121,7 +121,7 @@ const linksItems: LinksItems = {
     },
     {
       text: 'Пример3',
-      id: 2,
+      id: 3,
       linkText: 'Пример12',
       linkUrl: '#',
     },
@@ -141,11 +141,11 @@ const headerLinks: HeaderLink[] = [
 ];
 
 const navLinksMenu: NavLink[] = [
-  { id: 5, name: 'Главная', href: '/' },
-  { id: 1, name: 'Блог', href: '/blog' },
-  { id: 2, name: 'Тренерский состав', href: '/coachs' },
-  { id: 3, name: 'Новости', href: '/news' },
-  { id: 4, name: 'Контакты', href: '/contacts' },
+  { id: 1, name: 'Главная', href: '/' },
+  { id: 2, name: 'Блог', href: '/blog' },
+  { id: 3, name: 'Тренерский состав', href: '/coachs' },
+  { id: 4, name: 'Новости', href: '/news' },
+  { id: 5, name: 'Контакты', href: '/contacts' },
 ];
 
 const blogCards: BlogCard[] = [
