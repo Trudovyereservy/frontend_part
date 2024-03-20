@@ -1,9 +1,11 @@
 import {useMemo} from 'react';
-import styles from './CoachList.module.scss';
+
+import { useCardCount } from '../../../hooks/useCardCount';
+import useWindowSize from '../../../hooks/useWindowSize';
 import { Card } from '../Card/Card';
 import { ICardCoachProps } from '../Card/Card.props';
-import useWindowSize from '../../../hooks/useWindowSize';
-import { useCardCount } from '../../../hooks/useCardCount';
+
+import styles from './CoachList.module.scss';
 
 const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();

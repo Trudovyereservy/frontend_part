@@ -1,7 +1,10 @@
-import { IDescriptionPagesProps } from './DescriptionPages.props';
-import styles from './DescriptionPages.module.scss';
-import { descriptionPages } from '@/utils/constans';
 import { usePathname } from 'next/navigation';
+
+import { descriptionPages } from '@/utils/constans';
+
+import { IDescriptionPagesProps } from './DescriptionPages.props';
+
+import styles from './DescriptionPages.module.scss';
 
 const DescriptionPages = () => {
   const pathName = usePathname();

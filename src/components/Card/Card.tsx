@@ -1,6 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { ICardProps } from './Card.props';
+
 import styles from './card.module.scss';
 
 const Card = ({ title, subtitle, text, imgUrl, linkUrl, linkText }: ICardProps) => {

@@ -1,7 +1,8 @@
 'use client';
-import {CardsList} from '../../components/BlockCards/CardsList/CardList';
-import { blogCards } from '@/utils/constans';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { blogCards } from '@/utils/constans';
+
+import {CardsList} from '../../components/BlockCards/CardsList/CardList';
 
 export default function BlogPage() {
   const style = {

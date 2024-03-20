@@ -1,7 +1,9 @@
-import Link from 'next/link';
-import { ILinksHeaderProps } from './ILinksHeader.props';
-import styles from '../header.module.scss';
 import classNames from 'classnames';
+import Link from 'next/link';
+
+import { ILinksHeaderProps } from './ILinksHeader.props';
+
+import styles from '../header.module.scss';
 
 const LinksHeader = (links: ILinksHeaderProps) => {
   return (
