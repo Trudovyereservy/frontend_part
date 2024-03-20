@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './Form.module.scss';
 import lines from '@/../public/Lines.svg';
 import { regularExpressions } from '@/utils/regularExpressions';
+import childHappy from '../../../public/happy_childs.png'
 
 interface FormData {
   name: string;
@@ -29,6 +30,7 @@ export default function Form() {
       <h2 className={styles.form__headerMobile}>Пример текста</h2>
       <div className={styles.form__photoContainer} />
       <Image className={styles.form__lines} src={lines} alt="Декоративные линии" />
+      {/* <Image className={styles.form__lines} src={childHappy} alt="Декоративные линии" /> */}
       <div className={styles.form__formContainer}>
         <h2 className={styles.form__header}>Пример текста</h2>
         <p className={styles.form__subtitle}>
