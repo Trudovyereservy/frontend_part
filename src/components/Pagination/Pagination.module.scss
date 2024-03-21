@@ -1,0 +1,83 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+$chevron: url("../../../public/chevron\ .\ arrows.svg");
+$chevron-inverse: url("../../../public/chevron\ .\ arrows.grey.svg");
+
+.pagination__content {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+}
+
+.pagination__link {
+  padding: 25px;
+}
+
+.pagination__chevron {
+  background-image: $chevron;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &_disabled {
+    background-image: $chevron-inverse;
+  }
+}
+
+.pagination__chevronInverse {
+  background-image: $chevron;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+
+  &_disabled {
+    background-image: $chevron-inverse;
+  }
+}
+
+.pagination__item {
+  width: 48px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-color: $border-color-ligth-blue;
+  color: $text-color-blue;
+  background-color: transparent;
+
+  &_type_selected {
+    border-color: $border-color-red;
+    color: $text-color-white;
+    background-color: $bg-color-red;
+  }
+}
+
+.pagination__ellipsis {
+  width: 48px;
+  aspect-ratio: 1/1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $text-color-blue;
+}
+
+@include mobile {
+  .pagination__content {
+    align-items: center;
+    gap: 15px;
+  }
+}
