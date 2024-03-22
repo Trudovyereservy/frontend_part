@@ -1,14 +1,13 @@
-import { IDescriptionPagesProps } from './DescriptionPages.props';
-import styles from './DescriptionPages.module.scss';
-import { descriptionPages } from '@/utils/constans';
-import { usePathname } from 'next/navigation';
+import { IDescriptionPagesProps } from "./DescriptionPages.props";
+import styles from "./DescriptionPages.module.scss";
+import { usePathname } from "next/navigation";
 
-const DescriptionPages = () => {
+const DescriptionPages = ({ descriptionPages }: IDescriptionPagesProps) => {
   const pathName = usePathname();
   const blockData = descriptionPages.find((item) => item.route === pathName);
-  
+
   if (!blockData) {
-    return null; 
+    return null;
   }
 
   return (

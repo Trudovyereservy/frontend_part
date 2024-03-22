@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './menu.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navLinksMenu } from '@/utils/constans';
+import { navLinksMenu } from '@/utils/constants';
 import classNames from 'classnames';
 
 const Menu = ({ handler, handleToggleMenu }) => {

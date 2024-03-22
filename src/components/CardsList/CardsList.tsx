@@ -1,6 +1,6 @@
 import styles from './CardsList.module.scss';
 import { Card } from '../Card/Card';
-import { testCards } from '@/utils/constans';
+import { testCards } from '@/utils/constants';
 const CardsList = () => {
   return (
     <section className={styles.cardslist}>

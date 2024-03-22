@@ -1,7 +1,8 @@
 'use client';
+
 import Link from 'next/link';
 import styles from './header.module.scss';
-import { headerLinks } from '@/utils/constans';
+import { headerLinks } from '@/utils/constants';
 import { LinksHeader } from './LinksHeader/LinksHeader';
 import Menu from '@/components/Menu/Menu';
 import { useState } from 'react';

@@ -1,4 +1,5 @@
 'use client';
+
 import styles from './page.module.scss';
 import { useState } from 'react';
 import { MainBanner } from '@/components/main-banner/main-banner';

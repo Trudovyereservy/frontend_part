@@ -4,7 +4,7 @@ import picturelogo from '../../../public/Mask group.png';
 import picturelogo_mobile from '../../../public/Mask group_394px.png';
 import Image from 'next/image';
 import { Button } from '../Button/Button';
-import { buttonsNames } from '@/utils/constans';
+import { buttonsNames } from '@/utils/constants';
 
 const MainBanner = () => {
   return (

@@ -1,7 +1,9 @@
-'use client';
-import { CoachList } from '../../components/CoachCards/CoachList/CoachList';
-import { coachCards } from '@/utils/constans';
-import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+"use client";
+
+import { CoachList } from "../../components/CoachCards/CoachList/CoachList";
+import { coachCards } from "@/utils/constants";
+import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
+import { descriptionPages } from "@/utils/constants";
 
 export default function CoachsPage() {
   return (
@@ -10,7 +12,7 @@ export default function CoachsPage() {
         <title>Трудовые резервы | Тренерский состав</title>
         <meta name="title" content="Блог" />
       </head>
-      <DescriptionPages />
+      <DescriptionPages descriptionPages={descriptionPages} />
       <CoachList coachCards={coachCards} />
     </>
   );
