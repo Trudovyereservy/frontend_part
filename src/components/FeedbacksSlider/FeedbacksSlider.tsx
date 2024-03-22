@@ -1,4 +1,5 @@
 'use client';
+
 import styles from './FeedbacksSlider.module.scss';
 import React, { useState, useEffect } from 'react';
 import { ICarouselProps } from './FeedbacksSlider.props';
