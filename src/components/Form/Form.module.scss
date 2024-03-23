@@ -31,7 +31,8 @@
 }
 
 .form__photoContainer {
-  background-image: url('../../../public/Children-1440.svg');
+  // background-image: url('../../../public/Children-1440.svg');
+  background-image: url('../../../public/happy_childs.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -131,7 +132,8 @@
   }
 
   .form__photoContainer {
-    background-image: url('../../../public/Children-1024.svg');
+    // background-image: url('../../../public/Children-1024.svg');
+    background-image: url('../../../public/happy_childs.png');
     width: 405.1px;
     background-position: 0 79px;
   }
@@ -166,7 +168,8 @@
 
 @include netbook {
   .form__photoContainer {
-    background-image: url('../../../public/Children-393.svg');
+    // background-image: url('../../../public/Children-393.svg');
+    background-image: url('../../../public/happy_childs.png');
     width: 294.3px;
     height: 312.3px;
     background-position: center;
