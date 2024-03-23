@@ -1,4 +1,5 @@
 'use client';
+
 import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
 
 export default function NewsPage() {
