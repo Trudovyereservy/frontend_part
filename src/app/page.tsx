@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import styles from './page.module.scss';
 import { MainBanner } from '@/components/main-banner/main-banner';
@@ -7,7 +7,8 @@ import Form from '@/components/Form/Form';
 import { CardsList } from '@/components/CardsList/CardsList';
 // import FeedbacksSlider from '@/components/FeedbacksSlider/FeedbacksSlider';
 import { sliderPosts } from '@/utils/constans';
-import SwiperTest from '@/components/SwiperTest/SwiperTest';
+// import SwiperTest from '@/components/SwiperTest/SwiperTest';
+import SwiperProvider from '@/components/SwiperTest/SwiperProvider';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
       <MainBanner />
       <CardsList />
       {/* <FeedbacksSlider posts={sliderPosts} /> */}
-      <SwiperTest sliderPosts={sliderPosts}/>
+      {/* <SwiperTest sliderPosts={sliderPosts}/> */}
+      <SwiperProvider />
+      
       <Form />
       <Faq />
     </main>
