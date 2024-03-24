@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './menu.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navLinksMenu } from '@/utils/constants';
 import classNames from 'classnames';
 
-const Menu = ({ handler, handleToggleMenu }) => {
+const Menu = async ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
     handleToggleMenu(false);
   };
+
+  const user = await fetch('https://jsonplaceholder.typicode.com/users/1');
 
   const pathName = usePathname();
 
   return (
     <section className={`${styles.menu} ${handler ? `${styles.menu_active}` : ''}`}>
       <div
-        className={classNames(styles.menu__overlay, {[styles.menu__overlay_active]: handler})}
+        className={classNames(styles.menu__overlay, { [styles.menu__overlay_active]: handler })}
       ></div>
       <section className={styles.menu__container}>
         <button className={styles.menu__button_close} type="button" onClick={closeMenu}></button>
@@ -25,7 +27,9 @@ const Menu = ({ handler, handleToggleMenu }) => {
               const isActive = pathName === link.href;
               return (
                 <Link
-                  className={classNames(styles.menu__link, {[styles.menu__link_active]: isActive})}
+                  className={classNames(styles.menu__link, {
+                    [styles.menu__link_active]: isActive,
+                  })}
                   onClick={closeMenu}
                   href={link.href}
                   key={link.id}

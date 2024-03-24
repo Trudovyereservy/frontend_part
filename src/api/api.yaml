@@ -1,0 +1,437 @@
+openapi: 3.0.3
+info:
+  title: Talent Reserves API
+  version: 1.0.0
+  description: Talent Reserves official API
+paths:
+  /coaches/:
+    get:
+      operationId: coaches_list
+      description: |-
+        Вьюсет для отображения информации о тренерах.
+        Работает только на чтение (list, retrieve).
+        Имеется фильтрация по полю slug модели Directions.
+      parameters:
+      - in: query
+        name: direction_ids
+        schema:
+          type: array
+          items:
+            type: number
+        description: Multiple values may be separated by commas.
+        explode: false
+        style: form
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      tags:
+      - coaches
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCoachList'
+          description: ''
+  /coaches/{id}/:
+    get:
+      operationId: coaches_retrieve
+      description: |-
+        Вьюсет для отображения информации о тренерах.
+        Работает только на чтение (list, retrieve).
+        Имеется фильтрация по полю slug модели Directions.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Coach.
+        required: true
+      tags:
+      - coaches
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coach'
+          description: ''
+  /healthcheck/:
+    get:
+      operationId: healthcheck_retrieve
+      description: Тестовая вью-функция для SwaggerUI
+      tags:
+      - healthcheck
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /news/:
+    get:
+      operationId: news_list
+      description: Вьюсет для отображения списка новостей.
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: tags_ids
+        schema:
+          type: array
+          items:
+            type: number
+        description: Multiple values may be separated by commas.
+        explode: false
+        style: form
+      tags:
+      - news
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedNewsList'
+          description: ''
+  /news/{id}/:
+    get:
+      operationId: news_retrieve
+      description: Вьюсет для отображения списка новостей.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this News.
+        required: true
+      tags:
+      - news
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+          description: ''
+  /post/:
+    get:
+      operationId: post_list
+      description: Вьюсет для работы с постами.
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: tags_ids
+        schema:
+          type: array
+          items:
+            type: number
+        description: Multiple values may be separated by commas.
+        explode: false
+        style: form
+      tags:
+      - post
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPostList'
+          description: ''
+  /post/{id}/:
+    get:
+      operationId: post_retrieve
+      description: Вьюсет для работы с постами.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this post.
+        required: true
+      tags:
+      - post
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+          description: ''
+components:
+  schemas:
+    Coach:
+      type: object
+      description: |-
+        Сериализатор дя вывода информации о тренерах.
+        Выводятся все поля, за исключением birthday.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        surname:
+          type: string
+          maxLength: 64
+        name:
+          type: string
+          maxLength: 64
+        patronymic:
+          type: string
+          maxLength: 64
+        achievements:
+          type: string
+          maxLength: 400
+        directions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Direction'
+          readOnly: true
+        photo:
+          type: string
+          format: uri
+          nullable: true
+      required:
+      - directions
+      - id
+      - name
+      - surname
+    ContentNews:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        image:
+          type: string
+          format: uri
+        title_photo:
+          type: string
+          nullable: true
+          maxLength: 120
+        author_photo:
+          type: string
+          nullable: true
+          maxLength: 50
+        date_photo:
+          type: string
+          format: date
+          nullable: true
+      required:
+      - id
+      - image
+    ContentPost:
+      type: object
+      properties:
+        image:
+          type: string
+          format: uri
+    Direction:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 64
+      required:
+      - id
+      - title
+    News:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 120
+        description:
+          type: string
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+          readOnly: true
+        date_published:
+          type: string
+          format: date-time
+          description: Дата и время публикации (с отсрочкой)
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentNews'
+          readOnly: true
+      required:
+      - date_published
+      - description
+      - id
+      - images
+      - tags
+      - title
+    PaginatedCoachList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Coach'
+    PaginatedNewsList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/News'
+    PaginatedPostList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
+    Post:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+          readOnly: true
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentPost'
+          readOnly: true
+        text:
+          type: string
+        short_description:
+          type: string
+          maxLength: 255
+        publication_date:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - id
+      - images
+      - publication_date
+      - short_description
+      - tags
+      - text
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 254
+      required:
+      - id
+      - name
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
