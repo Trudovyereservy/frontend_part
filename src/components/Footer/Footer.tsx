@@ -7,10 +7,9 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/Button/Button';
 import { Input } from '@/components/Input/Input';
 import { LinksBlock } from '@/components/Links/LinksBlock';
-import { linksItems, buttonsNames } from '@/utils/constans';
+import { linksItems, buttonsNames } from '@/utils/constants';
 
 import styles from './footer.module.scss';
-
 
 const Footer = () => {
   const {

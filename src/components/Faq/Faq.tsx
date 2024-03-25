@@ -1,9 +1,7 @@
 import { FaqItem } from '@/components/FaqItem/FaqItem';
-import { testFaqItems } from '@/utils/constans';
+import { testFaqItems } from '@/utils/constants';
 
 import styles from './Faq.module.scss';
-
-
 
 const Faq = () => {
   return (

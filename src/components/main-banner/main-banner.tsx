@@ -5,10 +5,9 @@ import Image from 'next/image';
 import picturelogo from '@/../public/Mask group.png';
 import picturelogo_mobile from '@/../public/Mask group_394px.png';
 import { Button } from '@/components/Button/Button';
-import { buttonsNames } from '@/utils/constans';
+import { buttonsNames } from '@/utils/constants';
 
 import styles from '../main-banner/main-banner.module.scss';
-
 
 const MainBanner = () => {
   return (
