@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+
 import Link from 'next/link';
 
 import Menu from '@/components/Menu/Menu';
 import { headerLinks } from '@/utils/constants';
 
 import { LinksHeader } from './LinksHeader/LinksHeader';
+
 import styles from './header.module.scss';
 
 const Header = () => {

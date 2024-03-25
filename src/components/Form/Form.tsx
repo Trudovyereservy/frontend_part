@@ -3,12 +3,8 @@
 import Image from 'next/image';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-
 import lines from '@/../public/Lines.svg';
 import { regularExpressions } from '@/utils/regularExpressions';
-import childHappy from '../../../public/happy_childs.png'
-
-import childHappy from '../../../public/happy_childs.png'
 
 import styles from './Form.module.scss';
 

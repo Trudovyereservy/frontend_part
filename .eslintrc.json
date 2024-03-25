@@ -5,8 +5,9 @@
     "@stylistic/padding-line-between-statements": [
         "error",
         { "blankLine": "always", "prev": "directive", "next": "*" },
-        { "blankLine": "any", "prev": "directive", "next": "directive" }
+        { "blankLine": "always", "prev": "directive", "next": "directive" }
     ],
+    "@stylistic/no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
     "import/order": [
       "error",
       {
