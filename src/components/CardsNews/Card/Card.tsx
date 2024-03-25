@@ -11,8 +11,8 @@ const Card = ({ imgUrl, linkUrl, linkText }: ICardNewsMainProps) => {
         className={styles.card__image}
         src={imgUrl}
         alt="Обложка новости"
-        width={270}
-        height={270}
+        width={260}
+        height={263}
       />
       <Link className={styles.card__link} href={linkUrl}>
         {linkText}

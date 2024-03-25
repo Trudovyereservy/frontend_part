@@ -2,8 +2,6 @@
 @import '../../../styles/_mixins.scss';
 
 .card {
-  // max-width: 270px;
-  // height: 270px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -11,6 +9,7 @@
 
 .card__image {
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .card__link {
@@ -18,93 +17,27 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
-  // margin-bottom: 28px;
 }
 
+@include laptop {
+  .card__image {
+    width: 220px;
+    height: 222px;
+  }
+}
 
+@include mobile {
+  .card {
+    gap: 19px;
+  }
 
-// .card__image {
-//   width: 100%;
-//   display: block;
-//   object-fit: cover;
-//   object-position: center;
-//   border-radius: 5px;
-//   background: $bg-color-ligth-grey;
-//   margin-bottom: 25px;
-// }
+  .card__image {
+    width: 300px;
+    height: 300px;
+  }
 
-// .card__title {
-//   color: $text-color-black;
-//   font-size: 20px;
-//   font-style: normal;
-//   font-weight: 600;
-//   line-height: 1.65;
-//   margin-bottom: 10px;
-// }
-
-// .card__subtitle {
-//   flex-shrink: 0;
-//   color: $text-color-grey;
-//   font-size: 15px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: 1.70227;
-//   margin-bottom: 10px;
-// }
-
-// .card__text {
-//   color: $text-color-grey;
-//   font-size: 15px;
-//   font-weight: 400;
-//   line-height: 1.7;
-//   margin-bottom: 28px;
-// }
-
-// .card__link {
-//   border-radius: 30px;
-//   background: $bg-color-red;
-//   display: block;
-//   width: 211.2px;
-//   padding: 16px 35px;
-//   color: #fff;
-//   text-align: center;
-//   font-size: 15px;
-//   font-weight: 500;
-//   line-height: 1;
-// }
-
-// .card__link:hover {
-//   background-color: rgba(209, 23, 44, 0.9);
-//   transition: 0.3s ease-in-out;
-// }
-
-// @include laptop {
-//   .card__link {
-//     width: 176.3px;
-//   }
-//   .card__title {
-//     letter-spacing: -0.3px;
-//   }
-//   .card__subtitle {
-//     letter-spacing: -0.3px;
-//   }
-// }
-
-// @include tablet {
-//   .card__title {
-//     font-size: 14px;
-//     letter-spacing: -0.2px;
-//     margin-bottom: 8px;
-//   }
-//   .card__subtitle {
-//     /*font-size: 14px;*/
-//     display: none;
-//   }
-//   .card__text {
-//     font-size: 14px;
-//     margin-bottom: 9px;
-//   }
-//   .card__link {
-//     width: 220px;
-//   }
-// }
+  .card__link {
+    font-size: 14px;
+    line-height: 22.88px;
+  }
+}

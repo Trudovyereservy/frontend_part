@@ -1,12 +1,62 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/_mixins.scss';
 
-.cardslist__container {
-    border: red solid 2px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 20px;
-    list-style: none;
+.cardnews {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 140px 70px;
 }
+
+.cardslist__container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  height: 100%;
+
+}
+
+.cardslist__title {
+  color: $text-color-blue;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.63418;
+  margin-bottom: 20px;
+}
+
+@include desktop {
+  .cardslist__container {
+    gap: 20px;
+  }
+}
+
+@include laptop {
+  .cardnews {
+    padding: 0 42px 70px;
+  }
+
+  .cardslist__title {
+    font-size: 55px;
+  }
+}
+
+@include tablet {
+  .cardslist__title {
+    font-size: 34px;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+  }
+}
+
+  @include mobile {
+    .cardnews {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardslist__container {
+        flex-direction: column;
+    }
+  }

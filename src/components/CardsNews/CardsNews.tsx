@@ -7,7 +7,8 @@ import { cardsNewsMain } from '@/utils/constants';
 
 const CardsNews = () => {
   return (
-    <section>
+    <section className={styles.cardnews}>
+      <h2 className={styles.cardslist__title}>Пример текста</h2>
       <ul className={styles.cardslist__container}>
         {cardsNewsMain.map((card) => (
           <Card
