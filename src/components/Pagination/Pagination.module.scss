@@ -1,12 +1,12 @@
-@import "../../styles/_variables.scss";
-@import "../../styles/_mixins.scss";
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
 
-$chevron: url("../../../public/chevron\ .\ arrows.svg");
-$chevron-inverse: url("../../../public/chevron\ .\ arrows.grey.svg");
+$chevron: url('../../../public/chevron\ .\ arrows.svg');
+$chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
 
 .pagination__content {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 8px;
 
   font-size: 14px;
