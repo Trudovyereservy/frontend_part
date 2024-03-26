@@ -1,8 +1,8 @@
-"use client";
-import { CardsList } from "../../components/BlockCards/CardsList/CardList";
-import { blogCards } from "@/utils/constants";
-import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
-import { descriptionPages } from "@/utils/constants";
+'use client';
+
+import { CardsList } from '@/components/BlockCards/CardsList/CardList';
+import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { blogCards,descriptionPages } from '@/utils/constants';
 
 export default function BlogPage() {
   const style = {
