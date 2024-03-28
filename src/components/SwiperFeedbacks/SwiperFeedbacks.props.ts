@@ -1,5 +1,5 @@
 import { typeFeedback } from '../../utils/models/feedback';
 
-export interface ISwiperTestProps {
+export interface ISwiperFeedbacksProps {
   sliderPosts: typeFeedback[];
 }

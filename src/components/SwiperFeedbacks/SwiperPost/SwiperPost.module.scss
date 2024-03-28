@@ -1,21 +1,13 @@
 @import '@/styles/_variables.scss';
 @import '@/styles/_mixins.scss';
 
-.feedbacks__title {
-  padding: 0 140px;
-  padding-bottom: 20px;
-  color: $bg-color-blue;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 163.418%;
-}
-
 .feedbackCard__textPost {
   text-align: justify;
   text-align-last: center;
   font-size: 15px;
   font-weight: 400;
   line-height: 25.5px;
+  margin-bottom: 49px;
 }
 
 .feedbackCard__container {
@@ -33,6 +25,7 @@
   text-align: center;
 
   .feedbackCard__textName {
+    margin-bottom: 5px;
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
@@ -67,38 +60,16 @@
   }
 }
 
-@include laptop {
-  .feedbacks__title {
-    padding: 0 42px 22px;
-    font-size: 55px;
-  }
-}
-
 @include tablet {
   .feedbackCard__textPost {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-  }
-
-  .feedbacks__title {
-    padding: 0 40px 20px;
-    font-size: 34px;
-  }
-}
-
-@include pocketpc {
-  .feedbacks__title {
-    padding: 0 47px 27px;
+    margin-bottom: 25px;
   }
 }
 
 @include mobile {
-  .feedbacks__title {
-    padding: 0 47px 27px;
-    font-size: 34px;
-  }
-
   .feedbackCard__textPost {
     font-size: 14px;
     line-height: 23.1px;
