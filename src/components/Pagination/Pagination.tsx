@@ -1,13 +1,13 @@
 import * as React from 'react';
+
 import styles from '@/components/Pagination/Pagination.module.scss';
-
-import useWindowSize from '@/hooks/useWindowSize';
 import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
 
-import { PaginationPrevious } from './PaginationPrevious';
-import { PaginationNext } from './PaginationNext';
-import { PaginationItem } from './PaginationItem';
 import { PaginationEllipsis } from './PaginationEllipsis';
+import { PaginationItem } from './PaginationItem';
+import { PaginationNext } from './PaginationNext';
+import { PaginationPrevious } from './PaginationPrevious';
 
 type PaginationItemProps = {
   totalCards: number;
@@ -17,7 +17,9 @@ type PaginationItemProps = {
 export const Pagination = ({ totalCards = 117, currentPage = 3 }: PaginationItemProps) => {
   const width: number = useWindowSize();
   const cardsPerPage: number = useCardCount(width);
+
   const paginationItemsToDisplay = 5; //TODO Add to constants
+
   const totalPages = Math.ceil(totalCards / cardsPerPage);
   const lastPage = totalPages;
 
@@ -113,10 +115,7 @@ export const Pagination = ({ totalCards = 117, currentPage = 3 }: PaginationItem
   }
 
   return (
-    <nav
-      role="navigation"
-      aria-label="pagination"
-    >
+    <nav role="navigation" aria-label="pagination" className={styles.pagination}>
       <ul className={styles.pagination__content}>
         <PaginationPrevious
           href={`?limit=${cardsPerPage}&page=${currentPage - 1}`}

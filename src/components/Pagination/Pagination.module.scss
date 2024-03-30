@@ -4,6 +4,12 @@
 $chevron: url('../../../public/chevron\ .\ arrows.svg');
 $chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
 
+.pagination {
+  max-width: 1440px;
+  margin-bottom: 100px;
+  padding: 0 140px;
+}
+
 .pagination__content {
   display: flex;
   align-items: flex-start;
@@ -75,7 +81,24 @@ $chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
   color: $text-color-blue;
 }
 
+@include laptop {
+  .pagination {
+    max-width: 1024px;
+    padding: 0 42px;
+  }
+}
+
+@include tablet {
+  .pagination {
+    max-width: 494px;
+    margin-inline: auto;
+  }
+}
+
 @include mobile {
+  .pagination {
+    max-width: 394px;
+  }
   .pagination__content {
     align-items: center;
     gap: 15px;

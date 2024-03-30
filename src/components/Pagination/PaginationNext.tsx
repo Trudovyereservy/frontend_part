@@ -1,6 +1,7 @@
-import styles from './Pagination.module.scss';
-import Link from 'next/link';
 import classNames from 'classnames';
+import Link from 'next/link';
+
+import styles from './Pagination.module.scss';
 
 type PaginationNextProps = {
   href: string;
