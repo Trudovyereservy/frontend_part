@@ -4,31 +4,30 @@ import classNames from 'classnames';
 
 type PaginationItemProps = {
   href: string;
-  isSelected?: boolean;
-  itemText?: string;
+  pageNumber: number;
+  currentPage?: number;
 };
 
-export const PaginationItem = ({
-  href,
-  isSelected,
-  itemText = '#', //TODO Remove default value
-}: PaginationItemProps) => (
-  <li
-    className={classNames(styles.pagination__item, {
-      [styles.pagination__item_type_selected]: isSelected,
-    })}
-  >
-    {isSelected ? (
-      <span>{itemText}</span>
-    ) : (
-      <Link
-        //TODO Update page # to use props
-        aria-label={`Go to page ${href}`}
-        className={styles.pagination__link}
-        href={href}
-      >
-        <span>{itemText}</span>
-      </Link>
-    )}
-  </li>
-);
+export const PaginationItem = ({ href, pageNumber, currentPage }: PaginationItemProps) => {
+  const isSelected = pageNumber === currentPage ? true : false;
+
+  return (
+    <li
+      className={classNames(styles.pagination__item, {
+        [styles.pagination__item_type_selected]: isSelected,
+      })}
+    >
+      {isSelected ? (
+        <span>{pageNumber}</span>
+      ) : (
+        <Link
+          aria-label={`Go to page ${pageNumber}`}
+          className={styles.pagination__link}
+          href={href}
+        >
+          <span>{pageNumber}</span>
+        </Link>
+      )}
+    </li>
+  );
+};
