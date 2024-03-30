@@ -1,3 +1,53 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort", "@stylistic"],
+  "rules": {
+    "@stylistic/padding-line-between-statements": [
+        "error",
+        { "blankLine": "always", "prev": "directive", "next": "*" },
+        { "blankLine": "always", "prev": "directive", "next": "directive" }
+    ],
+    "@stylistic/no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{.,..}/**/*.+(css|sass|less|scss|pcss|styl)",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "next",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "warnOnUnassignedImports": true
+      }
+    ],
+    "import/newline-after-import": ["error", { "count": 1 }]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  }
 }
