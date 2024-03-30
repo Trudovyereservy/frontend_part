@@ -3,6 +3,7 @@ import * as React from 'react';
 import styles from '@/components/Pagination/Pagination.module.scss';
 import { useCardCount } from '@/hooks/useCardCount';
 import useWindowSize from '@/hooks/useWindowSize';
+import { BREAKPOINT_TABLET } from '@/utils/constResizeWindow';
 
 import { PaginationEllipsis } from './PaginationEllipsis';
 import { PaginationItem } from './PaginationItem';
@@ -13,12 +14,12 @@ type PaginationItemProps = {
   totalCards: number;
   currentPage: number;
 };
-//TODO Remove default values
-export const Pagination = ({ totalCards = 117, currentPage = 3 }: PaginationItemProps) => {
+
+export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => {
   const width: number = useWindowSize();
   const cardsPerPage: number = useCardCount(width);
 
-  const paginationItemsToDisplay = 5; //TODO Add to constants
+  const paginationItemsToDisplay = width > BREAKPOINT_TABLET ? 5 : 3;
 
   const totalPages = Math.ceil(totalCards / cardsPerPage);
   const lastPage = totalPages;
@@ -68,18 +69,11 @@ export const Pagination = ({ totalCards = 117, currentPage = 3 }: PaginationItem
       );
     }
 
-    // both the left and the right dots are visible
-    if (
-      totalPages > paginationItemsToDisplay &&
-      currentPage > siblings * 2 + 1 &&
-      currentPage + siblings * 2 <= totalPages
-    ) {
+    // only the right dots are visible
+    if (totalPages > paginationItemsToDisplay && currentPage <= siblings + 2) {
       return (
         <>
-          <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
-          <PaginationEllipsis />
-
-          {range(currentPage - siblings, currentPage + siblings).map((page) => (
+          {range(1, siblings * 2 + 2).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}
@@ -94,11 +88,14 @@ export const Pagination = ({ totalCards = 117, currentPage = 3 }: PaginationItem
       );
     }
 
-    // only the right dots are visible
-    if (totalPages > paginationItemsToDisplay && currentPage < totalPages) {
+    // both the left and the right dots are visible
+    if (totalPages > paginationItemsToDisplay && currentPage > siblings * 2 + 1) {
       return (
         <>
-          {range(1, siblings * 2 + 2).map((page) => (
+          <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
+          <PaginationEllipsis />
+
+          {range(currentPage - siblings, currentPage + siblings).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}

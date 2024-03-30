@@ -72,7 +72,7 @@ $chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
 
 .pagination__ellipsis {
   width: 48px;
-  aspect-ratio: 1/1;
+  height: 48px;
 
   display: flex;
   justify-content: center;
@@ -91,7 +91,11 @@ $chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
 @include tablet {
   .pagination {
     max-width: 494px;
+    padding: 0;
     margin-inline: auto;
+  }
+  .pagination__ellipsis {
+    width: 20px;
   }
 }
 
