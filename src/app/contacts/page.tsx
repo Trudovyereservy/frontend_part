@@ -1,8 +1,9 @@
 'use client';
 
+import AddressesList from '@/components/Addresses/AddressesList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import { Map } from '@/components/Map/Map';
-import { descriptionPages } from "@/utils/constants";
+import { descriptionPages, testAddresses } from "@/utils/constants";
 
 export default function ContactsPage() {
   return (
@@ -12,7 +13,8 @@ export default function ContactsPage() {
         <meta name="title" content="Блог" />
       </head>
       <DescriptionPages descriptionPages={descriptionPages} />
-      <Map/>
+      <Map />
+      <AddressesList addresses={testAddresses} />
     </>
   );
 }

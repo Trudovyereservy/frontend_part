@@ -1,0 +1,45 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+.addresses {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px calc(100%/3 - 286px);
+    margin: 32px auto 35px;
+    width: calc(100% - 280px);
+}
+
+@include desktop {
+    .addresses {
+        width: calc(100% - 84px);
+        gap: 20px calc(100%/4 - 219px);
+    }
+}
+
+@include laptop {
+    .addresses {
+        margin-top: 43px;
+        gap: 20px calc(100%/2 - 450px);
+    }
+}
+
+@include netbook {
+    .addresses {
+        grid-template-columns: auto auto;
+    }
+}
+
+@include tablet {
+    .addresses {
+        width: calc(100% - 92px);
+        margin-top: 36px;
+        grid-template-columns: auto;
+        row-gap: 30px;
+    }
+}
+
+@include mobile {
+    .addresses {
+        row-gap: 10px;
+    }
+}
