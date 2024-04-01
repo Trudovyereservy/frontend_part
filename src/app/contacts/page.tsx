@@ -1,6 +1,7 @@
 'use client';
 
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { Map } from '@/components/Map/Map';
 import { descriptionPages } from "@/utils/constants";
 
 export default function ContactsPage() {
@@ -11,6 +12,7 @@ export default function ContactsPage() {
         <meta name="title" content="Блог" />
       </head>
       <DescriptionPages descriptionPages={descriptionPages} />
+      <Map/>
     </>
   );
 }
