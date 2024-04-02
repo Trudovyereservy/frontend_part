@@ -7,4 +7,5 @@ export interface IAddress {
 
 export interface IAddressListProps {
     addresses: IAddress[];
+    onClick: (arg0: string) => void;
 }

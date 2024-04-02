@@ -5,8 +5,15 @@ import ContactCardList from '@/components/ContactCards/ContactCardsList/ContactC
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import { Map } from '@/components/Map/Map';
 import { descriptionPages, testAddresses, testContancts } from "@/utils/constants";
+import { useState } from 'react';
 
 export default function ContactsPage() {
+  const [mapUrl, setMapUrl] = useState(testAddresses[0].mapUrl);
+
+  const handleAddressChange = function (mapUrl: string) {
+    setMapUrl(mapUrl);
+  };
+
   return (
     <>
       <head>
@@ -14,8 +21,8 @@ export default function ContactsPage() {
         <meta name="title" content="Блог" />
       </head>
       <DescriptionPages descriptionPages={descriptionPages} />
-      <Map />
-      <AddressesList addresses={testAddresses} />
+      <Map mapUrl={mapUrl}/>
+      <AddressesList addresses={testAddresses} onClick={handleAddressChange}/>
       <ContactCardList cards={testContancts} />
     </>
   );

@@ -14,6 +14,10 @@
     color: rgba(0, 50, 99, 1);
 }
 
+.addressItem__title:hover {
+    cursor: pointer;
+}
+
 .addressItem__address {
     font-size: 15px;
     font-weight: 400;
