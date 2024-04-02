@@ -453,4 +453,39 @@ const testAddresses = [
   },
 ];
 
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses };
+//тестовый массив контактов 
+
+const testContancts = [
+  {
+    id: 0,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+  {
+    id: 1,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+  {
+    id: 2,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+  {
+    id: 3,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+  {
+    id: 4,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+  {
+    id: 5,
+    title: 'Пример текста пример текста',
+    subtitle: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+  },
+]
+
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts };
