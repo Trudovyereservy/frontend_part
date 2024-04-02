@@ -1,10 +1,14 @@
 'use client';
-import styles from './page.module.scss';
+
 import { useState } from 'react';
-import { MainBanner } from '@/components/main-banner/main-banner';
+
+import { CardsList } from '@/components/CardsList/CardsList';
 import { Faq } from "@/components/Faq/Faq";
-import { CardsList } from "@/components/CardsList/CardsList";
-import  Form from "@/components/Form/Form";
+import  Form  from "@/components/Form/Form";
+import { MainBanner } from '@/components/main-banner/main-banner';
+
+import styles from './page.module.scss';
+
 export default function Home() {
   const [closeMenu, setCloseMenu] = useState(false);
   
@@ -15,8 +19,8 @@ export default function Home() {
   return (
     <main className={styles.mainbanner__wrapper}>
       <MainBanner />
-      <CardsList />
-      <Form />
+      <CardsList/>
+      <Form/>
       <Faq />
     </main>
   );

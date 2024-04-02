@@ -1,11 +1,12 @@
-// import Head from 'next/head';
 'use client';
-import {CardsList} from '../../components/BlockCards/CardsList/CardList';
-import { blogCards } from '@/utils/constans';
+
+import { CardsList } from '@/components/BlockCards/CardsList/CardList';
+import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { blogCards,descriptionPages } from '@/utils/constants';
 
 export default function BlogPage() {
   const style = {
-    color: 'red',
+    color: "red",
     fontSize: 20,
   };
 
@@ -15,7 +16,8 @@ export default function BlogPage() {
         <title>Трудовые резервы | Блог</title>
         <meta name="title" content="Блог" />
       </head>
-    <CardsList blogCards={blogCards}/>
+      <DescriptionPages descriptionPages={descriptionPages} />
+      <CardsList blogCards={blogCards} />
     </>
   );
 }

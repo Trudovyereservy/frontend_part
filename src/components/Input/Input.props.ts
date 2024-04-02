@@ -1,6 +1,10 @@
+import { RegisterOptions } from 'react-hook-form';
+
 export interface InputProps {
-  className: string;
-  register: (name: string) => void;
+  className?: string;
+  // register: (name: string, value: any) => void;
+  register: any;
   nameInput: string;
-  // nameInput: any;
+  pattern: string;
+  rest?: RegisterOptions;
 }
