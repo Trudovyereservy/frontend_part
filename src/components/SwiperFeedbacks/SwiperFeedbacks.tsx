@@ -3,15 +3,14 @@
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { SwiperPost } from './SwiperPost/SwiperPost';
-
-import { ISwiperFeedbacksProps } from './SwiperFeedbacks.props';
+import '@/styles/globals.scss';
 
 import { config } from './configSwiper';
+import { ISwiperFeedbacksProps } from './SwiperFeedbacks.props';
+import { SwiperPost } from './SwiperPost/SwiperPost';
 
-import styles from './SwiperFeedbacks.module.scss';
-import '@/styles/globals.scss';
 import './Myswiper.scss';
+import styles from './SwiperFeedbacks.module.scss';
 
 const SwiperFeedbacks = ({ sliderPosts }: ISwiperFeedbacksProps) => {
   return (
@@ -31,9 +30,9 @@ const SwiperFeedbacks = ({ sliderPosts }: ISwiperFeedbacksProps) => {
         pagination={config.pagination}
         breakpoints={config.breakpoints}
       >
-        {sliderPosts.map((item, description) => (
-          <SwiperSlide key={description} className="myslide">
-            <SwiperPost {...item} />
+        {sliderPosts.map((item) => (
+          <SwiperSlide key={item.id} className="myslide">
+            <SwiperPost post={item.post} name={item.name} description={item.description} />
           </SwiperSlide>
         ))}
       </Swiper>

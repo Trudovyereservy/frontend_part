@@ -1,5 +1,9 @@
+interface descriptions {
+  route: string;
+  page: string;
+  content: string;
+}
+
 export interface IDescriptionPagesProps {
-    page: string;
-    content: string;
-  }
-  
+  descriptionPages: descriptions[];
+}

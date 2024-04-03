@@ -1,5 +1,5 @@
-import { typeFeedback } from '../../utils/models/feedback';
+import { TFeedback } from '@/components/SwiperFeedbacks/FeedbackTypes';
 
 export interface ISwiperFeedbacksProps {
-  sliderPosts: typeFeedback[];
+  sliderPosts: TFeedback[];
 }

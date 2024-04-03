@@ -1,21 +1,25 @@
 import {useMemo} from 'react';
+
+import { Card } from '@/components/CoachCards/Card/Card';
+import { ICardCoachProps } from '@/components/CoachCards/Card/Card.props';
+import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
+
 import styles from './CoachList.module.scss';
-import { Card } from '../Card/Card';
-import { ICardCoachProps } from '../Card/Card.props';
-import useWindowSize from '../../../hooks/useWindowSize';
-import { useCardCount } from '../../../hooks/useCardCount';
 
 const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width);
 
-  const visibleCoachCards = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
+  const visibleCoachCards: ICardCoachProps[] = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
 
   return (
     <section className={styles.cardslist}>
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
           <Card
+            id={card.id}
+            key={card.id}
             name={card.name}
             surname={card.surname}
             directions={card.directions}

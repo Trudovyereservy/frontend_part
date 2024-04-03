@@ -5,4 +5,5 @@ export interface ICardCoachProps {
   achievements: string;
   patronymic: string;
   photo: string;
+  id: number;
 }

@@ -1,12 +1,8 @@
+import { TPost } from '@/components/SwiperFeedbacks/FeedbackTypes';
+
 import styles from './SwiperPost.module.scss';
 
-interface ISwiperPostsProps {
-  post: string;
-  name: string;
-  description: string;
-}
-
-export const SwiperPost = ({ post, name, description }: ISwiperPostsProps) => {
+export const SwiperPost = ({ post, name, description }: TPost) => {
   return (
     <article>
       <p className={styles.feedbackCard__textPost}>{post}</p>
