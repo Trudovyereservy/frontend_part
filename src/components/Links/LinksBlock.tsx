@@ -1,5 +1,7 @@
 import Link from 'next/link';
+
 import { ILinksBlockProps } from './IlinksBlock.props';
+
 import styles from './links.module.scss';
 
 const LinksBlock = (links: ILinksBlockProps) => {

@@ -1,6 +1,8 @@
-import { IDescriptionPagesProps } from "./DescriptionPages.props";
-import styles from "./DescriptionPages.module.scss";
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation';
+
+import { IDescriptionPagesProps } from './DescriptionPages.props';
+
+import styles from './DescriptionPages.module.scss';
 
 const DescriptionPages = ({ descriptionPages }: IDescriptionPagesProps) => {
   const pathName = usePathname();

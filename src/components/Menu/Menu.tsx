@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import styles from './menu.module.scss';
+import React from 'react';
+
+import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 import { navLinksMenu } from '@/utils/constants';
-import classNames from 'classnames';
+
+import styles from './menu.module.scss';
 
 const Menu = async ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
