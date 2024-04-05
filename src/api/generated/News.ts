@@ -9,15 +9,15 @@
  * ---------------------------------------------------------------
  */
 
-import { News, PaginatedNewsList } from './data-contracts';
+import { NewsItem, PaginatedNewsList } from './data-contracts';
 import { HttpClient, RequestParams } from './http-client';
 
-export class NewsItems<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class News<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * @description Вьюсет для отображения списка новостей.
    *
    * @tags news
-   * @name NewsList
+   * @name News
    * @request GET:/news/
    * @secure
    */
@@ -49,7 +49,7 @@ export class NewsItems<SecurityDataType = unknown> extends HttpClient<SecurityDa
    * @secure
    */
   newsRetrieve = (id: number, params: RequestParams = {}) =>
-    this.request<News, any>({
+    this.request<NewsItem, any>({
       path: `/news/${id}/`,
       method: 'GET',
       secure: true,

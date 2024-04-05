@@ -51,7 +51,7 @@ export interface Direction {
   title: string;
 }
 
-export interface News {
+export interface NewsItem {
   id: number;
   /** @maxLength 120 */
   title: string;
@@ -94,7 +94,7 @@ export interface PaginatedNewsList {
    * @example "http://api.example.org/accounts/?page=2"
    */
   previous?: string | null;
-  results?: News[];
+  results?: NewsItem[];
 }
 
 export interface PaginatedPostList {
@@ -110,10 +110,10 @@ export interface PaginatedPostList {
    * @example "http://api.example.org/accounts/?page=2"
    */
   previous?: string | null;
-  results?: Post[];
+  results?: PostItem[];
 }
 
-export interface Post {
+export interface PostItem {
   id: number;
   tags: Tag[];
   images: ContentPost[];

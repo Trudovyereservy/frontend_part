@@ -9,16 +9,16 @@
  * ---------------------------------------------------------------
  */
 
-import { PaginatedPostList, Post } from './data-contracts';
+import { PaginatedPostList, PostItem } from './data-contracts';
 import { HttpClient, RequestParams } from './http-client';
 
-export class PostItems<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class Posts<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * @description Вьюсет для работы с постами.
    *
-   * @tags post
-   * @name PostList
-   * @request GET:/post/
+   * @tags posts
+   * @name Posts
+   * @request GET:/posts/
    * @secure
    */
   postList = (
@@ -33,7 +33,7 @@ export class PostItems<SecurityDataType = unknown> extends HttpClient<SecurityDa
     params: RequestParams = {},
   ) =>
     this.request<PaginatedPostList, any>({
-      path: `/post/`,
+      path: `/posts/`,
       method: 'GET',
       query: query,
       secure: true,
@@ -49,8 +49,8 @@ export class PostItems<SecurityDataType = unknown> extends HttpClient<SecurityDa
    * @secure
    */
   postRetrieve = (id: number, params: RequestParams = {}) =>
-    this.request<Post, any>({
-      path: `/post/${id}/`,
+    this.request<PostItem, any>({
+      path: `/posts/${id}/`,
       method: 'GET',
       secure: true,
       format: 'json',
