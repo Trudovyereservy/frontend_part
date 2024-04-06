@@ -8,12 +8,10 @@ import { navLinksMenu } from '@/utils/constants';
 
 import styles from './menu.module.scss';
 
-const Menu = async ({ handler, handleToggleMenu }) => {
+const Menu = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
     handleToggleMenu(false);
   };
-
-  const user = await fetch('https://jsonplaceholder.typicode.com/users/1');
 
   const pathName = usePathname();
 
