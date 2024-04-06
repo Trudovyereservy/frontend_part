@@ -1,13 +1,17 @@
+'use client';
+
 import { useState } from 'react';
 
 import classNames from 'classnames';
 import Image from 'next/image';
 
+import { Coach } from '@/api/generated/data-contracts';
+
 import { ICardCoachProps } from './Card.props';
 
 import styles from './Card.module.scss';
 
-const Card = ({ photo, name, surname, directions, achievements, patronymic }: ICardCoachProps) => {
+const Card: React.FC<Coach> = ({ photo, name, surname, directions, achievements, patronymic }) => {
   const [openInfo, setOpenInfo] = useState(true);
 
   function openCard() {
@@ -19,8 +23,8 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
       <div className={styles.card__photo_wrapper}>
         <Image
           className={styles.card__image}
-          src={photo}
-          alt="Фотография тренера"
+          src={photo || ''}
+          alt='Фотография тренера'
           width={360}
           height={360}
         />
@@ -36,7 +40,11 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
           <h3 className={styles.card__name}>{surname}</h3>
           <h3 className={styles.card__name}>{name}</h3>
           <h3 className={styles.card__name}>{patronymic}</h3>
-          <p className={styles.card__directions}>{directions}</p>
+          {directions.map(({ id, title }) => (
+            <p className={styles.card__directions} key={id}>
+              {title}
+            </p>
+          ))}
         </div>
       ) : (
         <p className={styles.card__achievements}>{achievements}</p>
