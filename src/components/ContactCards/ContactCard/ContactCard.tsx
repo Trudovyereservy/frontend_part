@@ -1,7 +1,8 @@
 import { FC } from "react";
-import styles from "./contactCard.module.scss";
 
 import { IContactCard } from "../ContactCardsList/ContactCardList.props";
+
+import styles from "./contactCard.module.scss";
 
 interface CardProp {
     card: IContactCard

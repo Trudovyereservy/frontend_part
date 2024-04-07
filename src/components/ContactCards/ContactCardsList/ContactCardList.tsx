@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import styles from './contactCardList.module.scss';
+
+import ContactCard from '../ContactCard/ContactCard';
 
 import { IContactCardListProps } from './ContactCardList.props';
-import ContactCard from '../ContactCard/ContactCard';
+
+import styles from './contactCardList.module.scss';
 
 const ContactCardList: FC<IContactCardListProps> = ({ cards }) => {
     return (

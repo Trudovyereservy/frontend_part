@@ -412,8 +412,8 @@ const testCards = [
   },
 ];
 
-
 //тестовый массив адресов 
+
 const testAddresses = [
   {
     id: 0,
