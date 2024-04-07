@@ -9,15 +9,15 @@ import { config } from './configSwiper';
 import { ISwiperFeedbacksProps } from './SwiperFeedbacks.props';
 import { SwiperPost } from './SwiperPost/SwiperPost';
 
-import './Myswiper.scss';
 import styles from './SwiperFeedbacks.module.scss';
+import './SwiperCustom.scss';
 
 const SwiperFeedbacks = ({ sliderPosts }: ISwiperFeedbacksProps) => {
   return (
     <>
       <h2 className={styles.feedbacks__title}>Пример текста</h2>
       <Swiper
-        className={styles.myslider}
+        // className={styles.myslider}
         modules={[Pagination, Autoplay]}
         loop={config.loop}
         slidesPerView={config.slidesPerView}
@@ -31,7 +31,8 @@ const SwiperFeedbacks = ({ sliderPosts }: ISwiperFeedbacksProps) => {
         breakpoints={config.breakpoints}
       >
         {sliderPosts.map((item) => (
-          <SwiperSlide key={item.id} className="myslide">
+          // <SwiperSlide key={item.id} className="slide-custom">
+          <SwiperSlide key={item.id} className="slide-custom">
             <SwiperPost post={item.post} name={item.name} description={item.description} />
           </SwiperSlide>
         ))}

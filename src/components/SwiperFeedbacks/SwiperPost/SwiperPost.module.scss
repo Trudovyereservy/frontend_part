@@ -25,7 +25,7 @@
   text-align: center;
 
   .feedbackCard__textName {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
@@ -60,6 +60,15 @@
   }
 }
 
+@include netbook {
+  .feedbackCard__textPost {
+    // font-size: 14px;
+    // font-weight: 400;
+    // line-height: 18px;
+    margin-bottom: 10px;
+  }
+}
+
 @include tablet {
   .feedbackCard__textPost {
     font-size: 14px;
@@ -74,4 +83,13 @@
     font-size: 14px;
     line-height: 23.1px;
   }
+}
+
+.feedbackCard {
+  background-color: rebeccapurple;
+}
+
+
+.feedbackCard:not(.swiper-slide-active) {
+  color: red;
 }
