@@ -4,7 +4,7 @@ import ContactCard from '../ContactCard/ContactCard';
 
 import { IContactCardListProps } from './ContactCardList.props';
 
-import styles from './contactCardList.module.scss';
+import styles from './ContactCardList.module.scss';
 
 const ContactCardList: FC<IContactCardListProps> = ({ cards }) => {
     return (

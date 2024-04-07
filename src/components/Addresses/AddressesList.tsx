@@ -3,7 +3,7 @@ import { FC } from "react";
 import { IAddressListProps } from "./AddressesList.props";
 import AddressItem from "./AddressItem/AddressItem";
 
-import styles from "./addressesList.module.scss";
+import styles from "./AddressesList.module.scss";
 
 const Addresses: FC<IAddressListProps> = ({ addresses, onClick }) => {
     return (

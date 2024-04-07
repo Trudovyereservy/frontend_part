@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { IContactCard } from "../ContactCardsList/ContactCardList.props";
 
-import styles from "./contactCard.module.scss";
+import styles from "./ContactCard.module.scss";
 
 interface CardProp {
     card: IContactCard

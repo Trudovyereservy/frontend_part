@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { IAddress } from "../AddressesList.props";
 
-import styles from "./addressItem.module.scss";
+import styles from "./AddressItem.module.scss";
 
 interface AddressProps {
     address: IAddress;
