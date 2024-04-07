@@ -3,50 +3,40 @@ import {
   BREAKPOINT_LAPTOP,
   BREAKPOINT_NETBOOK,
   BREAKPOINT_TABLET,
+  BREAKPOINT_POCKETPC,
   BREAKPOINT_MOBILE,
-  BREAKPOINT_MOBILE_MIN,
 } from '@/utils/constResizeWindow';
 
 export const config = {
   breakpoints: {
-    320: {
-      // slidesPerView: 'auto',
+    [BREAKPOINT_MOBILE]: {
+      slidesPerView: 'auto',
       initialSlide: 0,
-      slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 31,
+      centeredSlides: true,
       loop: false,
     },
-    394: {
-      // slidesPerView: 'auto',
-      // initialSlide: 0,
+    [BREAKPOINT_POCKETPC]: {
+      spaceBetween: 20,
+      initialSlide: 1,
       slidesPerView: 2,
-      spaceBetween: 20,
-      // centeredSlides: true,
+      loop: true,
     },
-    480: {
-      // slidesPerView: 'auto',
-      spaceBetween: 20,
-      // slidesPerView: 2,
-      // loop: true,
-    },
-    768: {
-      // initialSlide: 1,
-      spaceBetween: 20,
-      slidesPerView: 2,
-      // slidesPerView: 'auto',
-    },
-    880: {
-      spaceBetween: 20,
-      slidesPerView: 2,
-      // slidesPerView: 'auto',
-    },
-    1024: {
+    [BREAKPOINT_TABLET]: {
       spaceBetween: 20,
       slidesPerView: 2,
     },
-    1280: {
+    [BREAKPOINT_NETBOOK]: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    [BREAKPOINT_LAPTOP]: {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
+    [BREAKPOINT_DESKTOP]: {
       spaceBetween: 34,
-      // slidesPerView: 2,
       slidesPerView: 'auto',
     },
   },

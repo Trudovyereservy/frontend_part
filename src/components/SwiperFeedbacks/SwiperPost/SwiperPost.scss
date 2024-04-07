@@ -10,22 +10,9 @@
   margin-bottom: 49px;
 }
 
-.feedbackCard__container {
-  display: inline-block;
-  min-width: 615px;
-  height: 278px;
-  padding: 45px 40px 80px;
-  margin: 14px 0 35px;
-  border-radius: 30px;
-  border: 2px solid $border-color-blue;
-  opacity: 0.3;
-}
-
 .feedbackCard__about {
-  text-align: center;
 
   .feedbackCard__textName {
-    // margin-bottom: 5px;
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
@@ -62,9 +49,6 @@
 
 @include netbook {
   .feedbackCard__textPost {
-    // font-size: 14px;
-    // font-weight: 400;
-    // line-height: 18px;
     margin-bottom: 10px;
   }
 }
@@ -79,17 +63,30 @@
 }
 
 @include mobile {
-  .feedbackCard__textPost {
-    font-size: 14px;
-    line-height: 23.1px;
+  
+  .feedbackCard {
+  
+    &__textPost {
+      font-size: 14px;
+      line-height: 23.1px;
+      margin-bottom: 17px;
+    }
+  
+    &__about > &__textName {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 23.1px;
+      color: $bg-color-blue;
+    }
+
+    &__textDescription {
+    display: none;
   }
 }
 
-.feedbackCard {
-  background-color: rebeccapurple;
+  .feedbackCard__textPost {
+    margin-bottom: 18px;
+}
 }
 
 
-.feedbackCard:not(.swiper-slide-active) {
-  color: red;
-}
