@@ -1,9 +1,6 @@
 import { InputProps } from './Input.props';
 
-const Input = ({ className, register, nameInput, pattern, ...inputProps }: InputProps) => {
-  const { rest, ...restProps } = inputProps;
-
-  return (
+const Input = ({ className, register, nameInput, ...inputProps }: InputProps) => (
     <input
       type="text"
       placeholder="Phone"
@@ -15,9 +12,10 @@ const Input = ({ className, register, nameInput, pattern, ...inputProps }: Input
           message: 'Неверный формат телефона',
         },
       })}
-      {...restProps}
+      // {...restProps}
+      {...inputProps}
     />
-  );
-};
+  )
+;
 
 export { Input };

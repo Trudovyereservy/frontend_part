@@ -1,10 +1,11 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { ICardBlogProps } from './Card.props';
+
 import styles from './Card.module.scss';
 
-const Card = ({ title, shortDescription, imgUrl, linkUrl }: ICardBlogProps) => {
-  return (
+const Card = ({ title, shortDescription, imgUrl, linkUrl }: ICardBlogProps) => (
     <li className={styles.card}>
       <div className={styles.card__image_wrapper}>
         <Image
@@ -22,5 +23,4 @@ const Card = ({ title, shortDescription, imgUrl, linkUrl }: ICardBlogProps) => {
       </Link>
     </li>
   );
-};
 export { Card };

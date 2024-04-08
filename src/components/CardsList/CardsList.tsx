@@ -1,8 +1,9 @@
-import styles from './CardsList.module.scss';
-import { Card } from '../Card/Card';
+import { Card } from '@/components/Card/Card';
 import { testCards } from '@/utils/constants';
-const CardsList = () => {
-  return (
+
+import styles from './CardsList.module.scss';
+
+const CardsList = () => (
     <section className={styles.cardslist}>
       <h2 className={styles.cardslist__title}>Пример текста</h2>
       <ul className={styles.cardslist__container}>
@@ -20,6 +21,5 @@ const CardsList = () => {
       </ul>
     </section>
   );
-};
 
 export { CardsList };

@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
-import { CoachList } from "../../components/CoachCards/CoachList/CoachList";
-import { coachCards } from "@/utils/constants";
-import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
-import { descriptionPages } from "@/utils/constants";
+import { CoachList } from '@/components/CoachCards/CoachList/CoachList';
+import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { coachCards, descriptionPages } from '@/utils/constants';
 
 export default function CoachsPage() {
   return (

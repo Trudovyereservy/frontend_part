@@ -1,9 +1,11 @@
-import styles from './CardsList.module.scss';
 import { useMemo } from 'react';
-import { Card } from '../Card/Card';
-import { ICardBlogProps } from '../Card/Card.props';
-import useWindowSize from '../../../hooks/useWindowSize';
-import { useCardCount } from '../../../hooks/useCardCount';
+
+import { Card } from '@/components/BlockCards/Card/Card';
+import { ICardBlogProps } from '@/components/BlockCards/Card/Card.props';
+import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
+
+import styles from './CardsList.module.scss';
 
 const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
   const width: number = useWindowSize();
@@ -16,6 +18,7 @@ const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
           <Card
+            key={card.id}
             title={card.title}
             shortDescription={card.shortDescription}
             imgUrl={card.imgUrl}

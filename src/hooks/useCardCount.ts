@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+
 import {
     BREAKPOINT_DESKTOP,
     BREAKPOINT_LAPTOP,
@@ -6,8 +7,7 @@ import {
     CARD_COUNT_LAPTOP,
 } from '../utils/constResizeWindow';
 
-const useCardCount = (width: number): number => {
-  return useMemo(() => {
+const useCardCount = (width: number): number => useMemo(() => {
     switch (true) {
       case width === BREAKPOINT_LAPTOP:
         return CARD_COUNT_LAPTOP;
@@ -17,6 +17,5 @@ const useCardCount = (width: number): number => {
         return CARD_COUNT_LAPTOP;
     }
   }, [width]);
-};
 
 export { useCardCount };

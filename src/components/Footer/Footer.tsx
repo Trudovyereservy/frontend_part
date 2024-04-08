@@ -1,13 +1,15 @@
 'use client';
 
-import styles from './footer.module.scss';
-import Link from 'next/link';
-import { Button } from '../Button/Button';
-import { linksItems, buttonsNames } from '../../utils/constants';
-import { Input } from '../Input/Input';
-import { useForm } from 'react-hook-form';
-import { LinksBlock } from '../Links/LinksBlock';
 import classNames from 'classnames';
+import Link from 'next/link';
+import { useForm } from 'react-hook-form';
+
+import { Button } from '@/components/Button/Button';
+import { Input } from '@/components/Input/Input';
+import { LinksBlock } from '@/components/Links/LinksBlock';
+import { linksItems, buttonsNames } from '@/utils/constants';
+
+import styles from './footer.module.scss';
 
 const Footer = () => {
   const {
@@ -16,8 +18,7 @@ const Footer = () => {
     formState: { errors, isValid },
   } = useForm({ mode: 'onChange' });
 
-  const createLinks = (index: number, sectionName: string, linksItems: object) => {
-    return (
+  const createLinks = (index: number, sectionName: string, linksItems: object) => (
       <ul key={index} className={styles.footer__list} >
         <h3 className={styles.footer__list_title}>{sectionName}</h3>
         {linksItems.map((link) => (
@@ -25,7 +26,6 @@ const Footer = () => {
         ))}
       </ul>
     );
-  };
 
   return (
     <footer className={styles.footer__container}>
@@ -72,8 +72,7 @@ const Footer = () => {
           </div>
           <form
             className={classNames(styles.footer__phone_number, styles.footer__hidden)}
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
+            onSubmit={handleSubmit(() => {
             })}
           >
             <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
@@ -82,7 +81,6 @@ const Footer = () => {
               disabled={!isValid}
               active={true}
               onClick={() => {
-                console.log('Кнопка нажата!');
               }}
             >
               {buttonsNames.mainButtonFooter}

@@ -1,10 +1,12 @@
 'use client';
-import { useForm, SubmitHandler } from 'react-hook-form';
+
 import Image from 'next/image';
-import styles from './Form.module.scss';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
 import lines from '@/../public/Lines.svg';
 import { regularExpressions } from '@/utils/regularExpressions';
-import childHappy from '../../../public/happy_childs.png'
+
+import styles from './Form.module.scss';
 
 interface FormData {
   name: string;
@@ -20,8 +22,7 @@ export default function Form() {
     formState: { errors, isSubmitting, isValid },
   } = useForm<FormData>({ mode: 'all' });
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormData> = () => {
     reset();
   };
   
