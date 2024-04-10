@@ -3,8 +3,8 @@
 
 .card {
     max-width: 360px;
-    height: 165px;
-    background-color: rgba(214, 230, 244, 1);
+    min-height: 165px;
+    background-color: $bg-color-ligth-blue;
 }
 
 .card__title {
@@ -44,15 +44,9 @@
     }
 }
 
-
-@include laptop {}
-
-@include netbook {}
-
-@include tablet {}
-
 @include mobile {
     .card {
+        min-height: 140px;
         height: 140px;
     }
 

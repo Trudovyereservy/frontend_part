@@ -16,4 +16,4 @@ const Map: FC<MapProps> = ({ mapUrl }) => {
     );
 };
 
-export { Map };
+export default Map ;

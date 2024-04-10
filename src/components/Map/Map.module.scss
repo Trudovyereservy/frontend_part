@@ -26,10 +26,6 @@
     }
 }
 
-@include netbook {}
-
-@include tablet {}
-
 @include mobile {
     .map {
         width: calc(100% - 92px);
