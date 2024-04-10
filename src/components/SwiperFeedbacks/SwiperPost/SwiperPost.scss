@@ -11,6 +11,7 @@
 }
 
 .feedbackCard__about {
+  text-align: center;
 
   .feedbackCard__textName {
     font-size: 20px;
@@ -23,27 +24,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26.15px;
-  }
-}
-
-.feedbackCard__about {
-  text-align: center;
-
-  &__textName {
-    font: {
-      size: 20px;
-      weight: 700;
-      line-height: 28px;
-      color: $bg-color-blue;
-    }
-  }
-
-  &__textDescription {
-    font: {
-      size: 16px;
-      weight: 400;
-      line-height: 26.15px;
-    }
   }
 }
 

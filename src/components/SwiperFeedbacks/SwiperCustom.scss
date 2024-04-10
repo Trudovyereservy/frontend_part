@@ -68,6 +68,10 @@
   margin: 0;
 }
 
+.swiper-wrapper {
+  transition-delay: 500;
+}
+
 @include laptop {
   .slide-custom {
     width: 620px;

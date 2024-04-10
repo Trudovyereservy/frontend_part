@@ -7,7 +7,9 @@ import {
   BREAKPOINT_MOBILE,
 } from '@/utils/constResizeWindow';
 
-export const config = {
+import { TConfig } from './FeedbackTypes';
+
+export const config: TConfig = {
   breakpoints: {
     [BREAKPOINT_MOBILE]: {
       slidesPerView: 'auto',
@@ -53,5 +55,5 @@ export const config = {
   grabCursor: true,
   pagination: {
     clickable: true,
-  }
+  },
 };
