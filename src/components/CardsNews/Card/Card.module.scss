@@ -1,5 +1,5 @@
-@import '../../../styles/_variables.scss';
-@import '../../../styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
 
 .card {
   display: flex;
@@ -19,16 +19,23 @@
   font-weight: 600;
 }
 
-@include laptop {
+@include desktop {
   .card__image {
     width: 220px;
     height: 222px;
   }
 }
 
+@include tablet {
+  .card {
+    max-width: 220px;
+  }
+}
+
 @include mobile {
   .card {
-    gap: 19px;
+    gap: 20px;
+    max-width: 300px;
   }
 
   .card__image {

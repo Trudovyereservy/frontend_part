@@ -34,19 +34,42 @@
 
 @include laptop {
   .cardnews {
+    max-width: 1024px;
     padding: 0 42px 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
+
+  .cardslist__container {
+    display: flex;
+    flex-wrap: wrap;
+    // border: solid 1px blue;
+}
 
   .cardslist__title {
     font-size: 55px;
+    margin-bottom: 22px;
   }
 }
 
 @include tablet {
+  .cardnews {
+    // border: 2px solid red;
+    padding: 20px 20px;
+  }
+
+  .cardslist__container {
+    // border: solid green 1px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .cardslist__title {
     font-size: 34px;
     margin-bottom: 25px;
     letter-spacing: -0.5px;
+    padding: 0 42px;
   }
 }
 
@@ -54,9 +77,20 @@
     .cardnews {
         display: flex;
         flex-direction: column;
+        width: 300px;
+        align-items: center;
     }
 
     .cardslist__container {
         flex-direction: column;
+        width: 300px;
+    }
+
+    .cardslist__title {
+      width: 100%;
+      // padding: 0 7px;
+      margin-bottom: 28px;
+      padding: 0;
+      letter-spacing: -0.1px;
     }
   }
