@@ -18,6 +18,7 @@ const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
           <Card
+            key={card.name}
             name={card.name}
             surname={card.surname}
             directions={card.directions}

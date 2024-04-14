@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { ICardProps } from './Card.props';
 
-import styles from './card.module.scss';
+import styles from './Card.module.scss';
 
 const Card = ({ title, subtitle, text, imgUrl, linkUrl, linkText }: ICardProps) => {
   return (

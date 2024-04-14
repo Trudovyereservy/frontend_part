@@ -8,7 +8,7 @@ import { navLinksMenu } from '@/utils/constants';
 
 import styles from './menu.module.scss';
 
-const Menu = ({ handler, handleToggleMenu }) => {
+const Menu: React.FC<{handler: boolean, handleToggleMenu: (value: boolean) => void}> = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
     handleToggleMenu(false);
   };
