@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-import Menu from '@/components/Menu/Menu';
-import { headerLinks } from '@/utils/constants';
+import Menu from "@/components/Menu/Menu";
+import { headerLinks } from "@/utils/constants";
 
-import { LinksHeader } from './LinksHeader/LinksHeader';
+import { LinksHeader } from "./LinksHeader/LinksHeader";
 
-import styles from './header.module.scss';
+import styles from "./header.module.scss";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +29,11 @@ const Header = () => {
             <LinksHeader key={link.id} title={link.title} href={link.href} />
           ))}
 
-          <button className={styles.burger} type="button" onClick={handleToggleMenu}>
+          <button
+            className={styles.burger}
+            type="button"
+            onClick={handleToggleMenu}
+          >
             <span className={styles.burger__icon}></span>
           </button>
         </ul>

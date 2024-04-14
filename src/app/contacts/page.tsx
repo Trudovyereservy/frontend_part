@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
 import { descriptionPages } from "@/utils/constants";
 
 export default function ContactsPage() {

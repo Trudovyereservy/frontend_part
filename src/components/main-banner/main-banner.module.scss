@@ -1,5 +1,5 @@
-@import '../../styles/_variables.scss';
-@import '../../styles/_mixins.scss';
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 
 .mainbanner__wrapper {
   display: flex;
@@ -185,7 +185,6 @@
     height: 644px;
     max-width: 394px;
     margin-bottom: 100px;
-
   }
 
   .mainbanner__logo {

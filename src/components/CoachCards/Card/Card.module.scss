@@ -1,5 +1,5 @@
-@import '../../../styles/_variables.scss';
-@import '../../../styles/_mixins.scss';
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
 
 .card__photo_wrapper {
   position: relative;
@@ -11,7 +11,7 @@
   background-color: white;
   width: 54px;
   height: 54px;
-  background-image: url('../../../../public/Coach_plus.png');
+  background-image: url("../../../../public/Coach_plus.png");
   background-position: center;
   background-repeat: no-repeat;
   border: $border-color-ligth-blue 1px solid;
@@ -22,7 +22,7 @@
 
 .card__info_additional_active {
   border: 1px solid $border-color-red;
-  background-image: url('../../../../public/Coach_card_opened.png');
+  background-image: url("../../../../public/Coach_card_opened.png");
 }
 
 .card {
@@ -44,7 +44,8 @@
   margin-bottom: 10px;
 }
 
-.card__directions, .card__achievements {
+.card__directions,
+.card__achievements {
   font-size: 15px;
   font-weight: 500;
   line-height: 170%;

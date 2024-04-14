@@ -1,5 +1,5 @@
-@import '../../styles/_variables.scss';
-@import '../../styles/_mixins.scss';
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 
 .faq {
   max-width: 1440px;
@@ -25,7 +25,7 @@
   font-size: 34px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.13188; 
+  line-height: 1.13188;
   margin: 0 auto 30px;
 }
 
@@ -36,7 +36,7 @@
 }
 @include mobile {
   .faq {
-    padding: 15px 46px 100px 48px
+    padding: 15px 46px 100px 48px;
   }
   .faq__title {
     display: block;

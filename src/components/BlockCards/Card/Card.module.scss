@@ -1,5 +1,5 @@
-@import '../../../styles/_variables.scss';
-@import '../../../styles/_mixins.scss';
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
 
 .card {
   max-width: 360px;
@@ -56,7 +56,7 @@
 }
 
 .card__link:hover {
-  opacity: .75;
+  opacity: 0.75;
   transition: opacity 0.1s ease-in-out;
 }
 
@@ -120,7 +120,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
-    line-height: 23.10px;
+    line-height: 23.1px;
   }
 
   .card__image {

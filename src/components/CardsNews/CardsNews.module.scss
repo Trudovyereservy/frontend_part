@@ -1,5 +1,5 @@
-@import '@/styles/_variables.scss';
-@import '@/styles/_mixins.scss';
+@import "@/styles/_variables.scss";
+@import "@/styles/_mixins.scss";
 
 .cardnews {
   max-width: 1440px;
@@ -9,13 +9,11 @@
 }
 
 .cardslist__container {
-  height: 300px;
   display: flex;
   justify-content: center;
   gap: 40px;
   list-style: none;
   height: 100%;
-
 }
 
 .cardslist__title {
@@ -27,6 +25,10 @@
 }
 
 @include desktop {
+  .cardnews {
+    padding: 0 80px 60px;
+  }
+
   .cardslist__container {
     gap: 20px;
   }
@@ -35,17 +37,15 @@
 @include laptop {
   .cardnews {
     max-width: 1024px;
-    padding: 0 42px 70px;
+    padding: 0 42px 112px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
 
   .cardslist__container {
-    display: flex;
     flex-wrap: wrap;
-    // border: solid 1px blue;
-}
+  }
 
   .cardslist__title {
     font-size: 55px;
@@ -55,14 +55,7 @@
 
 @include tablet {
   .cardnews {
-    // border: 2px solid red;
-    padding: 20px 20px;
-  }
-
-  .cardslist__container {
-    // border: solid green 1px;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 0 0 50px;
   }
 
   .cardslist__title {
@@ -73,24 +66,26 @@
   }
 }
 
-  @include mobile {
-    .cardnews {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        align-items: center;
-    }
-
-    .cardslist__container {
-        flex-direction: column;
-        width: 300px;
-    }
-
-    .cardslist__title {
-      width: 100%;
-      // padding: 0 7px;
-      margin-bottom: 28px;
-      padding: 0;
-      letter-spacing: -0.1px;
-    }
+@include mobile {
+  .cardnews {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    padding: 0 0 55px;
   }
+
+  .cardslist__container {
+    flex-direction: column;
+    width: 300px;
+    gap: 22px;
+  }
+
+  .cardslist__title {
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 0;
+    letter-spacing: -0.1px;
+    align-self: flex-start;
+  }
+}

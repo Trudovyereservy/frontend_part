@@ -1,4 +1,4 @@
 export interface ILinksBlockProps {
-    linkUrl: string;
-    linkText: string;
-  }
+  linkUrl: string;
+  linkText: string;
+}

@@ -1,5 +1,5 @@
-@import '../../styles/_variables.scss';
-@import '../../styles/_mixins.scss';
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 
 .header__container {
   margin: 0 auto;
@@ -23,7 +23,7 @@
 
 .header__logo {
   margin-left: 60px;
-  background-image: url('../../../public/logo.png');
+  background-image: url("../../../public/logo.png");
   width: 52px;
   height: 52px;
   background-size: 53px 53px;
@@ -41,7 +41,6 @@
   list-style: none;
   display: flex;
   gap: 31px;
-
 }
 
 .burger {
@@ -72,7 +71,7 @@
 .burger::after,
 .burger::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 4px;
   width: 100%;
   background-color: $bg-color-white;

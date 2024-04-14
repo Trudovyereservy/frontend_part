@@ -1,17 +1,20 @@
-import {useMemo} from 'react';
+import { useMemo } from "react";
 
-import { Card } from '@/components/CoachCards/Card/Card';
-import { ICardCoachProps } from '@/components/CoachCards/Card/Card.props';
-import { useCardCount } from '@/hooks/useCardCount';
-import useWindowSize from '@/hooks/useWindowSize';
+import { Card } from "@/components/CoachCards/Card/Card";
+import { ICardCoachProps } from "@/components/CoachCards/Card/Card.props";
+import { useCardCount } from "@/hooks/useCardCount";
+import useWindowSize from "@/hooks/useWindowSize";
 
-import styles from './CoachList.module.scss';
+import styles from "./CoachList.module.scss";
 
 const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width);
 
-  const visibleCoachCards = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
+  const visibleCoachCards = useMemo(
+    () => coachCards.slice(0, count),
+    [coachCards, count],
+  );
 
   return (
     <section className={styles.cardslist}>

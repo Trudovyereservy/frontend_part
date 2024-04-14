@@ -1,4 +1,4 @@
 export interface FaqItemProps {
-    title: string;
-    text: string;
+  title: string;
+  text: string;
 }
