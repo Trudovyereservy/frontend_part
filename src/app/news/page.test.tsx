@@ -1,14 +1,19 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { descriptionPages } from '@/utils/constants'
 
 import NewsPage from './page';
 
-test('renders NewsPage component', () => {
-  const title = descriptionPages.find((item) => item.route === '/news')?.page;
-  const { getByText } = render(<NewsPage />);
-  const titleElement = getByText(title || 'Новости'); // Example text to check for
-  expect(titleElement).toBeInTheDocument();
-});
+it('renders NewsPage component', () => {
+  render(<NewsPage />);
+  const descriptionPagesElement = screen.getByText('Новости');
+  expect(descriptionPagesElement).toBeInTheDocument();
+})
+// test('renders DescriptionPages component', () => {
+//   const { getByText } = render(<NewsPage />);
+//   const descriptionPagesElement = getByText('Новости');
+//   expect(descriptionPagesElement).toBeInTheDocument();
+  
+// });

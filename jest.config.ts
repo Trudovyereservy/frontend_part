@@ -10,14 +10,16 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const config: Config = {
   coverageProvider: 'v8',
-  testEnvironment: 'jsdom',
+  // Use the jsdom test environment, which emulates a browser environment in Node.js for running DOM-related tests.
+  testEnvironment: 'jest-environment-jsdom',
   // Add more setup options before each test is run
-  // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
+  preset: 'ts-jest',
+
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
