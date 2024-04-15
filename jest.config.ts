@@ -19,6 +19,10 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   preset: 'ts-jest',
+  transform: {
+    '^.+\\.[jt]sx?$': 'babel-jest',
+    '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform'
+  },
 
 }
 
