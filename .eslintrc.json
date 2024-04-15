@@ -44,7 +44,14 @@
         "warnOnUnassignedImports": true
       }
     ],
-    "import/newline-after-import": ["error", { "count": 1 }]
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true, "allowUnboundThis": true }],
+    "arrow-body-style": ["error", "as-needed"],
+    "curly": "error",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "eqeqeq": ["error", "always"],
+    "camelcase": ["error", { "properties": "always" }]
   },
   "parserOptions": {
     "sourceType": "module",
