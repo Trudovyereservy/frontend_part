@@ -1,8 +1,8 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/_mixins.scss';
 
-$chevron: url('../../../public/chevron\ .\ arrows.svg');
-$chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
+$chevron: url('../../../public/chevron-arrows.svg');
+$chevron-grey: url('../../../public/chevron-arrows-grey.svg');
 
 .pagination {
   max-width: 1440px;
@@ -25,25 +25,23 @@ $chevron-inverse: url('../../../public/chevron\ .\ arrows.grey.svg');
   padding: 25px;
 }
 
-.pagination__chevron {
+@mixin chevron-background {
   background-image: $chevron;
   background-position: center;
   background-repeat: no-repeat;
 
   &_disabled {
-    background-image: $chevron-inverse;
+    background-image: $chevron-grey;
   }
 }
 
-.pagination__chevronInverse {
-  background-image: $chevron;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: rotate(180deg);
+.pagination__chevron {
+  @include chevron-background;
+}
 
-  &_disabled {
-    background-image: $chevron-inverse;
-  }
+.pagination__chevronInverse {
+  @include chevron-background;
+  transform: rotate(180deg);
 }
 
 .pagination__item {

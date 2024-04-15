@@ -31,7 +31,7 @@
   border: 1px solid $border-color-ligth-blue;
   border-radius: 5px;
   padding: 0;
-  background-image: url('../../../public/chevron\ .\ arrows.svg');
+  background-image: url('../../../public/chevron-arrows.svg');
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -39,7 +39,7 @@
 
 .faqitem__button_active {
   border: 1px solid $border-color-red;
-  background-image: url('../../../public/chevron\ .\ arrows.active.svg');
+  background-image: url('../../../public/chevron-arrows-active.svg');
 }
 
 .faqitem__paragraph {
@@ -86,7 +86,7 @@
   .faqitem__wrapper {
     padding: 16px 33px 16px 18px;
   }
-  
+
   .faqitem__wrapper_open {
     padding: 19px 33px 12px 18px;
   }
