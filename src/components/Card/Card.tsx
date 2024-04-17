@@ -1,18 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { ICardProps } from "./Card.props";
+import { ICardProps } from './Card.props';
 
-import styles from "./card.module.scss";
+import styles from './card.module.scss';
 
-const Card = ({
-  title,
-  subtitle,
-  text,
-  imgUrl,
-  linkUrl,
-  linkText,
-}: ICardProps) => (
+const Card = ({ title, subtitle, text, imgUrl, linkUrl, linkText }: ICardProps) => (
   <li className={styles.card}>
     <Image
       className={styles.card__image}

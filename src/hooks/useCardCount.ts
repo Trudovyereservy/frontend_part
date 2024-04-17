@@ -1,11 +1,11 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 import {
   BREAKPOINT_DESKTOP,
   BREAKPOINT_LAPTOP,
   CARD_COUNT_DESKTOP,
   CARD_COUNT_LAPTOP,
-} from "../utils/constResizeWindow";
+} from '../utils/constResizeWindow';
 
 const useCardCount = (width: number): number =>
   useMemo(() => {

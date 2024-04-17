@@ -1,5 +1,9 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ],
   "plugins": ["simple-import-sort", "@stylistic"],
   "rules": {
     "@stylistic/padding-line-between-statements": [
@@ -44,17 +48,7 @@
         "warnOnUnassignedImports": true
       }
     ],
-    "import/newline-after-import": ["error", { "count": 1 }],
-    "prefer-arrow-callback": [
-      "error",
-      { "allowNamedFunctions": true, "allowUnboundThis": true }
-    ],
-    "arrow-body-style": ["error", "as-needed"],
-    "curly": "error",
-    "no-unused-vars": "warn",
-    "no-console": "warn",
-    "eqeqeq": ["error", "always"],
-    "camelcase": ["error", { "properties": "always" }]
+    "import/newline-after-import": ["error", { "count": 1 }]
   },
   "parserOptions": {
     "sourceType": "module",

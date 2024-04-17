@@ -1,20 +1,13 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import classNames from "classnames";
-import Image from "next/image";
+import classNames from 'classnames';
+import Image from 'next/image';
 
-import { ICardCoachProps } from "./Card.props";
+import { ICardCoachProps } from './Card.props';
 
-import styles from "./Card.module.scss";
+import styles from './Card.module.scss';
 
-const Card = ({
-  photo,
-  name,
-  surname,
-  directions,
-  achievements,
-  patronymic,
-}: ICardCoachProps) => {
+const Card = ({ photo, name, surname, directions, achievements, patronymic }: ICardCoachProps) => {
   const [openInfo, setOpenInfo] = useState(true);
 
   function openCard() {

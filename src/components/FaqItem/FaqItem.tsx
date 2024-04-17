@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import classNames from "classnames";
+import classNames from 'classnames';
 
-import { FaqItemProps } from "./FaqItem.props";
+import { FaqItemProps } from './FaqItem.props';
 
-import styles from "./FaqItem.module.scss";
+import styles from './FaqItem.module.scss';
 
 const FaqItem = ({ title, text }: FaqItemProps) => {
   const [isItemOpened, setIsItemOpened] = useState(false);

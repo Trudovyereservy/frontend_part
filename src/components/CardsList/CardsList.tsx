@@ -1,7 +1,7 @@
-import { Card } from "@/components/Card/Card";
-import { testCards } from "@/utils/constants";
+import { Card } from '@/components/Card/Card';
+import { testCards } from '@/utils/constants';
 
-import styles from "./CardsList.module.scss";
+import styles from './CardsList.module.scss';
 
 const CardsList = () => (
   <section className={styles.cardslist}>

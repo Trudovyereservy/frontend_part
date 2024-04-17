@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import classNames from "classnames";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import classNames from 'classnames';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { navLinksMenu } from "@/utils/constants";
+import { navLinksMenu } from '@/utils/constants';
 
-import styles from "./menu.module.scss";
+import styles from './menu.module.scss';
 
 const Menu = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
@@ -16,20 +16,14 @@ const Menu = ({ handler, handleToggleMenu }) => {
   const pathName = usePathname();
 
   return (
-    <section
-      className={`${styles.menu} ${handler ? `${styles.menu_active}` : ""}`}
-    >
+    <section className={`${styles.menu} ${handler ? `${styles.menu_active}` : ''}`}>
       <div
         className={classNames(styles.menu__overlay, {
           [styles.menu__overlay_active]: handler,
         })}
       ></div>
       <section className={styles.menu__container}>
-        <button
-          className={styles.menu__button_close}
-          type="button"
-          onClick={closeMenu}
-        ></button>
+        <button className={styles.menu__button_close} type="button" onClick={closeMenu}></button>
         <nav className={styles.menu__nav}>
           <>
             {navLinksMenu.map((link) => {

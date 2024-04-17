@@ -40,7 +40,7 @@
 }
 
 .menu__button_close {
-  background-image: url("../../../public/close_icon_menu.svg");
+  background-image: url('../../../public/close_icon_menu.svg');
   width: 22px;
   height: 22px;
   padding: 0;
@@ -74,7 +74,7 @@
 .menu__link {
   text-decoration: none;
   color: white;
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: 'Inter', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -99,7 +99,7 @@
 
 .menu__link_active::after {
   position: absolute;
-  content: "";
+  content: '';
   // width: 100%;
   padding-bottom: 5px;
   border-bottom: 2px white solid;
@@ -121,7 +121,7 @@
 
 .menu__button_account {
   color: white;
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: 'Inter', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 12px;

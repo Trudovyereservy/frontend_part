@@ -1,17 +1,15 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import styles from "./Map.module.scss";
+import styles from './Map.module.scss';
 
 interface MapProps {
-    mapUrl: string;
+  mapUrl: string;
 }
 
 const Map: FC<MapProps> = ({ mapUrl }) => (
-        <article className={styles.map}>
-            <iframe className={styles.map__iframe}
-                src={mapUrl}
-                loading="lazy" ></iframe>
-        </article>
-    );
+  <article className={styles.map}>
+    <iframe className={styles.map__iframe} src={mapUrl} loading="lazy"></iframe>
+  </article>
+);
 
-export default Map ;
+export default Map;

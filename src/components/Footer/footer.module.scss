@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/_mixins.scss";
+@import '../../styles/variables';
+@import '../../styles/_mixins.scss';
 
 .footer__container {
   background-color: $bg-color-blue;
@@ -15,7 +15,7 @@
 }
 
 .footer__logo {
-  background-image: url("../../../public/logo.svg");
+  background-image: url('../../../public/logo.svg');
   width: 53px;
   height: 53px;
 }
@@ -29,13 +29,13 @@
 }
 
 .footer__social_twitter {
-  background-image: url("../../../public/twitter-brands.svg");
+  background-image: url('../../../public/twitter-brands.svg');
   width: 22px;
   height: 21px;
 }
 
 .footer__social_facebook {
-  background-image: url("../../../public/facebook-square-brands.svg");
+  background-image: url('../../../public/facebook-square-brands.svg');
   width: 18px;
   height: 21px;
   color: aquamarine;

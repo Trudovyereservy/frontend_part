@@ -1,20 +1,17 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
-import { Card } from "@/components/BlockCards/Card/Card";
-import { ICardBlogProps } from "@/components/BlockCards/Card/Card.props";
-import { useCardCount } from "@/hooks/useCardCount";
-import useWindowSize from "@/hooks/useWindowSize";
+import { Card } from '@/components/BlockCards/Card/Card';
+import { ICardBlogProps } from '@/components/BlockCards/Card/Card.props';
+import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
 
-import styles from "./CardsList.module.scss";
+import styles from './CardsList.module.scss';
 
 const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width);
 
-  const visibleCoachCards = useMemo(
-    () => blogCards.slice(0, count),
-    [blogCards, count],
-  );
+  const visibleCoachCards = useMemo(() => blogCards.slice(0, count), [blogCards, count]);
 
   return (
     <section className={styles.cardslist}>
