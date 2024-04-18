@@ -47,6 +47,14 @@ interface CoachCard {
   photo: string;
 }
 
+interface NewsCard {
+  id?: number;
+  title: string,
+  description: string,
+  date_published?: string;
+  images: string;
+}
+
 const linksItems: LinksItems = {
   exampleOne: [
     {
@@ -325,6 +333,79 @@ const coachCards: CoachCard[] = [
   },
 ];
 
+const newsCards: NewsCard[] = [
+  {
+    id: 0,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 1,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 2,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 3,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 4,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 5,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 6,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 7,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 8,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+  {
+    id: 9,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+  },
+]
+
 const descriptionPages = [
   {
     route: '/blog',
@@ -488,4 +569,4 @@ const testContancts = [
   },
 ]
 
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts };
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, newsCards };
