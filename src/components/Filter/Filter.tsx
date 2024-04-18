@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 
-import styles from './Filter.module.scss';
+import { IFilterProps } from './Filter.props';
 import Tag from './Tag/Tag';
 
-import { IFilterProps } from './Filter.props';
+import styles from './Filter.module.scss';
 
 const Filter: FC<IFilterProps> = ({ tags, posts, filterPosts }) => {
     const [selectedTags, setSelectedTags] = useState<Array<string>>([]);
@@ -23,7 +23,7 @@ const Filter: FC<IFilterProps> = ({ tags, posts, filterPosts }) => {
     }
 
     const filter = () => {
-        if (selectedTags.length != 0) {
+        if (selectedTags.length !== 0) {
             const filtredPosts = posts.filter((post) => post.tags.some(tag => selectedTags.includes(tag)))
             filterPosts(filtredPosts);
         } else {

@@ -1,9 +1,10 @@
 import { FC, useState } from 'react';
 
-import styles from './Tag.module.scss';
 import classNames from 'classnames';
 
 import { ITagProps } from './Tag.props';
+
+import styles from './Tag.module.scss';
 
 const Tag: FC<ITagProps> = ({ name, changeTags }) => {
     const [selected, setSelected] = useState<boolean>(false);
