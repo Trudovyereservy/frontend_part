@@ -36,6 +36,7 @@ interface BlogCard {
   linkText: string;
   imgUrl: string;
   id: number;
+  tags: Array<string>,
 }
 
 interface CoachCard {
@@ -148,6 +149,20 @@ const navLinksMenu: NavLink[] = [
   { id: 5, name: 'Контакты', href: '/contacts' },
 ];
 
+//Массив тегов для карточек блога
+
+const testBlogTags = [
+  { id: 0, name: "0" },
+  { id: 1, name: "1" },
+  { id: 2, name: "2" },
+  { id: 3, name: "3" },
+  { id: 4, name: "4" },
+  { id: 5, name: "5" },
+  { id: 6, name: "6" },
+  { id: 7, name: "7" },
+  { id: 8, name: "8" }
+]
+
 const blogCards: BlogCard[] = [
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -158,6 +173,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 0,
+    tags: ["1", "2"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -168,6 +184,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 1,
+    tags: ["1"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -178,6 +195,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 2,
+    tags: ["2", "4"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -188,6 +206,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 3,
+    tags: ["7"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -198,6 +217,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 4,
+    tags: ["4", "7"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -208,6 +228,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 5,
+    tags: ["3", "2"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -218,6 +239,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 6,
+    tags: ["4"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -228,6 +250,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 7,
+    tags: ["5"]
   },
   {
     title: 'Пример текста пример текста пример текста пример текста',
@@ -238,6 +261,7 @@ const blogCards: BlogCard[] = [
     linkText: 'Пример текста',
     imgUrl: '/sports-girl-in-gym-class 1.jpg',
     id: 8,
+    tags: ["6", "8"]
   },
 ];
 
@@ -488,4 +512,77 @@ const testContancts = [
   },
 ]
 
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts };
+//Тестовые массивы новостных постов и тегов к ним
+
+const testNewsTags = [
+  { id: 0, name: "0" },
+  { id: 1, name: "1" },
+  { id: 2, name: "2" },
+  { id: 3, name: "3" },
+  { id: 4, name: "4" },
+  { id: 5, name: "5" },
+  { id: 6, name: "6" },
+  { id: 7, name: "7" },
+  { id: 8, name: "8" }
+]
+
+const testNewsPosts = [
+  {
+    id: 0,
+    tags: ["1", "2"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  },
+  {
+    id: 1,
+    tags: ["2"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 2,
+    tags: ["3", "4", "5"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 3,
+    tags: ["3", "5"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 4,
+    tags: ["4"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 5,
+    tags: ["4", "6"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 6,
+    tags: ["7"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 7,
+    tags: ["8"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }, {
+    id: 8,
+    tags: ["8", "1"],
+    images: ['/sports-girl-in-gym-class 1.jpg'],
+    text: "Пример текста пример текста пример текста пример текста",
+    description: "Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста"
+  }
+]
+
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, testNewsTags, testNewsPosts, testBlogTags };

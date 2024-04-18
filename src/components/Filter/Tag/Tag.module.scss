@@ -12,8 +12,13 @@
     color: $text-color-blue;
 }
 
+.tag_active {
+    background-color: $bg-color-red;
+    color: $text-color-white;
+}
+
 @include tablet {
-    .tag  {
+    .tag {
         font-size: 14px;
         line-height: 22.88px;
     }
