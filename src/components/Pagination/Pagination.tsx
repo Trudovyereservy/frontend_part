@@ -4,6 +4,7 @@ import styles from '@/components/Pagination/Pagination.module.scss';
 import { useCardCount } from '@/hooks/useCardCount';
 import useWindowSize from '@/hooks/useWindowSize';
 import { BREAKPOINT_TABLET } from '@/utils/constResizeWindow';
+import { paginationRange } from '@/utils/pagination';
 
 import { PaginationArrow } from './PaginationArrow';
 import { PaginationEllipsis } from './PaginationEllipsis';
@@ -27,18 +28,11 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     // number of items to display before and after the current page
     const siblings = (paginationItemsToDisplay - 3) / 2;
 
-    // getting an array with page numbers to display
-    function range(start: number, end: number) {
-      const length = end - start + 1;
-
-      return Array.from({ length }, (_, i) => i + start);
-    }
-
     // no dots are visible
     if (totalPages <= paginationItemsToDisplay) {
       return (
         <>
-          {range(1, totalPages).map((page) => (
+          {paginationRange(1, totalPages).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}
@@ -56,7 +50,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
         <>
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
-          {range(totalPages - (siblings * 2 + 1), totalPages).map((page) => (
+          {paginationRange(totalPages - (siblings * 2 + 1), totalPages).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}
@@ -72,7 +66,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     if (totalPages > paginationItemsToDisplay && currentPage <= siblings + 2) {
       return (
         <>
-          {range(1, siblings * 2 + 2).map((page) => (
+          {paginationRange(1, siblings * 2 + 2).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}
@@ -94,7 +88,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
 
-          {range(currentPage - siblings, currentPage + siblings).map((page) => (
+          {paginationRange(currentPage - siblings, currentPage + siblings).map((page) => (
             <PaginationItem
               href={`?limit=${cardsPerPage}&page=${page}`}
               pageNumber={page}
