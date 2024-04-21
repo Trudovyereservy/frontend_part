@@ -1,9 +1,5 @@
-import * as React from 'react';
-
 import styles from '@/components/Pagination/Pagination.module.scss';
-import { useCardCount } from '@/hooks/useCardCount';
-import useWindowSize from '@/hooks/useWindowSize';
-import { BREAKPOINT_TABLET } from '@/utils/constResizeWindow';
+import usePagination from '@/hooks/usePagination';
 import { paginationRange } from '@/utils/pagination';
 
 import { PaginationArrow } from './PaginationArrow';
@@ -16,13 +12,8 @@ type PaginationItemProps = {
 };
 
 export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => {
-  const width: number = useWindowSize();
-  const cardsPerPage: number = useCardCount(width);
-
-  const paginationItemsToDisplay = width > BREAKPOINT_TABLET ? 5 : 3;
-
-  const totalPages = Math.ceil(totalCards / cardsPerPage);
-  const lastPage = totalPages;
+  const { cardsPerPage, paginationItemsToDisplay, totalPages, lastPage } =
+    usePagination(totalCards);
 
   function renderPaginationItems() {
     // number of items to display before and after the current page

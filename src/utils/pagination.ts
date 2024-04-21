@@ -5,4 +5,7 @@ function paginationRange(start: number, end: number) {
   return Array.from({ length }, (_, i) => i + start);
 }
 
-export { paginationRange };
+const paginationItemsDesktop = 5;
+const paginationItemsMobile = 3;
+
+export { paginationRange, paginationItemsDesktop, paginationItemsMobile };
