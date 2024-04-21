@@ -6,10 +6,10 @@ import { descriptionPages } from "@/utils/constants";
 export default function NewsPage() {
   return (
     <>
-      <head>
+      {/* <head>
         <title>Трудовые резервы | Новости</title>
         <meta name="title" content="Блог" />
-      </head>
+      </head> */}
       <DescriptionPages descriptionPages={descriptionPages} />
     </>
   );

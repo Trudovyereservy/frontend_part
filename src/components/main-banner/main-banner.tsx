@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 
-import picturelogo from '@/../public/Mask group.png';
-import picturelogo_mobile from '@/../public/Mask group_394px.png';
+import pictureLogo from '@/../public/Mask group.png';
+import pictureLogoMobile from '@/../public/Mask group_394px.png';
 import { Button } from '@/components/Button/Button';
 import { buttonsNames } from '@/utils/constants';
 
@@ -12,9 +12,9 @@ import styles from '../main-banner/main-banner.module.scss';
 const MainBanner = () => {
   return (
     <div className={styles.mainbanner__wrapper}>
-      <Image src={picturelogo} alt="background_main_banner" className={styles.mainbanner__logo} />
+      <Image src={pictureLogo} alt="background_main_banner" className={styles.mainbanner__logo} />
       <Image
-        src={picturelogo_mobile}
+        src={pictureLogoMobile}
         alt="background_main_banner"
         className={styles.mainbanner__logo_mobile}
       />

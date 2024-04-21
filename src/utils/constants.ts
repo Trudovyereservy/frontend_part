@@ -1,4 +1,4 @@
-interface LinkItem {
+export interface LinkItem {
   text: string;
   id: number;
   linkText: string;

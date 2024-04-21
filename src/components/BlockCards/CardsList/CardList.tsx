@@ -18,6 +18,7 @@ const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
           <Card
+            key={card.title}
             title={card.title}
             shortDescription={card.shortDescription}
             imgUrl={card.imgUrl}
