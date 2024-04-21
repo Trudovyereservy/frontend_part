@@ -5,10 +5,9 @@ import { useCardCount } from '@/hooks/useCardCount';
 import useWindowSize from '@/hooks/useWindowSize';
 import { BREAKPOINT_TABLET } from '@/utils/constResizeWindow';
 
+import { PaginationArrow } from './PaginationArrow';
 import { PaginationEllipsis } from './PaginationEllipsis';
 import { PaginationItem } from './PaginationItem';
-import { PaginationNext } from './PaginationNext';
-import { PaginationPrevious } from './PaginationPrevious';
 
 type PaginationItemProps = {
   totalCards: number;
@@ -114,17 +113,19 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
   return (
     <nav role="navigation" aria-label="pagination" className={styles.pagination}>
       <ul className={styles.pagination__content}>
-        <PaginationPrevious
+        <PaginationArrow
           href={`?limit=${cardsPerPage}&page=${currentPage - 1}`}
           currentPage={currentPage}
+          direction="previous"
         />
 
         {renderPaginationItems()}
 
-        <PaginationNext
+        <PaginationArrow
           href={`?limit=${cardsPerPage}&page=${currentPage + 1}`}
           currentPage={currentPage}
           lastPage={lastPage}
+          direction="next"
         />
       </ul>
     </nav>

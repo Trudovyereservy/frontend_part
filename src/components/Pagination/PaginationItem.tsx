@@ -10,7 +10,7 @@ type PaginationItemProps = {
 };
 
 export const PaginationItem = ({ href, pageNumber, currentPage }: PaginationItemProps) => {
-  const isSelected = pageNumber === currentPage ? true : false;
+  const isSelected = pageNumber === currentPage;
 
   return (
     <li
