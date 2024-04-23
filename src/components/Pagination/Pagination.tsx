@@ -1,10 +1,10 @@
 import styles from '@/components/Pagination/Pagination.module.scss';
 import usePagination from '@/hooks/usePagination';
-import { paginationRange } from '@/utils/pagination';
 
 import { PaginationArrow } from './PaginationArrow';
 import { PaginationEllipsis } from './PaginationEllipsis';
 import { PaginationItem } from './PaginationItem';
+import { PaginationList } from './PaginationList';
 
 type PaginationItemProps = {
   totalCards: number;
@@ -22,16 +22,12 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     // no dots are visible
     if (totalPages <= paginationItemsToDisplay) {
       return (
-        <>
-          {paginationRange(1, totalPages).map((page) => (
-            <PaginationItem
-              href={`?limit=${cardsPerPage}&page=${page}`}
-              pageNumber={page}
-              currentPage={currentPage}
-              key={page}
-            />
-          ))}
-        </>
+        <PaginationList
+          start={1}
+          end={totalPages}
+          cardsPerPage={cardsPerPage}
+          currentPage={currentPage}
+        />
       );
     }
 
@@ -41,14 +37,12 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
         <>
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
-          {paginationRange(totalPages - (siblings * 2 + 1), totalPages).map((page) => (
-            <PaginationItem
-              href={`?limit=${cardsPerPage}&page=${page}`}
-              pageNumber={page}
-              currentPage={currentPage}
-              key={page}
-            />
-          ))}
+          <PaginationList
+            start={totalPages - (siblings * 2 + 1)}
+            end={totalPages}
+            cardsPerPage={cardsPerPage}
+            currentPage={currentPage}
+          />
         </>
       );
     }
@@ -57,14 +51,12 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     if (totalPages > paginationItemsToDisplay && currentPage <= siblings + 2) {
       return (
         <>
-          {paginationRange(1, siblings * 2 + 2).map((page) => (
-            <PaginationItem
-              href={`?limit=${cardsPerPage}&page=${page}`}
-              pageNumber={page}
-              currentPage={currentPage}
-              key={page}
-            />
-          ))}
+          <PaginationList
+            start={1}
+            end={siblings * 2 + 2}
+            cardsPerPage={cardsPerPage}
+            currentPage={currentPage}
+          />
 
           <PaginationEllipsis />
           <PaginationItem href={`?limit=${cardsPerPage}&page=${lastPage}`} pageNumber={lastPage} />
@@ -79,14 +71,12 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
 
-          {paginationRange(currentPage - siblings, currentPage + siblings).map((page) => (
-            <PaginationItem
-              href={`?limit=${cardsPerPage}&page=${page}`}
-              pageNumber={page}
-              currentPage={currentPage}
-              key={page}
-            />
-          ))}
+          <PaginationList
+            start={currentPage - siblings}
+            end={currentPage + siblings}
+            cardsPerPage={cardsPerPage}
+            currentPage={currentPage}
+          />
 
           <PaginationEllipsis />
           <PaginationItem href={`?limit=${cardsPerPage}&page=${lastPage}`} pageNumber={lastPage} />

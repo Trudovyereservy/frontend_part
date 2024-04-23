@@ -5,6 +5,7 @@ function paginationRange(start: number, end: number) {
   return Array.from({ length }, (_, i) => i + start);
 }
 
+// number of pagination items to display depending on screen resolution
 const paginationItemsDesktop = 5;
 const paginationItemsMobile = 3;
 
