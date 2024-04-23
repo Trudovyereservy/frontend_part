@@ -15,12 +15,19 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
   const { cardsPerPage, paginationItemsToDisplay, totalPages, lastPage } =
     usePagination(totalCards);
 
-  function renderPaginationItems() {
-    // number of items to display before and after the current page
-    const siblings = (paginationItemsToDisplay - 3) / 2;
+  // number of items to display before and after the current page
+  const siblings = (paginationItemsToDisplay - 3) / 2;
 
+  const ellipsisNotVisible = totalPages <= paginationItemsToDisplay;
+  const ellipsisLeftVisible =
+    totalPages > paginationItemsToDisplay && currentPage + siblings * 2 >= totalPages;
+  const ellipsisRightVisible = totalPages > paginationItemsToDisplay && currentPage <= siblings + 2;
+  const ellipsisLeftAndRightVisible =
+    totalPages > paginationItemsToDisplay && currentPage > siblings * 2 + 1;
+
+  function renderPaginationItems() {
     // no dots are visible
-    if (totalPages <= paginationItemsToDisplay) {
+    if (ellipsisNotVisible) {
       return (
         <PaginationList
           start={1}
@@ -32,7 +39,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     }
 
     // only the left dots are visible
-    if (totalPages > paginationItemsToDisplay && currentPage + siblings * 2 >= totalPages) {
+    if (ellipsisLeftVisible) {
       return (
         <>
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
@@ -48,7 +55,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     }
 
     // only the right dots are visible
-    if (totalPages > paginationItemsToDisplay && currentPage <= siblings + 2) {
+    if (ellipsisRightVisible) {
       return (
         <>
           <PaginationList
@@ -65,7 +72,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     }
 
     // both the left and the right dots are visible
-    if (totalPages > paginationItemsToDisplay && currentPage > siblings * 2 + 1) {
+    if (ellipsisLeftAndRightVisible) {
       return (
         <>
           <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
