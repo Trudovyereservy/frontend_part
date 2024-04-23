@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import styles from '@/components/Pagination/Pagination.module.scss';
 import usePagination from '@/hooks/usePagination';
 
@@ -92,6 +94,8 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     }
   }
 
+  const renderedItems = useMemo(() => renderPaginationItems(), [totalPages, currentPage]);
+
   return (
     <nav role="navigation" aria-label="pagination" className={styles.pagination}>
       <ul className={styles.pagination__content}>
@@ -101,7 +105,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
           direction="previous"
         />
 
-        {renderPaginationItems()}
+        {renderedItems}
 
         <PaginationArrow
           href={`?limit=${cardsPerPage}&page=${currentPage + 1}`}
