@@ -2,14 +2,10 @@
 
 import { CardsList } from '@/components/BlockCards/CardsList/CardList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
-import { blogCards,descriptionPages } from '@/utils/constants';
+import { Pagination } from '@/components/Pagination/Pagination';
+import { blogCards, descriptionPages } from '@/utils/constants';
 
 export default function BlogPage() {
-  const style = {
-    color: "red",
-    fontSize: 20,
-  };
-
   return (
     <>
       <head>
@@ -18,6 +14,8 @@ export default function BlogPage() {
       </head>
       <DescriptionPages descriptionPages={descriptionPages} />
       <CardsList blogCards={blogCards} />
+      {/* TODO: Update with functionality */}
+      <Pagination totalCards={320} currentPage={1} />
     </>
   );
 }
