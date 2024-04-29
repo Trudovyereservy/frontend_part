@@ -2,6 +2,7 @@
 
 import { CoachList } from '@/components/CoachCards/CoachList/CoachList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+
 import { Pagination } from '@/components/Pagination/Pagination';
 import { coachCards, descriptionPages } from '@/utils/constants';
 

@@ -2,6 +2,7 @@
 
 import { CardsList } from '@/components/BlockCards/CardsList/CardList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+
 import { Pagination } from '@/components/Pagination/Pagination';
 import { blogCards, descriptionPages } from '@/utils/constants';
 
