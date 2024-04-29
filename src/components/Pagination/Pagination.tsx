@@ -17,15 +17,20 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
   const { cardsPerPage, paginationItemsToDisplay, totalPages, lastPage } =
     usePagination(totalCards);
 
+  // minimal number of pagination items to display
+  const paginationItemsMinimum = 3;
   // number of items to display before and after the current page
-  const siblings = (paginationItemsToDisplay - 3) / 2;
+  const siblings = Math.floor((paginationItemsToDisplay - paginationItemsMinimum) / 2);
 
-  const ellipsisNotVisible = totalPages <= paginationItemsToDisplay;
-  const ellipsisLeftVisible =
-    totalPages > paginationItemsToDisplay && currentPage + siblings * 2 >= totalPages;
-  const ellipsisRightVisible = totalPages > paginationItemsToDisplay && currentPage <= siblings + 2;
-  const ellipsisLeftAndRightVisible =
-    totalPages > paginationItemsToDisplay && currentPage > siblings * 2 + 1;
+  const isPaginationNecessary = totalPages > paginationItemsToDisplay;
+  const isCurrentPageNearEnd = currentPage + siblings * 2 >= totalPages;
+  const isCurrentPageNearStart = currentPage <= siblings + 2;
+  const isCurrentPageAwayFromBothEnds = currentPage > siblings * 2 + 1;
+
+  const ellipsisNotVisible = !isPaginationNecessary;
+  const ellipsisLeftVisible = isPaginationNecessary && isCurrentPageNearEnd;
+  const ellipsisRightVisible = isPaginationNecessary && isCurrentPageNearStart;
+  const ellipsisLeftAndRightVisible = isPaginationNecessary && isCurrentPageAwayFromBothEnds;
 
   function renderPaginationItems() {
     // no dots are visible
@@ -94,7 +99,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     }
   }
 
-  const renderedItems = useMemo(() => renderPaginationItems(), [totalPages, currentPage]);
+  const renderedPagination = useMemo(() => renderPaginationItems(), [totalPages, currentPage]);
 
   return (
     <nav role="navigation" aria-label="pagination" className={styles.pagination}>
@@ -105,7 +110,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
           direction="previous"
         />
 
-        {renderedItems}
+        {renderedPagination}
 
         <PaginationArrow
           href={`?limit=${cardsPerPage}&page=${currentPage + 1}`}
