@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 
+import { getIsDisabled, getChevronStyles } from '@/utils/pagination';
+
 import styles from './Pagination.module.scss';
 
 type PaginationArrowProps = {
@@ -16,24 +18,11 @@ export const PaginationArrow = ({
   lastPage,
   direction,
 }: PaginationArrowProps) => {
-  const isNextDisabled = currentPage === lastPage;
-  const isPreviousDisabled = currentPage === 1;
-  const isDisabled =
-    (isNextDisabled && direction === 'next') || (isPreviousDisabled && direction === 'previous');
-
-  const chevronStyle =
-    direction === 'next' ? styles.pagination__chevron : styles.pagination__chevronInverse;
-  const chevronDisabledStyle =
-    direction === 'next'
-      ? styles.pagination__chevron_disabled
-      : styles.pagination__chevronInverse_disabled;
+  const isDisabled = getIsDisabled(direction, currentPage, lastPage!);
+  const chevronStyles = getChevronStyles(direction, styles, isDisabled);
 
   return (
-    <li
-      className={classNames(styles.pagination__item, chevronStyle, {
-        [chevronDisabledStyle]: isDisabled,
-      })}
-    >
+    <li className={classNames(styles.pagination__item, chevronStyles)}>
       {isDisabled ? null : (
         <Link
           aria-label={`Go to ${direction} page`}
