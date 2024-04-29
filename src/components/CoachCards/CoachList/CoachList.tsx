@@ -11,13 +11,14 @@ const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width);
 
-  const visibleCoachCards = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
+  const visibleCoachCards: ICardCoachProps[] = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
 
   return (
     <section className={styles.cardslist}>
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
           <Card
+            id={card.id}
             key={card.id}
             name={card.name}
             surname={card.surname}
