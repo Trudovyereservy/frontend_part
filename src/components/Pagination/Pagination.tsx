@@ -14,7 +14,7 @@ type PaginationItemProps = {
 };
 
 export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => {
-  const { cardsPerPage, paginationItemsToDisplay, totalPages, lastPage } =
+  const { paginationItemsToDisplay, totalPages, lastPage } =
     usePagination(totalCards);
 
   // minimal number of pagination items to display
@@ -35,26 +35,18 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
   function renderPaginationItems() {
     // no dots are visible
     if (ellipsisNotVisible) {
-      return (
-        <PaginationList
-          start={1}
-          end={totalPages}
-          cardsPerPage={cardsPerPage}
-          currentPage={currentPage}
-        />
-      );
+      return <PaginationList start={1} end={totalPages} currentPage={currentPage} />;
     }
 
     // only the left dots are visible
     if (ellipsisLeftVisible) {
       return (
         <>
-          <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
+          <PaginationItem href={`?page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
           <PaginationList
             start={totalPages - (siblings * 2 + 1)}
             end={totalPages}
-            cardsPerPage={cardsPerPage}
             currentPage={currentPage}
           />
         </>
@@ -65,15 +57,10 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     if (ellipsisRightVisible) {
       return (
         <>
-          <PaginationList
-            start={1}
-            end={siblings * 2 + 2}
-            cardsPerPage={cardsPerPage}
-            currentPage={currentPage}
-          />
+          <PaginationList start={1} end={siblings * 2 + 2} currentPage={currentPage} />
 
           <PaginationEllipsis />
-          <PaginationItem href={`?limit=${cardsPerPage}&page=${lastPage}`} pageNumber={lastPage} />
+          <PaginationItem href={`?page=${lastPage}`} pageNumber={lastPage} />
         </>
       );
     }
@@ -82,18 +69,17 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     if (ellipsisLeftAndRightVisible) {
       return (
         <>
-          <PaginationItem href={`?limit=${cardsPerPage}&page=${1}`} pageNumber={1} />
+          <PaginationItem href={`?page=${1}`} pageNumber={1} />
           <PaginationEllipsis />
 
           <PaginationList
             start={currentPage - siblings}
             end={currentPage + siblings}
-            cardsPerPage={cardsPerPage}
             currentPage={currentPage}
           />
 
           <PaginationEllipsis />
-          <PaginationItem href={`?limit=${cardsPerPage}&page=${lastPage}`} pageNumber={lastPage} />
+          <PaginationItem href={`?page=${lastPage}`} pageNumber={lastPage} />
         </>
       );
     }
@@ -105,7 +91,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
     <nav role="navigation" aria-label="pagination" className={styles.pagination}>
       <ul className={styles.pagination__content}>
         <PaginationArrow
-          href={`?limit=${cardsPerPage}&page=${currentPage - 1}`}
+          href={`?page=${currentPage - 1}`}
           currentPage={currentPage}
           direction="previous"
         />
@@ -113,7 +99,7 @@ export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => 
         {renderedPagination}
 
         <PaginationArrow
-          href={`?limit=${cardsPerPage}&page=${currentPage + 1}`}
+          href={`?page=${currentPage + 1}`}
           currentPage={currentPage}
           lastPage={lastPage}
           direction="next"

@@ -5,20 +5,14 @@ import { PaginationItem } from './PaginationItem';
 type PaginationListProps = {
   start: number;
   end: number;
-  cardsPerPage: number;
   currentPage: number;
 };
 
-export const PaginationList = ({
-  start,
-  end,
-  cardsPerPage,
-  currentPage,
-}: PaginationListProps) => (
+export const PaginationList = ({ start, end, currentPage }: PaginationListProps) => (
   <>
     {paginationRange(start, end).map((page) => (
       <PaginationItem
-        href={`?limit=${cardsPerPage}&page=${page}`}
+        href={`?page=${page}`}
         pageNumber={page}
         currentPage={currentPage}
         key={page}
