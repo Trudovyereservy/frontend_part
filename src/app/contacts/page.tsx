@@ -7,6 +7,7 @@ import ContactCardList from '@/components/ContactCards/ContactCardsList/ContactC
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import Map from '@/components/Map/Map';
 import { descriptionPages, testAddresses, testContancts } from "@/utils/constants";
+import Breadcrumbs from '@/components/Breadcrumb/Breadcrumbs';
 
 export default function ContactsPage() {
   const [mapUrl, setMapUrl] = useState(testAddresses[0].mapUrl);
@@ -21,6 +22,7 @@ export default function ContactsPage() {
         <title>Трудовые резервы | Контакты</title>
         <meta name="title" content="Блог" />
       </head>
+      <Breadcrumbs />
       <DescriptionPages descriptionPages={descriptionPages} />
       <Map mapUrl={mapUrl} />
       <AddressesList addresses={testAddresses} onClick={handleAddressChange} />
