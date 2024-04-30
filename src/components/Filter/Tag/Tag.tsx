@@ -7,16 +7,15 @@ import { ITagProps } from './Tag.props';
 import styles from './Tag.module.scss';
 
 const Tag: FC<ITagProps> = ({ name, changeTags }) => {
-    const [selected, setSelected] = useState<boolean>(false);
+    const [isSelected, setSelected] = useState<boolean>(false);
 
     const handleSelected = () => {
-        const nextState = !selected;
-        setSelected(!selected);
-        changeTags(name, nextState);
+        changeTags(name, !isSelected);
+        setSelected(!isSelected);
     }
 
     return (
-        <div className={classNames(styles.tag, {[styles.tag_active]: selected})} onClick={handleSelected}>{name}</div>
+        <div className={classNames(styles.tag, { [styles.tag_active]: isSelected })} onClick={handleSelected}>{name}</div>
     )
 };
 

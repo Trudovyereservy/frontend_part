@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 
 import { IFilterProps } from './Filter.props';
 import Tag from './Tag/Tag';
@@ -9,26 +9,24 @@ const Filter: FC<IFilterProps> = ({ tags, posts, filterPosts }) => {
     const [selectedTags, setSelectedTags] = useState<Array<string>>([]);
 
     useEffect(() => {
-        filter()
-    }, [selectedTags])
+        filterPosts(filteredPosts);
+    }, [selectedTags, posts])
 
-    const changeTags = (tag: string, state: boolean) => {
-        if (state) {
-            setSelectedTags([...selectedTags, tag]);
-        } else {
-            setSelectedTags(
-                selectedTags.filter(item => item !== tag)
-            );
+    const filteredPosts = useMemo(
+        () => {
+            if (selectedTags.length !== 0) {
+                const filtredPosts = posts.filter((post) => post.tags.some(tag => selectedTags.includes(tag)))
+                return filtredPosts;
+            } else {
+                return posts;
+            }
         }
-    }
+        , [selectedTags])      
 
-    const filter = () => {
-        if (selectedTags.length !== 0) {
-            const filtredPosts = posts.filter((post) => post.tags.some(tag => selectedTags.includes(tag)))
-            filterPosts(filtredPosts);
-        } else {
-            filterPosts(posts);
-        }
+    const changeTags = (tag: string, isSelected: boolean) => {
+        setSelectedTags(prev =>
+            isSelected ? [...prev, tag] : prev.filter(item => item !== tag)
+        );
     }
 
     return (
