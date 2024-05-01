@@ -9,7 +9,7 @@ import styles from './CardsList.module.scss';
 
 const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
   const width: number = useWindowSize();
-  const count = useCardCount(width);
+  const count = useCardCount(width, "blogsComponent");
 
   const visibleCoachCards: ICardBlogProps[]  = useMemo(() => blogCards.slice(0, count), [blogCards, count]);
 

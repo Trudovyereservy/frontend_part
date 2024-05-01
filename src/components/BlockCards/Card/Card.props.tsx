@@ -4,5 +4,4 @@ export interface ICardBlogProps {
   shortDescription: string;
   imgUrl: string;
   linkUrl: string;
-  id: number;
 }

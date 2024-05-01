@@ -1,34 +1,23 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
-import { cardsNewsMain } from '@/utils/constants';
+import { useMemo } from 'react';
 
 import { Card } from './Card/Card';
 import { CardData } from './TCardsNews';
+import { useCardCount } from '@/hooks/useCardCount';
+import useWindowSize from '@/hooks/useWindowSize';
 
 import styles from './CardsNews.module.scss';
 
-const CardsNews: React.FC = () => {
-  const [visibleCards, setVisibleCards] = useState<CardData[]>(cardsNewsMain);
-
-  useEffect(() => {
-    const resizeListener = () => {
-      setVisibleCards(window.innerWidth > 394 ? cardsNewsMain : cardsNewsMain.slice(0, 3));
-    };
-
-    resizeListener();
-    window.addEventListener('resize', resizeListener);
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    };
-  }, []);
-
+const CardsNews = ({ cardsNews }: { cardsNews: CardData[] }) => {
+  const width: number = useWindowSize();
+  const count = useCardCount(width, 'mainComponent');
+  const visibleCardsNews: CardData[] = useMemo(() => cardsNews.slice(0, count), [cardsNews, count]);
   return (
     <section className={styles.cardnews}>
       <h2 className={styles.cardslist__title}>Пример текста</h2>
       <ul className={styles.cardslist__container}>
-        {visibleCards.map((card) => (
+        {visibleCardsNews.map((card) => (
           <Card
             key={card.id}
             imgUrl={card.imgUrl}

@@ -5,5 +5,6 @@ export const BREAKPOINT_TABLET = 768;
 export const BREAKPOINT_POCKETPC = 480;
 export const BREAKPOINT_MOBILE = 394;
 
-export const CARD_COUNT_DESKTOP = 8;
-export const CARD_COUNT_LAPTOP = 9;
+export const CARD_COUNT_DESKTOP = 9;
+export const CARD_COUNT_LAPTOP = 8;
+export const CARD_COUNT_MOBILE = 3
