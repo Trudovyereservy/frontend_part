@@ -1,15 +1,19 @@
 import { useMemo } from 'react';
 
+import cardCountConfigs from '../utils/cardCountConfigs';
 import {
   BREAKPOINT_DESKTOP,
   BREAKPOINT_LAPTOP,
   BREAKPOINT_MOBILE,
 } from '../utils/constResizeWindow';
-import cardCountConfigs from '../utils/cardCountConfigs';
 
 const useCardCount = (width: number, componentName: string): number =>
   useMemo(() => {
     const cardCountConfig = cardCountConfigs[componentName];
+    if (!cardCountConfig) {
+      // Бросаем ошибку, указав, что конфигурация не определена
+      throw new Error(`Конфигурация для "${componentName}" не определена.`);
+    }
     // Возвращаем количество карточек для конкретного разрешения, если оно указано
     // В противном случае возвращаем значение по умолчанию
     if (width >= BREAKPOINT_DESKTOP && typeof cardCountConfig[BREAKPOINT_DESKTOP] === 'number') {

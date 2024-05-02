@@ -1,7 +1,9 @@
 'use client';
 
-import Head from 'next/head';
 import { useState } from 'react';
+
+import Head from 'next/head';
+
 import AddressesList from '@/components/Addresses/AddressesList';
 import ContactCardList from '@/components/ContactCards/ContactCardsList/ContactCardList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';

@@ -9,7 +9,7 @@ import styles from './CoachList.module.scss';
 
 const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
-  const count = useCardCount(width, "coachesComponent");
+  const count = useCardCount(width, 'coachesComponent');
 
   const visibleCoachCards: ICardCoachProps[] = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
 

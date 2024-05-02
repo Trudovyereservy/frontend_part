@@ -1,8 +1,10 @@
 'use client';
 
 import Head from 'next/head';
+
 import { CardsList } from '@/components/BlockCards/CardsList/CardList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
+import { Pagination } from '@/components/Pagination/Pagination';
 import { blogCards, descriptionPages } from '@/utils/constants';
 
 export default function BlogPage() {
@@ -14,6 +16,8 @@ export default function BlogPage() {
       </Head>
       <DescriptionPages descriptionPages={descriptionPages} />
       <CardsList blogCards={blogCards} />
+      {/* TODO: Update with functionality */}
+      <Pagination totalCards={320} currentPage={1} />
     </>
   );
 }

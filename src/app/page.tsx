@@ -4,6 +4,7 @@ import { Faq } from '@/components/Faq/Faq';
 import Form from '@/components/Form/Form';
 import { MainBanner } from '@/components/main-banner/main-banner';
 import SwiperProvider from '@/components/ProviderComponents/SwiperProvider';
+
 import { cardsNewsMain } from '../utils/constants';
 
 import styles from './page.module.scss';

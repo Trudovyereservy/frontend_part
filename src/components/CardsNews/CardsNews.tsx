@@ -2,10 +2,11 @@
 
 import { useMemo } from 'react';
 
-import { Card } from './Card/Card';
-import { CardData } from './TCardsNews';
 import { useCardCount } from '@/hooks/useCardCount';
 import useWindowSize from '@/hooks/useWindowSize';
+
+import { Card } from './Card/Card';
+import { CardData } from './TCardsNews';
 
 import styles from './CardsNews.module.scss';
 

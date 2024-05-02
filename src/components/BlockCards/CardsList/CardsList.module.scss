@@ -5,7 +5,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 140px 70px;
+  padding: 40px 140px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 @include desktop {
   .cardslist {
     max-width: 1024px;
-    padding: 40px 42px 100px 42px;
+    padding: 40px 42px;
   }
   .cardslist__title {
     font-size: 55px;
@@ -49,7 +49,7 @@
 
 @include tablet {
   .cardslist {
-    padding: 20px 2% 69px 2%;
+    padding: 20px 2% 40px 2%;
   }
   .cardslist__container {
     gap: 2vw;
@@ -59,7 +59,7 @@
 @include mobile {
   .cardslist {
     max-width: 394px;
-    padding: 20px 47px 69px 47px;
+    padding: 20px 47px 40px;
   }
   .cardslist__title {
     font-size: 34px;
