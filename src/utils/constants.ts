@@ -445,7 +445,7 @@ const sliderPosts = [
   }
 ];
 
-// //тестовый массив адресов 
+// //тестовый массив адресов
 
 const testAddresses = [
   {
@@ -486,7 +486,7 @@ const testAddresses = [
   },
 ];
 
-//тестовый массив контактов 
+//тестовый массив контактов
 
 const testContancts = [
   {
