@@ -13,6 +13,7 @@ const Card = ({ title, subtitle, text, imgUrl, linkUrl, linkText }: ICardProps) 
       alt="Обложка новости"
       width={360}
       height={210}
+      priority
     />
     <h2 className={styles.card__title}>{title}</h2>
     <h3 className={styles.card__subtitle}>{subtitle}</h3>

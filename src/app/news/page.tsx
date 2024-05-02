@@ -1,15 +1,16 @@
 'use client';
 
+import Head from 'next/head';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import { descriptionPages } from '@/utils/constants';
 
 export default function NewsPage() {
   return (
     <>
-      <head>
+      <Head>
         <title>Трудовые резервы | Новости</title>
         <meta name="title" content="Блог" />
-      </head>
+      </Head>
       <DescriptionPages descriptionPages={descriptionPages} />
     </>
   );

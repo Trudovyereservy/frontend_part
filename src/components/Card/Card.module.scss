@@ -1,11 +1,9 @@
 @import '../../styles/_variables.scss';
 @import '../../styles/_mixins.scss';
 
-.card {
-}
-
 .card__image {
   width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
   object-position: center;

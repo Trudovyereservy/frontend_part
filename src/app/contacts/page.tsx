@@ -1,7 +1,7 @@
 'use client';
 
+import Head from 'next/head';
 import { useState } from 'react';
-
 import AddressesList from '@/components/Addresses/AddressesList';
 import ContactCardList from '@/components/ContactCards/ContactCardsList/ContactCardList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
@@ -17,10 +17,10 @@ export default function ContactsPage() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>Трудовые резервы | Контакты</title>
         <meta name="title" content="Блог" />
-      </head>
+      </Head>
       <DescriptionPages descriptionPages={descriptionPages} />
       <Map mapUrl={mapUrl} />
       <AddressesList addresses={testAddresses} onClick={handleAddressChange} />

@@ -4,36 +4,8 @@ import {
   BREAKPOINT_DESKTOP,
   BREAKPOINT_LAPTOP,
   BREAKPOINT_MOBILE,
-  CARD_COUNT_DESKTOP,
-  CARD_COUNT_LAPTOP,
-  CARD_COUNT_MOBILE,
 } from '../utils/constResizeWindow';
-
-type CardCountConfig = {
-  default: number;
-  [BREAKPOINT_LAPTOP]?: number;
-  [BREAKPOINT_DESKTOP]?: number;
-  [BREAKPOINT_MOBILE]?: number;
-};
-
-const cardCountConfigs: Record<string, CardCountConfig> = {
-  mainComponent: {
-    default: 3,
-    [BREAKPOINT_MOBILE]: 4,
-  },
-  blogsComponent: {
-    default: CARD_COUNT_LAPTOP,
-    [BREAKPOINT_LAPTOP]: 8,
-    [BREAKPOINT_DESKTOP]: 9,
-    [BREAKPOINT_MOBILE]: 8,
-  },
-  coachesComponent: {
-    default: CARD_COUNT_LAPTOP,
-    [BREAKPOINT_LAPTOP]: 8,
-    [BREAKPOINT_DESKTOP]: 9,
-    [BREAKPOINT_MOBILE]: 8,
-  },
-};
+import cardCountConfigs from '../utils/cardCountConfigs';
 
 const useCardCount = (width: number, componentName: string): number =>
   useMemo(() => {
