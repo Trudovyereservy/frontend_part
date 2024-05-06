@@ -1,3 +1,5 @@
+'use client'
+
 import { useMemo } from 'react';
 
 import styles from '@/components/Pagination/Pagination.module.scss';

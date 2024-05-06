@@ -1,8 +1,7 @@
+//Для того что бы корректно работала смена заголовком страниц и в консоль не сыпались ошибки, нужно убрать у этого комопнента директиву use client и перенести ее в дочерние компоненты?!
 'use client';
 
 import { useState } from 'react';
-
-import Head from 'next/head';
 
 import AddressesList from '@/components/Addresses/AddressesList';
 import ContactCardList from '@/components/ContactCards/ContactCardsList/ContactCardList';
@@ -19,10 +18,10 @@ export default function ContactsPage() {
 
   return (
     <>
-      <Head>
+      <head>
         <title>Трудовые резервы | Контакты</title>
-        <meta name="title" content="Блог" />
-      </Head>
+        <meta name="title" content="Трудовые резервы | Контакты" />
+      </head>
       <DescriptionPages descriptionPages={descriptionPages} />
       <Map mapUrl={mapUrl} />
       <AddressesList addresses={testAddresses} onClick={handleAddressChange} />

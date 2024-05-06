@@ -11,13 +11,15 @@ import styles from './page.module.scss';
 
 export default function Home() {
   return (
-    <main className={styles.mainbanner__wrapper}>
-      <MainBanner />
-      <CardsList />
-      <SwiperProvider />
-      <Form />
-      <Faq />
-      <CardsNews cardsNews={cardsNewsMain}/>
-    </main>
+    <>
+      <div className={styles.mainbanner__wrapper}>
+        <MainBanner />
+        <CardsList />
+        <SwiperProvider />
+        <Form />
+        <Faq />
+        <CardsNews cardsNews={cardsNewsMain} />
+      </div>
+    </>
   );
 }

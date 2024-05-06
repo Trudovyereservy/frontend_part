@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Трудовые резервы',
+  title: { absolute: 'Трудовые резервы', },
   description:
     'Общественно полезный фонд кадрового и спортивно-культурного развития “Трудовые резервы”',
 };
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="page__wrapper">
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
         </div>
       </body>
