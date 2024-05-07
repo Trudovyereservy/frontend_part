@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import styles from './Breadcrumbs.module.scss';
 
+import { IBreadcrumbs } from './Breadcrumbs.props';
+
 const RouteToLabelMap = {
     blog: "Блог",
     coachs: "Тренерский состав",
@@ -11,7 +13,7 @@ const RouteToLabelMap = {
     contacts: "Контакты"
 }
 
-const Breadcrumbs: FC = () => {
+const Breadcrumbs: FC<IBreadcrumbs> = () => {
     const pathname = usePathname()
     const segments = pathname.split("/");
     segments.shift()
