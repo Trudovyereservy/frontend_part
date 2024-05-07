@@ -1,23 +1,19 @@
 import { useMemo } from 'react';
 
 import {
-    BREAKPOINT_DESKTOP,
-    BREAKPOINT_LAPTOP,
-    CARD_COUNT_DESKTOP,
-    CARD_COUNT_LAPTOP,
+  BREAKPOINT_NETBOOK,
+  CARD_COUNT_DESKTOP,
+  CARD_COUNT_MOBILE,
 } from '../utils/constResizeWindow';
 
-const useCardCount = (width: number): number => {
-  return useMemo(() => {
+const useCardCount = (width: number): number =>
+  useMemo(() => {
     switch (true) {
-      case width === BREAKPOINT_LAPTOP:
-        return CARD_COUNT_LAPTOP;
-      case width < BREAKPOINT_DESKTOP:
-        return CARD_COUNT_DESKTOP;
+      case width <= BREAKPOINT_NETBOOK:
+        return CARD_COUNT_MOBILE;
       default:
-        return CARD_COUNT_LAPTOP;
+        return CARD_COUNT_DESKTOP;
     }
   }, [width]);
-};
 
 export { useCardCount };

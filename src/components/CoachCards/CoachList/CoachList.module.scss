@@ -4,7 +4,7 @@
 .cardslist {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 140px 70px;
+  padding: 40px 140px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,7 @@
 @include laptop {
   .cardslist {
     max-width: 1024px;
-    padding: 15px 42px 100px;
-    
+    padding: 15px 42px 40px;
   }
 
   .cardslist__container {
@@ -33,29 +32,25 @@
   }
 }
 
-@include tablet{
+@include tablet {
   .cardslist {
     max-width: 494px;
-    padding: 20px 47px 69px;
+    padding: 20px 47px 40px;
   }
 
   .cardslist__container {
     flex-direction: column;
-    
   }
 }
 
 @include mobile {
   .cardslist {
     max-width: 394px;
-    padding: 15px 0px 69px;
-    
+    padding: 15px 0px 40px;
   }
 
   .cardslist__container {
     gap: 20px;
     flex-direction: row;
   }
-
-  }
-
+}
