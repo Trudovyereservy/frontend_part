@@ -545,7 +545,6 @@ const testContancts = [
   },
 ]
 
-<<<<<<< HEAD
 //Тестовые массивы новостных постов и тегов к ним
 
 const testNewsTags = [
@@ -620,6 +619,3 @@ const testNewsPosts = [
 ]
 
 export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, testNewsTags, testNewsPosts, testBlogTags };
-=======
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, sliderPosts };
->>>>>>> develop
