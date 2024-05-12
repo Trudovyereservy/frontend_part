@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 
-import styles from './Breadcrumbs.module.scss';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { IBreadcrumbs } from './Breadcrumbs.props';
+
+import styles from './Breadcrumbs.module.scss';
 
 interface RouteToLabel {
     blog: string;
@@ -38,6 +39,7 @@ const Breadcrumbs: FC<IBreadcrumbs> = () => {
 
     const crumbs = segments.map((segment, index) => {
         const crumb = {
+            id: index,
             href: segmentsLinks[index],
             label: RouteToLabelMap[segment as keyof RouteToLabel],
         };
@@ -52,7 +54,7 @@ const Breadcrumbs: FC<IBreadcrumbs> = () => {
                 </li>
                 {
                     crumbs.map((segment) =>
-                        <li className={styles.breadcrumbs__listItem}>
+                        <li key={segment.id} className={styles.breadcrumbs__listItem}>
                             <p className={styles.breadcrumbs__separator}></p>
                             <Link className={pathname === segment.href ? styles.breadcrumbs__activeLink : ""} href={segment.href}>{segment.label}</Link>
                         </li>
