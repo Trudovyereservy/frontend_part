@@ -1,4 +1,6 @@
-import {useMemo} from 'react';
+'use client';
+
+import { useMemo } from 'react';
 
 import { Card } from '@/components/CoachCards/Card/Card';
 import { ICardCoachProps } from '@/components/CoachCards/Card/Card.props';
@@ -9,7 +11,7 @@ import styles from './CoachList.module.scss';
 
 const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
-  const count = useCardCount(width);
+  const count = useCardCount(width, 'coachesComponent');
 
   const visibleCoachCards: ICardCoachProps[] = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
 

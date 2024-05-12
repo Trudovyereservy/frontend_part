@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Трудовые резервы',
+  title: { absolute: 'Трудовые резервы', },
   description:
     'Общественно полезный фонд кадрового и спортивно-культурного развития “Трудовые резервы”',
 };
@@ -33,8 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" className={`${inter.variable} ${roboto.variable}`}>
       <body>
         <div className="page__wrapper">
-          <Header/>
-          {children}
+          <Header />
+          <main>{children}</main>
           <Footer />
         </div>
       </body>

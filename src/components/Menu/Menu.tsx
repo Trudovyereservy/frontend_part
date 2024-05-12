@@ -18,7 +18,9 @@ const Menu = ({ handler, handleToggleMenu }) => {
   return (
     <section className={`${styles.menu} ${handler ? `${styles.menu_active}` : ''}`}>
       <div
-        className={classNames(styles.menu__overlay, {[styles.menu__overlay_active]: handler})}
+        className={classNames(styles.menu__overlay, {
+          [styles.menu__overlay_active]: handler,
+        })}
       ></div>
       <section className={styles.menu__container}>
         <button className={styles.menu__button_close} type="button" onClick={closeMenu}></button>
@@ -28,7 +30,9 @@ const Menu = ({ handler, handleToggleMenu }) => {
               const isActive = pathName === link.href;
               return (
                 <Link
-                  className={classNames(styles.menu__link, {[styles.menu__link_active]: isActive})}
+                  className={classNames(styles.menu__link, {
+                    [styles.menu__link_active]: isActive,
+                  })}
                   onClick={closeMenu}
                   href={link.href}
                   key={link.id}

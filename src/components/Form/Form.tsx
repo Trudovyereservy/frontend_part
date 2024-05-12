@@ -22,11 +22,10 @@ export default function Form() {
     formState: { errors, isSubmitting, isValid },
   } = useForm<FormData>({ mode: 'all' });
 
-  const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormData> = () => {
     reset();
   };
-  
+
   return (
     <div className={styles.form}>
       <h2 className={styles.form__headerMobile}>Пример текста</h2>

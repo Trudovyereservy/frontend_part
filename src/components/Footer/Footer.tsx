@@ -18,16 +18,14 @@ const Footer = () => {
     formState: { errors, isValid },
   } = useForm({ mode: 'onChange' });
 
-  const createLinks = (index: number, sectionName: string, linksItems: object) => {
-    return (
-      <ul key={index} className={styles.footer__list} >
-        <h3 className={styles.footer__list_title}>{sectionName}</h3>
-        {linksItems.map((link) => (
-          <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
-        ))}
-      </ul>
-    );
-  };
+  const createLinks = (index: number, sectionName: string, linksItems: object) => (
+    <ul key={index} className={styles.footer__list}>
+      <h3 className={styles.footer__list_title}>{sectionName}</h3>
+      {linksItems.map((link) => (
+        <LinksBlock key={link.id} linkUrl={link.linkUrl} linkText={link.linkText} />
+      ))}
+    </ul>
+  );
 
   return (
     <footer className={styles.footer__container}>
@@ -74,18 +72,14 @@ const Footer = () => {
           </div>
           <form
             className={classNames(styles.footer__phone_number, styles.footer__hidden)}
-            onSubmit={handleSubmit((data) => {
-              console.log(data);
-            })}
+            onSubmit={handleSubmit(() => {})}
           >
             <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
             <Button
               className={styles.footer__button}
               disabled={!isValid}
               active={true}
-              onClick={() => {
-                console.log('Кнопка нажата!');
-              }}
+              onClick={() => {}}
             >
               {buttonsNames.mainButtonFooter}
             </Button>
