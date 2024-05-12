@@ -1,19 +1,20 @@
-'use client';
+import type { Metadata } from 'next';
 
 import { CardsList } from '@/components/BlockCards/CardsList/CardList';
 import Breadcrumbs from '@/components/Breadcrumb/Breadcrumbs';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
-
 import { Pagination } from '@/components/Pagination/Pagination';
 import { blogCards, descriptionPages } from '@/utils/constants';
+
+export const metadata: Metadata = {
+  title: { absolute: 'Трудовые резервы | Блог' },
+  description:
+    'Эта страница создана для демонстрации блоков и элементов, которые используются на сайте...',
+};
 
 export default function BlogPage() {
   return (
     <>
-      <head>
-        <title>Трудовые резервы | Блог</title>
-        <meta name="title" content="Блог" />
-      </head>
       <Breadcrumbs/>
       <DescriptionPages descriptionPages={descriptionPages} />
       <CardsList blogCards={blogCards} />

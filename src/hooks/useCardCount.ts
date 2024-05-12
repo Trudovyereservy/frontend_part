@@ -1,19 +1,36 @@
 import { useMemo } from 'react';
 
+import cardCountConfigs from '../utils/cardCountConfigs';
 import {
-  BREAKPOINT_NETBOOK,
-  CARD_COUNT_DESKTOP,
-  CARD_COUNT_MOBILE,
+  BREAKPOINT_DESKTOP,
+  BREAKPOINT_LAPTOP,
+  BREAKPOINT_MOBILE,
 } from '../utils/constResizeWindow';
 
-const useCardCount = (width: number): number =>
+const useCardCount = (width: number, componentName: string): number =>
   useMemo(() => {
-    switch (true) {
-      case width <= BREAKPOINT_NETBOOK:
-        return CARD_COUNT_MOBILE;
-      default:
-        return CARD_COUNT_DESKTOP;
+    const cardCountConfig = cardCountConfigs[componentName];
+    if (!cardCountConfig) {
+      // Бросаем ошибку, указав, что конфигурация не определена
+      throw new Error(`Конфигурация для "${componentName}" не определена.`);
     }
-  }, [width]);
+    // Возвращаем количество карточек для конкретного разрешения, если оно указано
+    // В противном случае возвращаем значение по умолчанию
+    if (width >= BREAKPOINT_DESKTOP && typeof cardCountConfig[BREAKPOINT_DESKTOP] === 'number') {
+      return cardCountConfig[BREAKPOINT_DESKTOP];
+    } else if (
+      width >= BREAKPOINT_LAPTOP &&
+      typeof cardCountConfig[BREAKPOINT_LAPTOP] === 'number'
+    ) {
+      return cardCountConfig[BREAKPOINT_LAPTOP];
+    } else if (
+      width > BREAKPOINT_MOBILE &&
+      typeof cardCountConfig[BREAKPOINT_MOBILE] === 'number'
+    ) {
+      return cardCountConfig[BREAKPOINT_MOBILE];
+    } else {
+      return cardCountConfig.default;
+    }
+  }, [width, componentName]);
 
 export { useCardCount };

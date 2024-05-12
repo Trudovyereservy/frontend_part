@@ -5,6 +5,10 @@ export interface InputProps {
   // register: (name: string, value: any) => void;
   register: any;
   nameInput: string;
-  pattern: string;
+  // pattern: string;
+  pattern: {
+    value: RegExp;
+    message: string;
+  };
   rest?: RegisterOptions;
 }

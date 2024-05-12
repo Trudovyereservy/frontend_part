@@ -23,6 +23,7 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
           alt="Фотография тренера"
           width={360}
           height={360}
+          priority
         />
         <button
           className={classNames(styles.card__info_additional, {

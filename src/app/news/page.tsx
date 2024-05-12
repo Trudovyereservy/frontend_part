@@ -1,17 +1,19 @@
-'use client';
+import type { Metadata } from 'next';
 
 import Breadcrumbs from "@/components/Breadcrumb/Breadcrumbs";
 import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
 import { Pagination } from '@/components/Pagination/Pagination';
 import { descriptionPages } from '@/utils/constants';
 
+export const metadata: Metadata = {
+  title: { absolute: 'Трудовые резервы | Новости' },
+  description:
+    'Эта страница создана для демонстрации блоков и элементов, которые используются на сайте...',
+};
+
 export default function NewsPage() {
   return (
     <>
-      <head>
-        <title>Трудовые резервы | Новости</title>
-        <meta name="title" content="Новости" />
-      </head>
       <Breadcrumbs/>
       <DescriptionPages descriptionPages={descriptionPages} />
       {/* TODO: Update with functionality */}

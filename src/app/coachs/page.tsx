@@ -1,19 +1,20 @@
-'use client';
+import type { Metadata } from 'next';
 
 import Breadcrumbs from '@/components/Breadcrumb/Breadcrumbs';
 import { CoachList } from '@/components/CoachCards/CoachList/CoachList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
-
 import { Pagination } from '@/components/Pagination/Pagination';
 import { coachCards, descriptionPages } from '@/utils/constants';
+
+export const metadata: Metadata = {
+  title: { absolute: 'Трудовые резервы | Тренерский состав' },
+  description:
+    'Эта страница создана для демонстрации блоков и элементов, которые используются на сайте...',
+};
 
 export default function CoachsPage() {
   return (
     <>
-      <head>
-        <title>Трудовые резервы | Тренерский состав</title>
-        <meta name="title" content="Тренерский состав" />
-      </head>
       <Breadcrumbs/>
       <DescriptionPages descriptionPages={descriptionPages} />
       <CoachList coachCards={coachCards} />
