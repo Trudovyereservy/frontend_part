@@ -4,6 +4,7 @@ import { Faq } from '@/components/Faq/Faq';
 import Form from '@/components/Form/Form';
 import { MainBanner } from '@/components/main-banner/main-banner';
 import SwiperProvider from '@/components/ProviderComponents/SwiperProvider';
+import  SwiperGalleryProvider  from '@/components/SwiperGallery/SwiperGallery';
 
 import { cardsNewsMain } from '../utils/constants';
 
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <div className={styles.mainbanner__wrapper}>
         <MainBanner />
+        <SwiperGalleryProvider />
         <CardsList />
         <SwiperProvider />
         <Form />
