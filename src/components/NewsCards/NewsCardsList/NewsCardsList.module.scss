@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@import '@/styles/variables';
+@import '@/styles/mixins';
 
 .cardslist {
   max-width: 1440px;
@@ -50,6 +50,7 @@
     max-width: 494px;
     padding: 20px 47px 69px;
   }
+  
   .cardslist__title {
     font-size: 34px;
     margin-bottom: 25px;
@@ -60,14 +61,14 @@
     flex-direction: column;
     gap:34px;
   }
+
+  .cardslist__container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @include mobile {
   .cardslist {
     max-width: 394px;
-  }
-
-  .cardslist__container {
-    grid-template-columns: 1fr 1fr;
   }
 }

@@ -48,10 +48,10 @@ interface CoachCard {
 }
 
 interface NewsCard {
-  id?: number;
+  id: number;
   title: string,
   description: string,
-  date_published?: string;
+  date_published: string;
   images: string;
 }
 
@@ -340,6 +340,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 1,
@@ -347,6 +348,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 2,
@@ -354,6 +356,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 3,
@@ -361,6 +364,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 4,
@@ -368,6 +372,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 5,
@@ -375,6 +380,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 6,
@@ -382,6 +388,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 7,
@@ -389,6 +396,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 8,
@@ -396,6 +404,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
   {
     id: 9,
@@ -403,6 +412,7 @@ const newsCards: NewsCard[] = [
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
     images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
   },
 ]
 

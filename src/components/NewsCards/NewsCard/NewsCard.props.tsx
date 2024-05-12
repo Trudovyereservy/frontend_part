@@ -1,7 +1,7 @@
 export interface NewsCardProps {
-    id?: number;
+    id: number;
     title: string,
     description: string,
-    date_published?: string;
+    date_published: string;
     images?: string;
 }
