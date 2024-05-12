@@ -1,0 +1,55 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+$width: calc(100% - 280px);
+$width-desktop: calc(100% - 84px);
+$width-tablet: calc(100% - 92px);
+
+.breadcrumbs {
+    margin: 29px auto 0;
+    width: $width;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.breadcrumbs__listItem {
+    display: flex;
+    margin-right: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #3B5765;
+}
+
+.breadcrumbs__separator {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url(../../../public/separator.svg);
+    background-position: center;
+}
+
+.breadcrumbs__activeLink {
+    color: #839EAD;
+}
+
+@include desktop {
+    .breadcrumbs {
+        width: $width-desktop;
+        margin-top: 29px;
+    }
+}
+
+@include tablet {
+    .breadcrumbs {
+        width: $width-tablet;
+        margin-top: 18px;
+    }
+
+    .breadcrumbs__listItem {
+        font-size: 14px;
+    }
+}

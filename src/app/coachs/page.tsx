@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import Breadcrumbs from '@/components/Breadcrumb/Breadcrumbs';
 import { CoachList } from '@/components/CoachCards/CoachList/CoachList';
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import { Pagination } from '@/components/Pagination/Pagination';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function CoachsPage() {
   return (
     <>
+      <Breadcrumbs/>
       <DescriptionPages descriptionPages={descriptionPages} />
       <CoachList coachCards={coachCards} />
       {/* TODO: Update with functionality */}

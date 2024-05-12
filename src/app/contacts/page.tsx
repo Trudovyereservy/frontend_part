@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
-import { descriptionPages } from '@/utils/constants';
+import Map from '@/components/Map/Map';
+import { descriptionPages, testAddresses, testContancts } from "@/utils/constants";
+import Breadcrumbs from '@/components/Breadcrumb/Breadcrumbs';
 import ContactsProvider from '../../components/ProviderComponents/ContactsProvider';
 
 export const metadata: Metadata = {
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
 export default function ContactsPage() {
   return (
     <>
+      <Breadcrumbs />
       <DescriptionPages descriptionPages={descriptionPages} />
       <ContactsProvider />
     </>
