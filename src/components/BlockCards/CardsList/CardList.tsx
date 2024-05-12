@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo } from 'react';
 
 import { Card } from '@/components/BlockCards/Card/Card';
@@ -9,7 +11,7 @@ import styles from './CardsList.module.scss';
 
 const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
   const width: number = useWindowSize();
-  const count = useCardCount(width);
+  const count = useCardCount(width, 'blogsComponent');
 
   const visibleCoachCards: ICardBlogProps[]  = useMemo(() => blogCards.slice(0, count), [blogCards, count]);
 

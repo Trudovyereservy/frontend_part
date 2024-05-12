@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from 'next';
 
 import { useState } from 'react';
 
@@ -7,6 +7,12 @@ import Filter from '@/components/Filter/Filter';
 import { NewsPost, BlogCard } from '@/components/Filter/Filter.props';
 import { descriptionPages, testNewsPosts, testNewsTags } from '@/utils/constants';
 import { Pagination } from '@/components/Pagination/Pagination';
+
+export const metadata: Metadata = {
+  title: { absolute: 'Трудовые резервы | Новости' },
+  description:
+    'Эта страница создана для демонстрации блоков и элементов, которые используются на сайте...',
+};
 
 export default function NewsPage() {
   const [posts, setPosts] = useState<Array<NewsPost | BlogCard>>(testNewsPosts);
@@ -17,10 +23,6 @@ export default function NewsPage() {
 
   return (
     <>
-      <head>
-        <title>Трудовые резервы | Новости</title>
-        <meta name="title" content="Новости" />
-      </head>
       <DescriptionPages descriptionPages={descriptionPages} />
       <Filter tags={testNewsTags} posts={testNewsPosts} filterPosts={filterPosts} />
       {/* TODO: Update with functionality */}

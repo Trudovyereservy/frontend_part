@@ -24,7 +24,7 @@
 @include laptop {
   .cardslist {
     max-width: 1024px;
-    padding: 15px 42px 40px;
+    padding: 15px 42px 100px;
   }
 
   .cardslist__container {
@@ -46,7 +46,7 @@
 @include mobile {
   .cardslist {
     max-width: 394px;
-    padding: 15px 0px 40px;
+    padding: 15px 0px 69px;
   }
 
   .cardslist__container {
