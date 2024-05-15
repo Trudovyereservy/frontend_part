@@ -55,6 +55,12 @@ interface CardNewsMain {
   imgUrl: string;
 }
 
+interface slidesSwiperGallery {
+  id: number;
+  linkUrl: string;
+  imgUrl: string;
+}
+
 const linksItems: LinksItems = {
   exampleOne: [
     {
@@ -576,6 +582,34 @@ const testContancts = [
   },
 ];
 
+const slidesSwiperGallery: slidesSwiperGallery[] = [
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 0,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 1,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 2,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 3,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 4,
+  },
+];
+
 export {
   linksItems,
   navLinksMenu,
@@ -589,5 +623,6 @@ export {
   testAddresses,
   testContancts,
   cardsNewsMain,
-  sliderPosts
+  sliderPosts,
+  slidesSwiperGallery
 };
