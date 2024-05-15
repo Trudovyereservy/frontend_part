@@ -55,6 +55,14 @@ interface CardNewsMain {
   imgUrl: string;
 }
 
+interface NewsCard {
+  id: number;
+  title: string,
+  description: string,
+  date_published: string;
+  images: string;
+}
+
 const linksItems: LinksItems = {
   exampleOne: [
     {
@@ -342,6 +350,89 @@ const coachCards: CoachCard[] = [
   },
 ];
 
+const newsCards: NewsCard[] = [
+  {
+    id: 0,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 1,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 2,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 3,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 4,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 5,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 6,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 7,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 8,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+  {
+    id: 9,
+    title: 'Пример текста пример текста пример текста пример текста',
+    description:
+      'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    images: '/sports-girl-in-gym-class 1.jpg',
+    date_published: '2024-03-16',
+  },
+]
+
 const descriptionPages = [
   {
     route: '/blog',
@@ -576,18 +667,4 @@ const testContancts = [
   },
 ];
 
-export {
-  linksItems,
-  navLinksMenu,
-  buttonsNames,
-  headerLinks,
-  blogCards,
-  coachCards,
-  descriptionPages,
-  testFaqItems,
-  testCards,
-  testAddresses,
-  testContancts,
-  cardsNewsMain,
-  sliderPosts
-};
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, newsCards };
