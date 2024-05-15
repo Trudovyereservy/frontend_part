@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages";
-import { Pagination } from '@/components/Pagination/Pagination';
 import { NewsCardsList } from '@/components/NewsCards/NewsCardsList/NewsCardsList';
+import { Pagination } from '@/components/Pagination/Pagination';
 import { newsCards, descriptionPages } from "@/utils/constants";
 
 export const metadata: Metadata = {
