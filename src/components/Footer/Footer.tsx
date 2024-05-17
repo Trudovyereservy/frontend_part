@@ -8,16 +8,9 @@ import { Button } from '@/components/Button/Button';
 import { Input } from '@/components/Input/Input';
 import { LinksBlock } from '@/components/Links/LinksBlock';
 import { linksItems, buttonsNames } from '@/utils/constants';
-import { ILinkItem } from './Footer.props';
+import { ILinkItem, FormValues } from './Footer.props';
 
 import styles from './footer.module.scss';
-
-type FormValues = {
-  nameInput: string;
-  required: string;
-  pattern: { value: RegExp; message: string; }
-  Phone?: React.ReactNode;
-}
 
 const Footer = () => {
   const {
