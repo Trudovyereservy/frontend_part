@@ -55,7 +55,7 @@ interface CardNewsMain {
   imgUrl: string;
 }
 
-interface slidesSwiperGallery {
+interface slideSwiperGallery {
   id: number;
   linkUrl: string;
   imgUrl: string;
@@ -582,7 +582,7 @@ const testContancts = [
   },
 ];
 
-const slidesSwiperGallery: slidesSwiperGallery[] = [
+const slidesSwiperGallery: slideSwiperGallery[] = [
   {
     linkUrl: '#',
     imgUrl: '/Group.jpg',

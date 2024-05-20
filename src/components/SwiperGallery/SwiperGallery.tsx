@@ -3,22 +3,16 @@
 import React, { useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { slidesSwiperGallery } from '@/utils/constants'
+import { ISwiperGalleryProps } from '../SwiperGallery/SwiperGallery.props';
 import '@/styles/globals.scss';
 import { Slide } from './SwiperSlide/Slide'
-import { SlidePreview } from './SwiperSlidePreview/SlidePreview'
-// Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/free-mode';
-// import 'swiper/css/navigation';
-// import 'swiper/css/thumbs';
+import { SlidePreview } from './SlidePreview/SlidePreview'
 
-// import styles from './SwiperGallery.module.scss';
 import './styles.scss';
 
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-export default function SwiperGallery() {
+export const SwiperGallery = ({slidesSwiperGallery}:ISwiperGalleryProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
