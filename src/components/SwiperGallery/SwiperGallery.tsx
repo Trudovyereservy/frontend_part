@@ -8,7 +8,7 @@ import '@/styles/globals.scss';
 import { Slide } from './SwiperSlide/Slide'
 import { SlidePreview } from './SlidePreview/SlidePreview'
 
-import './styles.scss';
+import './Styles.scss';
 
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
