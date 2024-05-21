@@ -1,0 +1,25 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+
+.tag {
+    display: inline;
+    padding: 10px 20px;
+    background-color: #F1F5F7;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text-color-blue;
+}
+
+.tag_active {
+    background-color: $bg-color-red;
+    color: $text-color-white;
+}
+
+@include tablet {
+    .tag {
+        font-size: 14px;
+        line-height: 22.88px;
+    }
+}

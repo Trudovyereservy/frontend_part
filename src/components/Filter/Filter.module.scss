@@ -1,0 +1,34 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+$width: calc(100% - 280px);
+$width-desktop: calc(100% - 84px);
+$width-tablet: calc(100% - 92px);
+
+.filter {
+    display: flex;
+    margin: 0 auto 46px;
+    flex-wrap: wrap;
+    gap: 24px 15px;
+    width: $width;
+}
+
+@include desktop {
+    .filter {
+        width: $width-desktop;
+    }
+}
+
+@include laptop {
+    .filter {
+        margin-bottom: 49px;
+    }
+}
+
+@include tablet {
+    .filter {
+        width: $width-tablet;
+        margin-bottom: 59px;
+        gap: 8px;
+    }
+}
