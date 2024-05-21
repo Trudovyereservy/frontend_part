@@ -9,6 +9,8 @@ import { Input } from '@/components/Input/Input';
 import { LinksBlock } from '@/components/Links/LinksBlock';
 import { linksItems, buttonsNames } from '@/utils/constants';
 
+import { ILinkItem, FormValues } from './Footer.props';
+
 import styles from './footer.module.scss';
 
 const Footer = () => {
@@ -16,9 +18,9 @@ const Footer = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm({ mode: 'onChange' });
+  } = useForm<FormValues>({ mode: 'onChange' });
 
-  const createLinks = (index: number, sectionName: string, linksItems: object) => (
+  const createLinks = (index: number, sectionName: string, linksItems: Array<ILinkItem>) => (
     <ul key={index} className={styles.footer__list}>
       <h3 className={styles.footer__list_title}>{sectionName}</h3>
       {linksItems.map((link) => (
@@ -72,14 +74,14 @@ const Footer = () => {
           </div>
           <form
             className={classNames(styles.footer__phone_number, styles.footer__hidden)}
-            onSubmit={handleSubmit(() => {})}
+            onSubmit={handleSubmit(() => { })}
           >
             <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
             <Button
               className={styles.footer__button}
               disabled={!isValid}
               active={true}
-              onClick={() => {}}
+              onClick={() => { }}
             >
               {buttonsNames.mainButtonFooter}
             </Button>

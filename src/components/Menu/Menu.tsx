@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import classNames from 'classnames';
 import Link from 'next/link';
@@ -6,9 +6,11 @@ import { usePathname } from 'next/navigation';
 
 import { navLinksMenu } from '@/utils/constants';
 
+import { IMenuProps } from './Menu.props';
+
 import styles from './menu.module.scss';
 
-const Menu = ({ handler, handleToggleMenu }) => {
+const Menu: FC<IMenuProps> = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
     handleToggleMenu(false);
   };

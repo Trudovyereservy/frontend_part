@@ -1,14 +1,14 @@
-import { RegisterOptions } from 'react-hook-form';
+import { RegisterOptions, UseFormRegister } from 'react-hook-form';
+
+export interface InputValues {
+  nameInput: string;
+  required: string;
+  pattern: { value: RegExp; message: string; }
+}
 
 export interface InputProps {
   className?: string;
-  // register: (name: string, value: any) => void;
-  register: any;
+  register: UseFormRegister<InputValues>;
   nameInput: string;
-  // pattern: string;
-  pattern: {
-    value: RegExp;
-    message: string;
-  };
   rest?: RegisterOptions;
 }
