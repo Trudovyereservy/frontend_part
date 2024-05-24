@@ -667,4 +667,4 @@ const testContancts = [
   },
 ];
 
-export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, newsCards };
+export { linksItems, navLinksMenu, buttonsNames, headerLinks, blogCards, coachCards, descriptionPages, testFaqItems, testCards, testAddresses, testContancts, newsCards, sliderPosts, cardsNewsMain };
