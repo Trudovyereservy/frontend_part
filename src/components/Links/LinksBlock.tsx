@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { ILinksBlockProps } from './IlinksBlock.props';
+import { ILinksBlockProps } from './ILinksBlock.props';
 
 import styles from './links.module.scss';
 
