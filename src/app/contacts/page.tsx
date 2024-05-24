@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
 import { descriptionPages } from '@/utils/constants';
+
 import ContactsProvider from '../../components/ProviderComponents/ContactsProvider';
 
 export const metadata: Metadata = {
