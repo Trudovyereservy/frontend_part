@@ -31,6 +31,12 @@ const cardCountConfigs: Record<string, CardCountConfig> = {
       [BREAKPOINT_LAPTOP]: CARD_COUNT_LAPTOP,
       [BREAKPOINT_MOBILE]: CARD_COUNT_LAPTOP,
     },
+    newsCardsComponent: {
+      default: CARD_COUNT_LAPTOP,
+      [BREAKPOINT_DESKTOP]: CARD_COUNT_DESKTOP,
+      [BREAKPOINT_LAPTOP]: CARD_COUNT_LAPTOP,
+      [BREAKPOINT_MOBILE]: CARD_COUNT_LAPTOP,
+    },
   };
 
   export default cardCountConfigs;

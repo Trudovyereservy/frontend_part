@@ -57,8 +57,9 @@ interface CardNewsMain {
 
 interface NewsCard {
   id: number;
-  title: string,
-  description: string,
+  title: string;
+  description: string;
+  tags: string[];
   date_published: string;
   images: string;
 }
@@ -356,6 +357,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -364,6 +366,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -372,6 +375,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -380,6 +384,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -388,6 +393,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -396,6 +402,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -404,6 +411,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -412,6 +420,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -420,6 +429,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
@@ -428,6 +438,7 @@ const newsCards: NewsCard[] = [
     title: 'Пример текста пример текста пример текста пример текста',
     description:
       'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример пример текста пример',
+    tags: ['#coaches'],
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },

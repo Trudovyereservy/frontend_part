@@ -3,5 +3,6 @@ export interface NewsCardProps {
     title: string,
     description: string,
     date_published: string;
-    images?: string;
+    images: string;
+    tags: string[];
 }

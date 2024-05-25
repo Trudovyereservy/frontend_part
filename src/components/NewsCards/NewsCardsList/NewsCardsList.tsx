@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo } from 'react';
 
 import { useCardCount } from '@/hooks/useCardCount';
@@ -25,6 +27,7 @@ const NewsCardsList = ({ newsCards }: { newsCards: NewsCardProps[] }) => {
                         description={card.description}
                         images={card.images}
                         date_published={card.date_published}
+                        tags={card.tags}
                     />
                 ))}
             </ul>
