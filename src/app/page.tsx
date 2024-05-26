@@ -1,10 +1,10 @@
 import { CardsList } from '@/components/CardsList/CardsList';
 import { CardsNews } from '@/components/CardsNews/CardsNews';
+import { CompanyInfo } from '@/components/CompanyInfo/CompanyInfo';
 import { Faq } from '@/components/Faq/Faq';
 import Form from '@/components/Form/Form';
 import { MainBanner } from '@/components/main-banner/main-banner';
 import SwiperProvider from '@/components/ProviderComponents/SwiperProvider';
-import { CompanyInfo } from '@/components/CompanyInfo/CompanyInfo';
 
 import { cardsNewsMain } from '../utils/constants';
 

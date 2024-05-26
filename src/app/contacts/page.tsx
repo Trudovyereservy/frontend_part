@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 
 import { DescriptionPages } from '@/components/DescriptionPages/DescriptionPages';
-import { descriptionPages } from '@/utils/constants';
-
 import ContactsProvider from '@/components/ProviderComponents/ContactsProvider';
+import { descriptionPages } from '@/utils/constants';
 
 export const metadata: Metadata = {
   title: { absolute: 'Трудовые резервы | Контакты' },
