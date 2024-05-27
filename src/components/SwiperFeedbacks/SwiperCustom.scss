@@ -82,7 +82,7 @@
     margin: 18px 0 0 0;
     padding: 14px 41px 45px;
     width: 615px;
-}
+  }
 
   .slidecustom .swiper-slide-active {
     margin: 0;
@@ -131,7 +131,6 @@
 }
 
 @include mobile {
-
   .slidecustom .swiper-wrapper {
     padding-bottom: 27px;
   }
@@ -145,6 +144,20 @@
     height: 360px;
     margin: 0;
     padding: 45px 34px 31px;
+  }
+
+  .slidecustom .swiper-slide-prev,
+  .slidecustom .swiper-slide-next {
+    margin: 0;
+    padding: 48px 18px 31px;
+    width: 269px;
+    height: 360px;
+  }
+
+  .slidecustom .swiper-slide-active {
+    width: 269px;
+    height: 360px;
+    padding: 48px 18px 31px;
   }
 
   .slidecustom .swiper-wrapper {

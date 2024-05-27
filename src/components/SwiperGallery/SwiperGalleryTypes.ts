@@ -11,8 +11,7 @@ export interface TSlidesGallery {
     imgUrl: string;
   };
 
-
-  export interface TConfig {
+  export interface TConfigSwiper {
     breakpoints: {
       [key: string]: BreakpointConfig;
     };

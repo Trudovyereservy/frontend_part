@@ -28,17 +28,17 @@ export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
         navigation={config.navigation}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
         centeredSlides={config.centeredSlides}
         breakpoints={config.breakpoints}
+        className="mySwiper2"
       >
         {slidesSwiperGallery.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide className="mySwiper2__custom" key={item.id}>
             <Slide imgUrl={item.imgUrl} linkUrl={item.linkUrl} />
           </SwiperSlide>
         ))}
       </Swiper>
-      {width >= 394 && (
+      {width > 480 && (
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
