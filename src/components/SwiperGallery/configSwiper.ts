@@ -1,5 +1,3 @@
-import { TConfigSwiper } from './SwiperGalleryTypes';
-
 import {
   BREAKPOINT_DESKTOP,
   BREAKPOINT_LAPTOP,
@@ -9,35 +7,48 @@ import {
   BREAKPOINT_MOBILE,
 } from '@/utils/constResizeWindow';
 
+import { TConfigSwiper } from './SwiperGalleryTypes';
+
 export const config: TConfigSwiper = {
   slidesPerView: 'auto',
-  // slidesPerView: 2,
   initialSlide: 0,
   spaceBetween: 30,
   centeredSlides: true,
-  loop: false,
+  loop: true,
   grabCursor: true,
   pagination: {
     clickable: true,
   },
   navigation: false,
   breakpoints: {
-    // [BREAKPOINT_MOBILE]: {
-    // 394: {
-    //   // slidesPerView: 3,
-    //   slidesPerView: 'auto',
-    //   initialSlide: 0,
-    //   spaceBetween: 30,
-    //   centeredSlides: true,
-    //   loop: false,
-    // },
-    [BREAKPOINT_POCKETPC]: {
-      loop: true,
-      // slidesPerView: 1,
+    [BREAKPOINT_MOBILE]: {
+      spaceBetween: 31,
       slidesPerView: 'auto',
-      initialSlide: 1,
-      centeredSlides: true,
-      spaceBetween: 5,
+      initialSlide: 0,
+      loop: false,
+    },
+    [BREAKPOINT_POCKETPC]: {
+      spaceBetween: 30,
+      slidesPerView: 'auto',
+      initialSlide: 0,
+      loop: false,
+    },
+    [BREAKPOINT_TABLET]: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+    },
+    [BREAKPOINT_NETBOOK]: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    [BREAKPOINT_LAPTOP]: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    [BREAKPOINT_DESKTOP]: {
+      spaceBetween: 34,
+      slidesPerView: 1,
     },
   },
 };

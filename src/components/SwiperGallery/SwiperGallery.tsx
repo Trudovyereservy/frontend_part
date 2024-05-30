@@ -5,15 +5,15 @@ import React, { useState } from 'react';
 import { Swiper as SwiperType } from 'swiper';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { config } from './configSwiper';
 
+import useWindowSize from '@/hooks/useWindowSize';
 import '@/styles/globals.scss';
 
 import { ISwiperGalleryProps } from '../SwiperGallery/SwiperGallery.props';
 
+import { config } from './configSwiper';
 import { SlidePreview } from './SlidePreview/SlidePreview';
 import { Slide } from './SwiperSlide/Slide';
-import useWindowSize from '@/hooks/useWindowSize';
 
 import './Styles.scss';
 
@@ -30,10 +30,10 @@ export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
         modules={[FreeMode, Navigation, Thumbs]}
         centeredSlides={config.centeredSlides}
         breakpoints={config.breakpoints}
-        className="mySwiper2"
+        className='swiperGalleryMain'
       >
         {slidesSwiperGallery.map((item) => (
-          <SwiperSlide className="mySwiper2__custom" key={item.id}>
+          <SwiperSlide className='swiperGallery__custom' key={item.id}>
             <Slide imgUrl={item.imgUrl} linkUrl={item.linkUrl} />
           </SwiperSlide>
         ))}

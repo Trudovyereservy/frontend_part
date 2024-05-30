@@ -7,7 +7,7 @@ import './SlidePreview.scss';
 const SlidePreview = ({ imgUrl }: ISlidePreviewProps) => (
   <li>
     <Image
-      className='card__image'
+      className="card__image"
       src={imgUrl}
       alt="Картинка из жизни спортшколы"
       width={150}

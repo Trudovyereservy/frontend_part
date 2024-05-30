@@ -31,13 +31,13 @@
 }
 
 .mySwiper {
-  height: 25%;
+  height: 26%;
   box-sizing: border-box;
   padding: 10px 0 0;
 }
 
-.mySwiper2 {
-  height: 75%;
+.swiperGalleryMain {
+  height: 74%;
   width: 100%;
 }
 
@@ -53,79 +53,56 @@
   border-radius: 5px;
 }
 
-// @include pocketpc {
-//   .wrapper {
-//     height: 177px;
-//     width: 100%;
-//   }
+@include laptop {
+  .wrapper {
+    height: 408px;
+    width: 460px;
+    margin: 27px 0;
+  }
 
-//   .swiper-slide .mySwiper {
-//     width: 300px;
-//   }
-// }
+  .mySwiper {
+    padding: 10px 0 0;
+  }
+}
 
-// @include mobile {
-//   .wrapper {
-//     height: 177px;
-//     // width: 370px;
-//     width: 100%;
-//     // border: solid green 2px;
-//   }
-//   .swiper-wrapper {
-//     // border: solid green 2px;
-//     width: 500px;
-//   }  
+@include tablet {
+  .wrapper {
+    height: 300px;
+    width: 336px;
+    margin: 27px 0;
+  }
+}
 
-//   .mySwiper2 {
-//     height: 100%;
-//     width: 100%;
-//     border: solid red 2px;
-//     overflow: hidden;
-//   }
+@include pocketpc {
+  .swiperGalleryMain {
+    height: 100%;
+  }
 
-//   .mySwiper2 .swiper-slide-active {
-//     width: 269px;
-//     // border: solid green 2px;
-//   }
+  .wrapper {
+    width: 480px;
+    height: 177px;
+    margin: 27px 0;
+  }
 
-//   .mySwiper2 img {
-//     object-fit: cover;
-//     // width: 100%;
-//   }
+  .swiperGallery__custom {
+    width: 269px;
+    height: 177px;
+  }
 
-//   .mySwiper2 .swiper-slide-prev,
-//   .mySwiper2 .swiper-slide-next {
-//     opacity: 0.4;
-//   }
-// }
+  .swiperGallery__custom.swiper-slide-prev,
+  .swiperGallery__custom.swiper-slide-next {
+    opacity: 0.4;
+  }
+}
 
 @include mobile {
-  // .myswiper2 .swiper-wrapper {
-  //   padding-bottom: 27px;
-  // }
-
-  .mySwiper2__custom {
-    width: 269px;
-    height: 177px;
-    margin: 0;
-    padding: 45px 34px 31px;
+  .swiperGalleryMain {
+    height: 100%;
   }
 
-  .myswiper2 .swiper-slide-prev,
-  .myswiper2 .swiper-slide-next {
-    margin: 0;
-    padding: 48px 18px 31px;
-    width: 269px;
+  .wrapper {
+    max-width: 394px;
     height: 177px;
-  }
-
-  .myswiper2 .swiper-slide-active {
-    width: 269px;
-    height: 177px;
-    padding: 48px 18px 31px;
-  }
-
-  .myswiper2 .swiper-wrapper {
-    margin: 0px;
+    margin: 27px 0;
   }
 }

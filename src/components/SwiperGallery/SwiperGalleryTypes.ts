@@ -22,7 +22,6 @@ export interface TSlidesGallery {
       delay: number;
       disableOnInteraction: boolean;
     };
-    // speed: number;
     navigation: boolean;
     centeredSlides: boolean;
     spaceBetween: number;
@@ -31,5 +30,3 @@ export interface TSlidesGallery {
       clickable: boolean;
     };
   }
-
-  

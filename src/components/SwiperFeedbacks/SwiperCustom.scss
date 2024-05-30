@@ -127,6 +127,17 @@
   .slidecustom .swiper-slide-active {
     width: 280px;
     height: 340px;
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .slidecustom .swiper-slide-prev,
+  .slidecustom .swiper-slide-next {
+    padding: 20px 14px 20px;
+  }
+
+  .slidecustom .swiper-slide {
+    padding: 20px 15px 10px;
   }
 }
 
@@ -158,6 +169,7 @@
     width: 269px;
     height: 360px;
     padding: 48px 18px 31px;
+    font-size: 14px;
   }
 
   .slidecustom .swiper-wrapper {
