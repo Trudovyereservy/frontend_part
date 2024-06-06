@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { ILinksBlockProps } from './ILinksBlock.props';
 
-import styles from './links.module.scss';
+import styles from './Links.module.scss';
 
 const LinksBlock = (links: ILinksBlockProps) => (
   <li className={styles.footer}>

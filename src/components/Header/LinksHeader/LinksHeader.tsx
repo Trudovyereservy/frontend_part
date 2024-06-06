@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { ILinksHeaderProps } from './ILinksHeader.props';
 
-import styles from '../header.module.scss';
+import styles from '../Header.module.scss';
 
 const LinksHeader = (links: ILinksHeaderProps) => (
   <li className={styles.footer}>

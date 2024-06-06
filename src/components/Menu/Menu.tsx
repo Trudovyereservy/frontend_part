@@ -8,7 +8,7 @@ import { navLinksMenu } from '@/utils/constants';
 
 import { IMenuProps } from './Menu.props';
 
-import styles from './menu.module.scss';
+import styles from './Menu.module.scss';
 
 const Menu: FC<IMenuProps> = ({ handler, handleToggleMenu }) => {
   const closeMenu = () => {
