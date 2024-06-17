@@ -416,7 +416,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class_1.jpg',
     id: 0,
   },
   {
@@ -425,7 +425,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class_1.jpg',
     id: 1,
   },
   {
@@ -434,7 +434,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class_1.jpg',
     id: 2,
   },
 ];

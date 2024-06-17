@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:20-alpine AS base
 
 FROM base as deps
 
@@ -14,6 +14,7 @@ WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+COPY /public ./
 
 RUN yarn build
 
@@ -36,4 +37,4 @@ USER nextjs
 
 EXPOSE 3000
 
-CMD ["next", "start"]
+CMD ["node", "server.js"]
