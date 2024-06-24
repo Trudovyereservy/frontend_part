@@ -1,6 +1,46 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
 .companyinfo__wrapper {
     max-width: 1160px;
     display: flex;
     margin: 0 auto;
-    justify-content: right;
+    justify-content: center;
+    gap: 80px;
 }
+
+.companyinfo {
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.companyinfo__info {
+    width: 521px;
+    min-height: 650px;
+}
+
+.companyinfo__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+
+.companyinfo__title {
+    color: $text-color-blue;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.63418;
+    margin-bottom: 20px;
+}
+
+.companyinfo__description {
+    color: $text-color-grey;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 31px;
+  }

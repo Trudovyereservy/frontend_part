@@ -1,0 +1,34 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+
+.companyinfo__item {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-height: 197px;
+    gap: 7px;
+}
+
+.companyinfo__icon {
+    background-image: url('../../../../public/itemCompanyInfo_icon.png');
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.companyinfo__subtitle {
+    color: $text-color-black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.companyinfo__text {
+    color: $text-color-grey;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+}

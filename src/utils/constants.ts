@@ -55,6 +55,12 @@ interface CardNewsMain {
   imgUrl: string;
 }
 
+interface CardCompanyInfo {
+  id: number;
+  subtitle: string;
+  textItem: string;
+}
+
 interface slideSwiperGallery {
   id: number;
   linkUrl: string;
@@ -610,6 +616,29 @@ const slidesSwiperGallery: slideSwiperGallery[] = [
   },
 ];
 
+const cardsCompanyInfo: CardCompanyInfo[] = [
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 1,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 2,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 3,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 4,
+  },
+];
+
 export {
   linksItems,
   navLinksMenu,
@@ -624,5 +653,6 @@ export {
   testContancts,
   cardsNewsMain,
   sliderPosts,
-  slidesSwiperGallery
+  slidesSwiperGallery,
+  cardsCompanyInfo
 };
