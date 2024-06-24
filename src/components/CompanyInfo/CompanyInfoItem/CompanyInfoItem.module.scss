@@ -32,3 +32,10 @@
     font-weight: 400;
     line-height: 1.7;
 }
+
+@include laptop {
+    .companyinfo__item {
+        width: 220px;
+        min-height: 176px;
+    }
+}

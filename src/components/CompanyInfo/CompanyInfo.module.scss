@@ -29,6 +29,8 @@
 }
 
 .companyinfo__title {
+    max-width: 1160px;
+    display: flex;
     color: $text-color-blue;
     font-size: 64px;
     font-style: normal;
@@ -43,4 +45,23 @@
     font-weight: 400;
     line-height: 1.7;
     margin-bottom: 31px;
+  }
+
+  @include laptop {
+    .companyinfo__wrapper {
+        gap: 17px;
+    }
+
+    .companyinfo__info {
+        width: 460px;
+        min-height: 650px;
+    }
+
+    .companyinfo__title {
+        font-size: 55px;
+    }
+
+    .companyinfo__items {
+        gap: 17px;
+    }
   }
