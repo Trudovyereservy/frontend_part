@@ -5,7 +5,7 @@
 .companyinfo__item {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    max-width: 250px;
     min-height: 197px;
     gap: 7px;
 }
@@ -37,5 +37,11 @@
     .companyinfo__item {
         width: 220px;
         min-height: 176px;
+    }
+}
+
+@include mobile {
+    .companyinfo__text {
+        display: none;
     }
 }

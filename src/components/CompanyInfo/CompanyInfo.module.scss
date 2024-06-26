@@ -3,7 +3,7 @@
 
 .companyinfo__wrapper {
     max-width: 1160px;
-    display: flex;
+    // display: flex;
     margin: 0 auto;
     justify-content: center;
     gap: 80px;
@@ -18,7 +18,7 @@
 }
 
 .companyinfo__info {
-    width: 521px;
+    max-width: 521px;
     min-height: 650px;
 }
 
@@ -26,6 +26,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0 20px;
+}
+
+.companyinfo__titlewrapper {
+    max-width: 1160px; 
+    margin: 0 auto;
+}
+
+.companyinfo__infowrapper {
+    display: flex
+    ;
 }
 
 .companyinfo__title {
@@ -54,7 +64,6 @@
 
     .companyinfo__info {
         width: 460px;
-        min-height: 650px;
     }
 
     .companyinfo__title {
@@ -63,5 +72,11 @@
 
     .companyinfo__items {
         gap: 17px;
+    }
+  }
+
+  @include mobile {
+    .companyinfo__info {
+        // display: none;
     }
   }
