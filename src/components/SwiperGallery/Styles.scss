@@ -53,11 +53,10 @@
   border-radius: 5px;
 }
 
-@include laptop {
+@include desktop {
   .wrapper {
     height: 408px;
     width: 460px;
-    margin: 27px 0;
   }
 
   .mySwiper {
@@ -76,6 +75,7 @@
 @include pocketpc {
   .swiperGalleryMain {
     height: 100%;
+    // display: none;
   }
 
   .wrapper {

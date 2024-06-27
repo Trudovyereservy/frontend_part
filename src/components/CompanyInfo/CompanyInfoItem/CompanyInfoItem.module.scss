@@ -35,8 +35,20 @@
 
 @include laptop {
     .companyinfo__item {
-        width: 220px;
+        max-width: 218px;
         min-height: 176px;
+        gap: 8px;
+    }
+
+    .companyinfo__text {
+        max-width: 218px;
+    }
+}
+
+@include pocketpc {
+    .companyinfo__item {
+        max-width: 195px;
+        
     }
 }
 
