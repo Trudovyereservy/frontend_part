@@ -48,7 +48,6 @@
 @include pocketpc {
     .companyinfo__item {
         max-width: 195px;
-        
     }
 }
 
@@ -56,4 +55,14 @@
     .companyinfo__text {
         display: none;
     }
+
+    .companyinfo__item {
+        width: 140px;
+        min-height: 82px;
+    }
+    .companyinfo__subtitle {
+        font-size: 14px;
+
+    }
+    
 }

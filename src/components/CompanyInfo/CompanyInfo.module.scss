@@ -67,6 +67,14 @@
 @include laptop {
     .companyinfo__wrapper {
         gap: 17px;
+        margin: 0;
+        padding: 0 42px;
+        align-self: center;
+    }
+
+    .companyinfo__description {
+        // display: block;
+        align-self: center;
     }
 
     .companyinfo__info {
@@ -80,7 +88,6 @@
 
     .companyinfo__items {
         gap: 17px 24px;
-        // flex-wrap: nowrap;
     }
 }
 
@@ -92,11 +99,20 @@
     .companyinfo__wrapper {
         max-width: 768px;
     }
+
+    .companyinfo__info {
+        max-width: 460px;
+        margin-right: 0;
+    }
 }
 
 @include tablet {
     .companyinfo__items {
         justify-content: center;
+    }
+
+    .companyinfo__title {
+        font-size: 34px;
     }
 }
 
@@ -104,24 +120,53 @@
     .companyinfo__info {
         // justify-content: center;
         // align-items: center;
-        border: 1px solid red;
+        // border: 1px solid red;
         margin-right: 0px;
+    }
+
+    .companyinfo__wrapper {
+        padding: 0;
+    }
+
+    .companyinfo__description {
+        padding: 0 20px 0;
     }
 
     .companyinfo__items {
         gap: 10px;
-        max-width: 480px;
-        // margin: 0 auto;
+        // max-width: 336px;
+        margin: 0 auto;
+        width: 100%;
     }
-    
+
+    .companyinfo__title {
+        padding: 0 20px;
+    }
+
 }
 
 @include mobile {
     .companyinfo__wrapper {
         max-width: 394px;
+        padding: 20px 47px;
     }
 
     .companyinfo__title {
-        max-width: 350px;
+        max-width: 300px;
+    }
+
+    .companyinfo__items {
+        padding: 0 20px 20px;
+        gap: 0 30px;
+        // max-width: 336px;
+        margin: 0 auto;
+        max-width: 394px;
+        justify-content: space-between;
+
+
+    }
+
+    .companyinfo__description  {
+        // padding: 0 47px;
     }
 }
