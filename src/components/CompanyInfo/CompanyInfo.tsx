@@ -13,15 +13,14 @@ const CompanyInfo = () => {
   const widthWindow = useWindowSize();
   return (
     <section className={styles.companyinfo}>
-      {/* <div className={styles.companyinfo__titlewrapper}> */}
-      {/* </div> */}
       {widthWindow <= 768 ? <article className={styles.companyinfo__wrapper}>
         <h2 className={styles.companyinfo__title}>Пример текста</h2>
-        {/* <div className={styles.companyinfo */}
         <div className={styles.companyinfo__info}>
           <div className={styles.companyinfo__description}>Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста</div>
           <div className={styles.companyinfo__items}>
             <SwiperGalleryProvider />
+          </div>
+          <div className={styles.companyinfo__items_wrapper}>
             {cardsCompanyInfo.map((item) => (
               <CompanyInfoItem
                 key={item.id}
