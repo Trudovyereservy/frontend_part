@@ -11,7 +11,7 @@ import { linksItems, buttonsNames } from '@/utils/constants';
 
 import { ILinkItem, FormValues } from './Footer.props';
 
-import styles from './footer.module.scss';
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   const {

@@ -55,6 +55,18 @@ interface CardNewsMain {
   imgUrl: string;
 }
 
+interface CardCompanyInfo {
+  id: number;
+  subtitle: string;
+  textItem: string;
+}
+
+interface slideSwiperGallery {
+  id: number;
+  linkUrl: string;
+  imgUrl: string;
+}
+
 const linksItems: LinksItems = {
   exampleOne: [
     {
@@ -410,7 +422,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class1.png',
     id: 0,
   },
   {
@@ -419,7 +431,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class1.png',
     id: 1,
   },
   {
@@ -428,7 +440,7 @@ const testCards = [
     text: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример',
     linkUrl: '#',
     linkText: 'Пример текста',
-    imgUrl: '/sports-teacher-in-gym-class 1.jpg',
+    imgUrl: '/sports-teacher-in-gym-class1.png',
     id: 2,
   },
 ];
@@ -576,6 +588,57 @@ const testContancts = [
   },
 ];
 
+const slidesSwiperGallery: slideSwiperGallery[] = [
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 0,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 1,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 2,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 3,
+  },
+  {
+    linkUrl: '#',
+    imgUrl: '/Group.jpg',
+    id: 4,
+  },
+];
+
+const cardsCompanyInfo: CardCompanyInfo[] = [
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 1,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 2,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 3,
+  },
+  {
+    subtitle: 'Пример текста',
+    textItem: 'Пример текста пример текста пример текста пример текста пример текста пример текста',
+    id: 4,
+  },
+];
+
 export {
   linksItems,
   navLinksMenu,
@@ -589,5 +652,7 @@ export {
   testAddresses,
   testContancts,
   cardsNewsMain,
-  sliderPosts
+  sliderPosts,
+  slidesSwiperGallery,
+  cardsCompanyInfo
 };
