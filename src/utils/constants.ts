@@ -67,6 +67,15 @@ interface slideSwiperGallery {
   imgUrl: string;
 }
 
+interface NewsCard {
+  id: number;
+  title: string,
+  description: string,
+  date_published: string;
+  images: string;
+  tags: string[];
+}
+
 const linksItems: LinksItems = {
   exampleOne: [
     {
@@ -747,5 +756,6 @@ export {
   cardsNewsMain,
   sliderPosts,
   slidesSwiperGallery,
-  cardsCompanyInfo
+  cardsCompanyInfo,
+  newsCards
 };
