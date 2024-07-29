@@ -15,7 +15,7 @@
   }
 },
 "lint-staged": {
-  "*.jsx": [
+  "*.tsx": [
     "yarn lint --fix",
     "git add"
   ]
