@@ -1,10 +1,6 @@
 {
   "extends": 
-  // [
     "next/core-web-vitals",
-    // "plugin:testing-library/react",
-    // "plugin:jest-dom/recommended"
-  // ],
   "plugins": ["simple-import-sort", "@stylistic"],
   "rules": {
     "@stylistic/padding-line-between-statements": [
