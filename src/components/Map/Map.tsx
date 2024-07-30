@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import styles from './Map.module.scss';
-12;
+
 interface MapProps {
   mapUrl: string;
 }
