@@ -21,7 +21,14 @@ export const PaginationArrow = ({
   const isDisabled = getIsDisabled(direction, currentPage, lastPage!);
   const chevronStyles = getChevronStyles(direction, styles, isDisabled);
 
-  return (
+
+
+
+
+
+
+
+                  return (
     <li className={classNames(styles.pagination__item, chevronStyles)}>
       {isDisabled ? null : (
         <Link

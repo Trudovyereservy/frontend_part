@@ -3,24 +3,6 @@
 import { useMemo } from 'react';
 
 import styles from '@/components/Pagination/Pagination.module.scss';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import usePagination from '@/hooks/usePagination';
 
 import { PaginationArrow } from './PaginationArrow';
