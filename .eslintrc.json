@@ -66,7 +66,8 @@
       {
         "count": 1
       }
-    ]
+    ],
+    "no-console": "error"
   },
   "parserOptions": {
     "sourceType": "module",
