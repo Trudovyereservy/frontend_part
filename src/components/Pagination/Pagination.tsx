@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useMemo } from 'react';
 
@@ -16,8 +16,7 @@ type PaginationItemProps = {
 };
 
 export const Pagination = ({ totalCards, currentPage }: PaginationItemProps) => {
-  const { paginationItemsToDisplay, totalPages, lastPage } =
-    usePagination(totalCards);
+  const { paginationItemsToDisplay, totalPages, lastPage } = usePagination(totalCards);
 
   // minimal number of pagination items to display
   const paginationItemsMinimum = 3;

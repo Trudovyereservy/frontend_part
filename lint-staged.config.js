@@ -1,5 +1,4 @@
 module.exports = {
-    "*/**/*.{jsx,tsx,js,ts,css,scss}": [
-        "yarn lint --fix"
-    ]
+  'src/**/*.tsx': ['yarn lint --fix'],
+  'src/**/*.tsx': ['yarn format'],
 };

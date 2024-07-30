@@ -21,18 +21,26 @@ import './Styles.scss';
 export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const width = useWindowSize();
-  
-  const slides = useMemo(() => slidesSwiperGallery.map((item) => (
-    <SwiperSlide className='swiperGallery__custom' key={item.id}>
-      <Slide imgUrl={item.imgUrl} linkUrl={item.linkUrl} />
-    </SwiperSlide>
-  )), [slidesSwiperGallery])
 
-  const slidesPreview = useMemo(() => slidesSwiperGallery.map((item) => (
-    <SwiperSlide key={item.id}>
-      <SlidePreview imgUrl={item.imgUrl} />
-    </SwiperSlide>
-  )), [slidesSwiperGallery])
+  const slides = useMemo(
+    () =>
+      slidesSwiperGallery.map((item) => (
+        <SwiperSlide className="swiperGallery__custom" key={item.id}>
+          <Slide imgUrl={item.imgUrl} linkUrl={item.linkUrl} />
+        </SwiperSlide>
+      )),
+    [slidesSwiperGallery],
+  );
+
+  const slidesPreview = useMemo(
+    () =>
+      slidesSwiperGallery.map((item) => (
+        <SwiperSlide key={item.id}>
+          <SlidePreview imgUrl={item.imgUrl} />
+        </SwiperSlide>
+      )),
+    [slidesSwiperGallery],
+  );
 
   return (
     <div className="wrapper">
@@ -44,7 +52,7 @@ export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
         modules={[FreeMode, Navigation, Thumbs]}
         centeredSlides={config.centeredSlides}
         breakpoints={config.breakpoints}
-        className='swiperGalleryMain'
+        className="swiperGalleryMain"
       >
         {slides}
       </Swiper>

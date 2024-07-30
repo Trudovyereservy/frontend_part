@@ -13,7 +13,10 @@ const CoachList = ({ coachCards }: { coachCards: ICardCoachProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width, 'coachesComponent');
 
-  const visibleCoachCards: ICardCoachProps[] = useMemo(() => coachCards.slice(0, count), [coachCards, count]);
+  const visibleCoachCards: ICardCoachProps[] = useMemo(
+    () => coachCards.slice(0, count),
+    [coachCards, count],
+  );
 
   return (
     <section className={styles.cardslist}>

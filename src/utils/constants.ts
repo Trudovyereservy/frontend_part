@@ -69,8 +69,8 @@ interface slideSwiperGallery {
 
 interface NewsCard {
   id: number;
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   date_published: string;
   images: string;
   tags: string[];
@@ -454,7 +454,7 @@ const newsCards: NewsCard[] = [
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
-]
+];
 
 const descriptionPages = [
   {
@@ -605,7 +605,7 @@ const sliderPosts = [
     post: 'Пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текстаПример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста пример текста',
     name: 'Олег',
     description: 'Главный',
-  }
+  },
 ];
 
 // //тестовый массив адресов
@@ -757,5 +757,5 @@ export {
   sliderPosts,
   slidesSwiperGallery,
   cardsCompanyInfo,
-  newsCards
+  newsCards,
 };

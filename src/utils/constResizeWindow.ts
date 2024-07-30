@@ -7,4 +7,4 @@ export const BREAKPOINT_MOBILE = 394;
 
 export const CARD_COUNT_DESKTOP = 9;
 export const CARD_COUNT_LAPTOP = 8;
-export const CARD_COUNT_MOBILE = 3
+export const CARD_COUNT_MOBILE = 3;

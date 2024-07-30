@@ -45,12 +45,12 @@
   }
 }
 
-@include tablet{
+@include tablet {
   .cardslist {
     max-width: 494px;
     padding: 20px 47px 69px;
   }
-  
+
   .cardslist__title {
     font-size: 34px;
     margin-bottom: 25px;
@@ -59,7 +59,7 @@
 
   .cardslist__container {
     flex-direction: column;
-    gap:34px;
+    gap: 34px;
   }
 
   .cardslist__container {

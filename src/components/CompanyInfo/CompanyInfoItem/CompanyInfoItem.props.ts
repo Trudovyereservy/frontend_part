@@ -1,4 +1,4 @@
 export interface ICompanyInfoItem {
-    subtitle: string,
-    textItem: string
+  subtitle: string;
+  textItem: string;
 }

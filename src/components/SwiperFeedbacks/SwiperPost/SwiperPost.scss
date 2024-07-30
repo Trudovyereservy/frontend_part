@@ -43,15 +43,13 @@
 }
 
 @include mobile {
-  
   .feedbackCard {
-  
     &__textPost {
       font-size: 14px;
       line-height: 23.1px;
       margin-bottom: 17px;
     }
-  
+
     &__about > &__textName {
       font-size: 14px;
       font-weight: 600;
@@ -60,13 +58,11 @@
     }
 
     &__textDescription {
-    display: none;
+      display: none;
+    }
   }
-}
 
   .feedbackCard__textPost {
     margin-bottom: 18px;
+  }
 }
-}
-
-
