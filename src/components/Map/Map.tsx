@@ -1,6 +1,5 @@
-import { FC } from 'react';
-
 import styles from './Map.module.scss';
+import { FC } from 'react';
 
 interface MapProps {
   mapUrl: string;

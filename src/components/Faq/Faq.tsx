@@ -1,6 +1,7 @@
-import styles from './Faq.module.scss';
 import { FaqItem } from '@/components/FaqItem/FaqItem';
 import { testFaqItems } from '@/utils/constants';
+
+import styles from './Faq.module.scss';
 
 const Faq = () => (
   <section className={styles.faq}>
