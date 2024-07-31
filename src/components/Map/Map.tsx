@@ -8,7 +8,14 @@ import { FC } from 'react';
 
 
 
-interface MapProps {
+
+
+
+
+
+
+
+      interface MapProps {
   mapUrl: string;
 }
 
