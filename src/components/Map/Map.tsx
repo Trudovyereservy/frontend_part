@@ -12,9 +12,6 @@ import { FC } from 'react';
 
 
 
-
-
-
       interface MapProps {
   mapUrl: string;
 }
