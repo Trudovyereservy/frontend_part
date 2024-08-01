@@ -74,14 +74,14 @@ const Footer = () => {
           </div>
           <form
             className={classNames(styles.footer__phone_number, styles.footer__hidden)}
-            onSubmit={handleSubmit(() => { })}
+            onSubmit={handleSubmit(() => {})}
           >
             <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
             <Button
               className={styles.footer__button}
               disabled={!isValid}
               active={true}
-              onClick={() => { }}
+              onClick={() => {}}
             >
               {buttonsNames.mainButtonFooter}
             </Button>

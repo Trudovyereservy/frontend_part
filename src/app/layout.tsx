@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: { absolute: 'Трудовые резервы', },
+  title: { absolute: 'Трудовые резервы' },
   description:
     'Общественно полезный фонд кадрового и спортивно-культурного развития “Трудовые резервы”',
 };

@@ -13,13 +13,16 @@ const CardsList = ({ blogCards }: { blogCards: ICardBlogProps[] }) => {
   const width: number = useWindowSize();
   const count = useCardCount(width, 'blogsComponent');
 
-  const visibleCoachCards: ICardBlogProps[]  = useMemo(() => blogCards.slice(0, count), [blogCards, count]);
+  const visibleCoachCards: ICardBlogProps[] = useMemo(
+    () => blogCards.slice(0, count),
+    [blogCards, count],
+  );
 
   return (
     <section className={styles.cardslist}>
       <ul className={styles.cardslist__container}>
         {visibleCoachCards.map((card) => (
-          <Card 
+          <Card
             id={card.id}
             key={card.id}
             title={card.title}

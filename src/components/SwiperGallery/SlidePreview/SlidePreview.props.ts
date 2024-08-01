@@ -1,3 +1,3 @@
 export interface ISlidePreviewProps {
-    imgUrl: string;
-  }
+  imgUrl: string;
+}
