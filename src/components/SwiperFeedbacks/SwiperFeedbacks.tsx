@@ -4,7 +4,6 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import '@/styles/globals.scss';
-import { sliderPosts } from '@/utils/constants';
 
 import { config } from './configSwiper';
 import { ISwiperFeedbacksProps } from './SwiperFeedbacks.props';

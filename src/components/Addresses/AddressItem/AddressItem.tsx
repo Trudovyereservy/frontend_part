@@ -11,9 +11,18 @@ interface AddressProps {
 
 const AddressItem: FC<AddressProps> = ({ address, onClick }) => (
   <div className={styles.addressItem}>
-    <h3 className={styles.addressItem__title} onClick={() => onClick(address.mapUrl)}>
+    <button
+      className={styles.addressItem__title}
+      onClick={() => onClick(address.mapUrl)}
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter') {
+          onClick(address.mapUrl);
+        }
+      }}
+    >
       {address.title}
-    </h3>
+    </button>
     <p className={styles.addressItem__address}>{address.address}</p>
   </div>
 );
