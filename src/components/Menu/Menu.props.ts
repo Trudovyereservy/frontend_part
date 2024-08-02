@@ -1,4 +1,4 @@
 export interface IMenuProps {
-    handler: boolean;
-    handleToggleMenu: (arg0: boolean) => void;
+  handler: boolean;
+  handleToggleMenu: (arg0: boolean) => void;
 }
