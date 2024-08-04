@@ -4,6 +4,7 @@ import { DescriptionPages } from "@/components/DescriptionPages/DescriptionPages
 import { NewsCardsList } from '@/components/NewsCards/NewsCardsList/NewsCardsList';
 import { Pagination } from '@/components/Pagination/Pagination';
 import { newsCards, descriptionPages } from "@/utils/constants";
+import SwiperNewsProvider from '@/components/ProviderComponents/SwiperNewsProvider';
 
 export const metadata: Metadata = {
   title: { absolute: 'Трудовые резервы | Новости' },
@@ -19,6 +20,7 @@ export default function NewsPage() {
         <meta name="title" content="Новости" />
       </head>
       <DescriptionPages descriptionPages={descriptionPages} />
+      <SwiperNewsProvider newsCards={newsCards} />
       <NewsCardsList newsCards={newsCards} />
       {/* TODO: Update with functionality */}
       <Pagination totalCards={117} currentPage={3} />

@@ -1,51 +1,43 @@
-@import '../../styles/_variables.scss';
-@import '../../styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
 
 $width: calc(100% - 280px);
 $width-desktop: calc(100% - 84px);
 $width-tablet: calc(100% - 92px);
 
-.addresses {
+.cardList {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 20px 100px;
-  margin: 32px auto 35px;
+  column-gap: 40px;
+  row-gap: 15px;
+  margin: 0 auto 97px;
   width: $width;
 }
 
 @include desktop {
-  .addresses {
+  .cardList {
     width: $width-desktop;
     gap: 20px;
   }
 }
 
 @include laptop {
-  .addresses {
-    margin-top: 43px;
-    margin-bottom: 53px;
-    gap: 20px;
+  .cardList {
+    margin-bottom: 74px;
   }
 }
 
 @include netbook {
-  .addresses {
+  .cardList {
     grid-template-columns: auto auto;
   }
 }
 
 @include tablet {
-  .addresses {
+  .cardList {
     width: $width-tablet;
-    margin-top: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     grid-template-columns: auto;
-    row-gap: 30px;
-  }
-}
-
-@include mobile {
-  .addresses {
     row-gap: 10px;
   }
 }

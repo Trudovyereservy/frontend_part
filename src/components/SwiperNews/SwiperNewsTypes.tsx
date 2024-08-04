@@ -4,4 +4,5 @@ export interface SwiperNewsCard {
     description: string;
     date_published: string;
     images: string;
+    tags?: string[];
 }
