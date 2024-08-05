@@ -5,15 +5,18 @@ import { Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import '@/styles/globals.scss';
-import { newsCards } from '@/utils/constants';
+// import { newsCards } from '@/utils/constants';
 
 import { newsConfig } from './ConfigSwiperNews';
 import { INewsSlides } from './SwiperNews.props';
 import { SwiperNewsCard } from './SwiperNewsCard/SwiperNewsCard';
 
+import styles from './newsSwiper.module.scss';
+import './newsSwiper.scss';
+
 const SwiperNews = ({ newsCards }: INewsSlides) => {
   return (
-    <>
+    <div className={styles.newsSwiperWrapper}>
       <Swiper
         scrollbar={{
           hide: false,
@@ -29,7 +32,7 @@ const SwiperNews = ({ newsCards }: INewsSlides) => {
         grabCursor={newsConfig.grabCursor}
         pagination={newsConfig.pagination}
         breakpoints={newsConfig.breakpoints}
-        className="mySwiper"
+        className="mySwiperNews"
       >
         {newsCards.map((item) => (
             <SwiperSlide key={item.id}>
@@ -44,7 +47,7 @@ const SwiperNews = ({ newsCards }: INewsSlides) => {
             </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

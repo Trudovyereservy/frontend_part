@@ -22,7 +22,7 @@ export const newsConfig: NConfig = {
       spaceBetween: 20,
       initialSlide: 1,
       slidesPerView: 2,
-      loop: true,
+      loop: false,
     },
     [BREAKPOINT_TABLET]: {
       spaceBetween: 20,
@@ -39,7 +39,10 @@ export const newsConfig: NConfig = {
     },
     [BREAKPOINT_DESKTOP]: {
       spaceBetween: 40,
-      slidesPerView: 'auto',
+      // slidesPerView: 'auto',
+      slidesPerView: 3,
+      initialSlide: 1,
+      loop: false,
     },
   },
   loop: true,

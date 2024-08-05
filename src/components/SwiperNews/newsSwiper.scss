@@ -1,0 +1,28 @@
+.mySwiperNews {
+    max-width: 1640px;
+}
+
+.swiper .mySwiperNews {
+    margin: 0;
+    overflow: hidden;
+}
+
+.mySwiperNews .swiper-slide-next  {
+    opacity: .4;
+}
+
+.swiper-scrollbar {
+    max-width: 1140px;
+}
+
+.mySwiperNews.swiper-wrapper {
+    border: 2px green solid;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+
+

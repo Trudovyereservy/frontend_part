@@ -20,7 +20,7 @@ export const SwiperNewsCard = ({
             src={images}
             alt="Изображение новости"
             width= {460}
-            height= {399.59}
+            height= {400}
         />
         <span className="swiper-news-card__image_title">Пример</span>
       </div>
