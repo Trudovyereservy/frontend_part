@@ -43,7 +43,7 @@ const SwiperNews = ({ newsCards }: INewsSlides) => {
                 date_published={item.date_published}
                 images={item.images}
                 tags={item.tags}
-                /> 
+                />
             </SwiperSlide>
         ))}
       </Swiper>

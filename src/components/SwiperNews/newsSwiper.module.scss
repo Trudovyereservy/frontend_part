@@ -3,7 +3,17 @@
 
 .newsSwiperWrapper {
     max-width: 1640px;
-    margin-left: 135px;
-    border: 2px red solid;
+    // border: 2px red solid;
 }
 
+@include tablet {
+    .newsSwiperWrapper {
+        margin-left: 42px;
+    }
+}
+
+@include mobile {
+    .newsSwiperWrapper {
+        margin-left: 47px;
+    }
+}
