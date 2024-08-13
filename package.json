@@ -10,7 +10,7 @@
     "eslint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\"",
     "eslint-fix": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\" --fix",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\" --write",
-    "prettier-check": "prettier --check .gitignore \"src/**/*.+(ts|js|tsx|jsx)\" --write",
+    "prettier-check": "prettier --check .gitignore \"src/**/*.+(ts|js|tsx|jsx)\"",
     "prepare": "husky install"
   },
   "husky": {
