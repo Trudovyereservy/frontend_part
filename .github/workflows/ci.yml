@@ -12,5 +12,5 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run Linters
         run: |
-          yarn eslint
+          yarn eslint --ignore-path
           yarn prettier-check
