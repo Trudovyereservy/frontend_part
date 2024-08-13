@@ -10,5 +10,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Install deps
         run: yarn install --frozen-lockfile
-      - name: Lint and fix
-        run: yarn lint --fix
+      - name: Lint and Prettier
+        run: yarn eslint 
+        run: yarn format
