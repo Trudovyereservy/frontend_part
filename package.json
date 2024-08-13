@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
     "classnames": "^2.5.1",
     "eslint": "8",
     "next": "14.0.2",
