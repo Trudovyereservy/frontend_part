@@ -1,4 +1,1 @@
-export interface ISlideProps {
-  imgUrl: string;
-  linkUrl: string;
-}
+export interface ISlideProps {  imgUrl: string;  linkUrl: string;}

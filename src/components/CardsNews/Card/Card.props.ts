@@ -1,5 +1,1 @@
-export interface ICardNewsMainProps {
-  imgUrl: string;
-  linkUrl: string;
-  linkText: string;
-}
+export interface ICardNewsMainProps {  imgUrl: string;  linkUrl: string;  linkText: string;}

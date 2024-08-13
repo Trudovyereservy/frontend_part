@@ -1,4 +1,1 @@
-export interface ICompanyInfoItem {
-  subtitle: string;
-  textItem: string;
-}
+export interface ICompanyInfoItem {  subtitle: string;  textItem: string;}
