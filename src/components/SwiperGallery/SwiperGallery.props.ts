@@ -1,1 +1,5 @@
-import { TSlidesGallery } from '@/components/SwiperGallery/SwiperGalleryTypes';export interface ISwiperGalleryProps {  slidesSwiperGallery: TSlidesGallery[];}
+import { TSlidesGallery } from '@/components/SwiperGallery/SwiperGalleryTypes';
+
+export interface ISwiperGalleryProps {
+  slidesSwiperGallery: TSlidesGallery[];
+}

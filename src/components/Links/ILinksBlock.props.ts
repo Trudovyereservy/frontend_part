@@ -1,1 +1,4 @@
-export interface ILinksBlockProps {  linkUrl: string;  linkText: string;}
+export interface ILinksBlockProps {
+  linkUrl: string;
+  linkText: string;
+}
