@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn format --write",
+      "yarn format",
       "yarn eslint --fix"
     ]
   },
