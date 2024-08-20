@@ -56,8 +56,7 @@ export default function Form() {
                 value: regularExpressions.name,
                 message: 'Допускается латиница, кириллица, пробел и дефис',
               },
-            })}
-          ></input>
+            })}></input>
           <span className={styles.form__inputError}>{errors?.name?.message || ''}</span>
           <input
             className={styles.form__input}
@@ -74,8 +73,7 @@ export default function Form() {
                 value: regularExpressions.phoneNumber,
                 message: 'Пожалуйста, введите номер телефона',
               },
-            })}
-          ></input>
+            })}></input>
           <span className={styles.form__inputError}>{errors?.phoneNumber?.message || ''}</span>
           <input
             className={styles.form__input}
@@ -92,14 +90,12 @@ export default function Form() {
                 value: regularExpressions.email,
                 message: 'Пожалуйста, введите электронную почту',
               },
-            })}
-          ></input>
+            })}></input>
           <span className={styles.form__inputError}>{errors?.eMail?.message || ''}</span>
           <button
             className={styles.form__submitButton}
             type="submit"
-            disabled={isSubmitting || !isValid}
-          >
+            disabled={isSubmitting || !isValid}>
             Пример текста
           </button>
         </form>

@@ -29,8 +29,7 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
           className={classNames(styles.card__info_additional, {
             [styles.card__info_additional_active]: !openInfo,
           })}
-          onClick={openCard}
-        ></button>
+          onClick={openCard}></button>
       </div>
       {openInfo ? (
         <div className={styles.card__info}>

@@ -20,9 +20,8 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn eslint --fix",
       "yarn format --write",
-      "git commit --allow-empty"
+      "yarn eslint --fix"
     ]
   },
   "dependencies": {

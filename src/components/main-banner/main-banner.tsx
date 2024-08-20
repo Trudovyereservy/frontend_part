@@ -32,8 +32,7 @@ const MainBanner = () => (
         className={styles.mainbanner__button}
         disabled={false}
         active={true}
-        onClick={() => {}}
-      >
+        onClick={() => {}}>
         {buttonsNames.mainButtonFooter}
       </Button>
     </div>

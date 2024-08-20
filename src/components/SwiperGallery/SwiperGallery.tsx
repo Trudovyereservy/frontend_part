@@ -52,8 +52,7 @@ export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
         modules={[FreeMode, Navigation, Thumbs]}
         centeredSlides={config.centeredSlides}
         breakpoints={config.breakpoints}
-        className="swiperGalleryMain"
-      >
+        className="swiperGalleryMain">
         {slides}
       </Swiper>
       {width > 480 && (
@@ -65,8 +64,7 @@ export const SwiperGallery = ({ slidesSwiperGallery }: ISwiperGalleryProps) => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
-        >
+          className="mySwiper">
           {slidesPreview}
         </Swiper>
       )}

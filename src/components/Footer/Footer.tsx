@@ -55,13 +55,17 @@ const Footer = () => {
           <div className={styles.footer__social}>
             <Link href="#">
               <div
-                className={classNames(styles.footer__social_icon, styles.footer__social_facebook)}
-              ></div>
+                className={classNames(
+                  styles.footer__social_icon,
+                  styles.footer__social_facebook,
+                )}></div>
             </Link>
             <Link href="#">
               <div
-                className={classNames(styles.footer__social_icon, styles.footer__social_twitter)}
-              ></div>
+                className={classNames(
+                  styles.footer__social_icon,
+                  styles.footer__social_twitter,
+                )}></div>
             </Link>
           </div>
           <div className={styles.footer__adress}>
@@ -74,15 +78,13 @@ const Footer = () => {
           </div>
           <form
             className={classNames(styles.footer__phone_number, styles.footer__hidden)}
-            onSubmit={handleSubmit(() => {})}
-          >
+            onSubmit={handleSubmit(() => {})}>
             <Input className={styles.footer__input_phone} register={register} nameInput={'Phone'} />
             <Button
               className={styles.footer__button}
               disabled={!isValid}
               active={true}
-              onClick={() => {}}
-            >
+              onClick={() => {}}>
               {buttonsNames.mainButtonFooter}
             </Button>
             <div className={styles.footer__form_error}>

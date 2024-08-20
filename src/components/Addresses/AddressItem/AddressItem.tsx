@@ -19,8 +19,7 @@ const AddressItem: FC<AddressProps> = ({ address, onClick }) => (
         if (event.key === 'Enter') {
           onClick(address.mapUrl);
         }
-      }}
-    >
+      }}>
       {address.title}
     </button>
     <p className={styles.addressItem__address}>{address.address}</p>

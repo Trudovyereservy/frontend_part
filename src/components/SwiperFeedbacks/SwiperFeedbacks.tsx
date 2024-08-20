@@ -28,8 +28,7 @@ const SwiperFeedbacks = ({ sliderPosts }: ISwiperFeedbacksProps) => {
         grabCursor={config.grabCursor}
         pagination={config.pagination}
         breakpoints={config.breakpoints}
-        className="slidecustom"
-      >
+        className="slidecustom">
         {sliderPosts.map((item) => (
           <SwiperSlide key={item.id} className="slide-custom">
             <SwiperPost post={item.post} name={item.name} description={item.description} />
