@@ -19,7 +19,8 @@ const FaqItem = ({ title, text }: FaqItemProps) => {
       <div
         className={classNames(styles.faqitem__wrapper, {
           [styles.faqitem__wrapper_open]: isItemOpened,
-        })}>
+        })}
+      >
         <h3 className={styles.faqitem__title}>{title}</h3>
         <button
           className={classNames(styles.faqitem__button, {
@@ -31,7 +32,8 @@ const FaqItem = ({ title, text }: FaqItemProps) => {
       <p
         className={classNames(styles.faqitem__paragraph, {
           [styles.faqitem__paragraph_open]: isItemOpened,
-        })}>
+        })}
+      >
         {text}
       </p>
     </li>

@@ -16,14 +16,16 @@ export const PaginationItem = ({ href, pageNumber, currentPage }: PaginationItem
     <li
       className={classNames(styles.pagination__item, {
         [styles.pagination__item_type_selected]: isSelected,
-      })}>
+      })}
+    >
       {isSelected ? (
         <span>{pageNumber}</span>
       ) : (
         <Link
           aria-label={`Go to page ${pageNumber}`}
           className={styles.pagination__link}
-          href={href}>
+          href={href}
+        >
           <span>{pageNumber}</span>
         </Link>
       )}

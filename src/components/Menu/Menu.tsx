@@ -22,7 +22,8 @@ const Menu: FC<IMenuProps> = ({ handler, handleToggleMenu }) => {
       <div
         className={classNames(styles.menu__overlay, {
           [styles.menu__overlay_active]: handler,
-        })}></div>
+        })}
+      ></div>
       <section className={styles.menu__container}>
         <button className={styles.menu__button_close} type="button" onClick={closeMenu}></button>
         <nav className={styles.menu__nav}>
@@ -36,7 +37,8 @@ const Menu: FC<IMenuProps> = ({ handler, handleToggleMenu }) => {
                   })}
                   onClick={closeMenu}
                   href={link.href}
-                  key={link.id}>
+                  key={link.id}
+                >
                   {link.name}
                 </Link>
               );
