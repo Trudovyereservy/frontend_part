@@ -36,7 +36,7 @@ export const newsConfig: NConfig = {
       slidesPerView: 2,
     },
     [BREAKPOINT_LAPTOP]: {
-      slidesPerView: 'auto',
+      slidesPerView: 3,
       spaceBetween: 20,
       centeredSlides: true,
     },

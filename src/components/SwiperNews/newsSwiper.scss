@@ -3,6 +3,7 @@
 
 .mySwiperNews {
     max-width: 1640px;
+    margin-left: 140px;
 }
 
 .swiper .mySwiperNews {
@@ -15,7 +16,8 @@
 }
 
 .swiper-scrollbar {
-    max-width: 1140px;
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
 .swiper-scrollbar-drag {
@@ -35,9 +37,19 @@
     // border: 2px green solid;
 }
 
+@include tablet{
+    .mySwiperNews {
+        margin-left: 42px;
+    }    
+}
+
 @include mobile {
     .swiper-scrollbar.swiper-scrollbar-horizontal {
         max-height: 10px;
+    }
+
+    .mySwiperNews {
+        margin-left: 47px;
     }
 }
 
