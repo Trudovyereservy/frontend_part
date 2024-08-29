@@ -37,7 +37,9 @@ const Card = ({ photo, name, surname, directions, achievements, patronymic }: IC
           <h3 className={styles.card__name}>{surname}</h3>
           <h3 className={styles.card__name}>{name}</h3>
           <h3 className={styles.card__name}>{patronymic}</h3>
+          {/* <p className={styles.card__directions}>{directions}</p> */}
           <p className={styles.card__directions}>{directions}</p>
+          {/* <p className={styles.card__directions}>{'бакетбол'}</p> */}
         </div>
       ) : (
         <p className={styles.card__achievements}>{achievements}</p>
