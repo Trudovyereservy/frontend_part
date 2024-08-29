@@ -19,7 +19,7 @@ function getIsChevronDisabled(direction: string, currentPage: number, lastPage: 
   return isDisabled;
 }
 // returning the styles for pagination arrow
-function getChevronStyles(direction: string, styles: any, isDisabled: boolean) {
+function getChevronStyles(direction: string, styles: Record<string, string>, isDisabled: boolean) {
   if (direction === 'next') {
     const chevronStyle = isDisabled
       ? [styles.pagination__chevron, styles.pagination__chevron_disabled]

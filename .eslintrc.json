@@ -1,18 +1,39 @@
 {
-  "extends": 
-  // [
+  "extends": [
     "next/core-web-vitals",
-    // "plugin:testing-library/react",
-    // "plugin:jest-dom/recommended"
-  // ],
-  "plugins": ["simple-import-sort", "@stylistic"],
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "@typescript-eslint",
+    "@stylistic",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "@stylistic/padding-line-between-statements": [
       "error",
-      { "blankLine": "always", "prev": "directive", "next": "*" },
-      { "blankLine": "always", "prev": "directive", "next": "directive" }
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "directive"
+      }
     ],
-    "@stylistic/no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "@stylistic/no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
     "import/order": [
       "error",
       {
@@ -43,13 +64,25 @@
             "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["react", "next"],
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "next"
+        ],
         "newlines-between": "always",
-        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
         "warnOnUnassignedImports": true
       }
     ],
-    "import/newline-after-import": ["error", { "count": 1 }]
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ],
+    "no-console": [1, { "allow": ["warn"] }]
   },
   "parserOptions": {
     "sourceType": "module",

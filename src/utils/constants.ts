@@ -454,7 +454,7 @@ const newsCards: NewsCard[] = [
     images: '/sports-girl-in-gym-class 1.jpg',
     date_published: '2024-03-16',
   },
-]
+];
 
 const descriptionPages = [
   {
@@ -773,6 +773,8 @@ export {
   cardsNewsMain,
   sliderPosts,
   slidesSwiperGallery,
+  cardsCompanyInfo,
+  newsCards,
   cardsCompanyInfo,
   newsCards
 };

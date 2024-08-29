@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useMemo } from 'react';
 
@@ -13,13 +13,13 @@ import styles from './CompanyInfo.module.scss';
 
 const CompanyInfo = () => {
   const widthWindow = useWindowSize();
-  const cards = useMemo(() => cardsCompanyInfo.map((item) => (
-    <CompanyInfoItem
-      key={item.id}
-      textItem={item.textItem}
-      subtitle={item.subtitle}
-    />
-  )), [])
+  const cards = useMemo(
+    () =>
+      cardsCompanyInfo.map((item) => (
+        <CompanyInfoItem key={item.id} textItem={item.textItem} subtitle={item.subtitle} />
+      )),
+    [],
+  );
 
   const mobileView = () => (
     <article className={styles.companyinfo__wrapper}>
@@ -32,9 +32,7 @@ const CompanyInfo = () => {
         <div className={styles.companyinfo__items}>
           <SwiperGalleryProvider />
         </div>
-        <div className={styles.companyinfo__items_wrapper}>
-          {cards}
-        </div>
+        <div className={styles.companyinfo__items_wrapper}>{cards}</div>
       </div>
     </article>
   );
@@ -48,9 +46,7 @@ const CompanyInfo = () => {
           Трудовые резервы – это объединение спортивных секций для формирования и воспитания нового поколения лидеров через активный образ жизни и спорт. 
 Наша цель - развивать патриотизм, самоидентификацию и здоровый образ жизни у молодежи. Мы поддерживаем спортивные программы и помогаем молодым людям определить свои цели. Мы хотим, чтобы каждый молодой человек стал лидером и принимал ответственность за свою среду.
           </div>
-          <div className={styles.companyinfo__items}>
-            {cards}
-          </div>
+          <div className={styles.companyinfo__items}>{cards}</div>
         </div>
         <SwiperGalleryProvider />
       </div>
@@ -59,7 +55,7 @@ const CompanyInfo = () => {
 
   return (
     <section className={styles.companyinfo}>
-      {(widthWindow <= 768) ? mobileView() : desktopView()}
+      {widthWindow <= 768 ? mobileView() : desktopView()}
     </section>
   );
 };
