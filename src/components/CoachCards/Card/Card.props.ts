@@ -6,7 +6,7 @@ export interface IDirection {
 export interface ICardCoachProps {
   name: string;
   surname: string;
-  directions: IDirection[];
+  directions: JSX.Element | null;
   achievements: string;
   patronymic: string;
   photo: string;

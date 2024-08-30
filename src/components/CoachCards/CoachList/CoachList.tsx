@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect } from 'react';
 
 import { Card } from '@/components/CoachCards/Card/Card';
-import { ICardCoachProps } from '@/components/CoachCards/Card/Card.props';
+import { ICardCoachProps, IDirection } from '@/components/CoachCards/Card/Card.props';
 import { useCardCount } from '@/hooks/useCardCount';
 import useWindowSize from '@/hooks/useWindowSize';
 
@@ -54,9 +54,15 @@ const CoachList = () => {
             key={card.id}
             name={card.name}
             surname={card.surname}
-            directions={card.directions.map((direction) => (
-              <span key={direction.id}>{direction.title}</span>
-            ))}
+            directions={
+              Array.isArray(card.directions) ? (
+                <>
+                  {card.directions.map((direction: IDirection) => (
+                    <span key={direction.id}>{direction.title}</span>
+                  ))}
+                </>
+              ) : null
+            }
             achievements={card.achievements}
             patronymic={card.patronymic}
             photo={card.photo}
