@@ -5,11 +5,7 @@ import { NewsCardProps } from './NewsCard.props';
 
 import styles from './NewsCard.module.scss';
 
-const NewsCard = ({
-    title,
-    description,
-    images,
-}: NewsCardProps) => {
+const NewsCard = ({ title, description, images, date_published, tags}: NewsCardProps) => {
     return (
         <li className={styles.card}>
             <div className={styles.card__image_wrapper}>
