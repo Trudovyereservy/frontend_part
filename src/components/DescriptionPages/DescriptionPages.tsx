@@ -10,9 +10,9 @@ const DescriptionPages = ({ descriptionPages }: IDescriptionPagesProps) => {
   const pathName = usePathname();
   const blockData = descriptionPages.find((item) => item.route === pathName);
 
-  // if (!blockData) {
-  //   return null;
-  // }
+  if (!blockData) {
+    return null;
+  }
 
   return (
     <article className={styles.description__container}>
