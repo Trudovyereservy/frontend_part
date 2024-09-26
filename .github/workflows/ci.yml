@@ -1,0 +1,16 @@
+name: CI Workflow Check
+on:
+  pull_request:
+    branches: [main, develop]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: yarn install --frozen-lockfile
+      - name: Run Linters
+        run: |
+          yarn eslint
+          yarn prettier-check

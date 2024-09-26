@@ -10,6 +10,7 @@
     "eslint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\"",
     "eslint-fix": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\" --fix",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|jsx)\" --write",
+    "prettier-check": "prettier --ignore-path .gitignore --check \"src/**/*.+(ts|js|tsx|jsx)\"",
     "prepare": "husky install"
   },
   "husky": {
@@ -19,11 +20,12 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn eslint --fix",
-      "yarn format --write"
+      "yarn format",
+      "yarn eslint --fix"
     ]
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
     "classnames": "^2.5.1",
     "eslint": "8",
     "next": "14.0.2",
